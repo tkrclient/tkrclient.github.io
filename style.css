@@ -1,0 +1,238 @@
+@keyframes in-progress {
+ from {
+  transform:rotate(0deg)
+ }
+ to {
+  transform:rotate(90deg)
+ }
+}
+.s3games {
+ display:none
+}
+.s3games.active {
+ display:block
+}
+.s3games-in-progress {
+ animation-name:in-progress;
+ animation-duration:0.5s;
+ animation-iteration-count:infinite;
+ animation-timing-function:ease-in-out;
+ position:fixed;
+ margin-top:-9rem;
+ width:100vw;
+ height:100vh;
+ display:flex;
+ align-items:center;
+ justify-content:center
+}
+.s3games-in-progress .s3games-item {
+ background-color:#0c0;
+ border-radius:100%;
+ position:absolute;
+ width:2em;
+ height:2em
+}
+.s3games-in-progress .s3games-item.s3games-item1 {
+ transform:rotate(90deg) translate(3em, 0)
+}
+.s3games-in-progress .s3games-item.s3games-item2 {
+ transform:rotate(180deg) translate(3em, 0)
+}
+.s3games-in-progress .s3games-item.s3games-item3 {
+ transform:rotate(270deg) translate(3em, 0)
+}
+.s3games-in-progress .s3games-item.s3games-item4 {
+ transform:rotate(360deg) translate(3em, 0)
+}
+.s3games-please-wait {
+ font-size:3em;
+ margin-bottom:-9rem;
+ text-shadow:0 0 1rem #000
+}
+.s3games-layer {
+ background-color:rgba(0,0,0,0.75);
+ color:#fff;
+ cursor:pointer;
+ font-family:Ubuntu;
+ font-size:20px;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ position:fixed;
+ left:0;
+ top:0;
+ width:100vw;
+ height:100vh;
+ z-index:16000000
+}
+.s3games-layer .s3games-window {
+ background-color:#000;
+ background-image:url("https://account.s3games.com/images/pattern.png");
+ border:1px solid rgba(255,255,255,0.1);
+ border-radius:0.5rem;
+ box-shadow:0 0 5rem #000;
+ box-sizing:border-box;
+ cursor:auto;
+ padding:2rem;
+ min-width:600px;
+ max-width:calc(100vw - 4rem);
+ max-height:calc(100vh - 4rem);
+ overflow-y:auto
+}
+.s3games-layer .s3games-window::-webkit-scrollbar {
+ cursor:pointer;
+ width:0.5rem
+}
+.s3games-layer .s3games-window::-webkit-scrollbar-track {
+ background:transparent;
+ cursor:pointer
+}
+.s3games-layer .s3games-window::-webkit-scrollbar-thumb {
+ background:rgba(255,255,255,0.5);
+ border-radius:0.25rem;
+ height:2rem
+}
+.s3games-layer .s3games-window::-webkit-scrollbar-thumb:hover {
+ background:#fff
+}
+.s3games-layer .s3games-window::-webkit-scrollbar-corner {
+ background:transparent
+}
+.s3games-layer .s3games-window h1 {
+ font-size:2rem;
+ font-weight:normal;
+ margin-bottom:2rem
+}
+.s3games-layer .s3games-window form {
+ margin:0;
+ padding:0
+}
+.s3games-layer .s3games-window label {
+ display:block;
+ margin-bottom:0.5rem
+}
+.s3games-layer .s3games-window button,
+.s3games-layer .s3games-window input[type=email],
+.s3games-layer .s3games-window input[type=password],
+.s3games-layer .s3games-window input[type=text],
+.s3games-layer .s3games-window textarea {
+ border:none;
+ border-radius:0.25rem;
+ color:inherit;
+ font:inherit
+}
+.s3games-layer .s3games-window input[type=email],
+.s3games-layer .s3games-window input[type=password],
+.s3games-layer .s3games-window input[type=text],
+.s3games-layer .s3games-window textarea {
+ background-color:rgba(0,0,0,0.5);
+ box-shadow:0 0 0 1px rgba(255,255,255,0.25);
+ padding:0.5rem 1rem
+}
+.s3games-layer .s3games-window input[type=email]:focus,
+.s3games-layer .s3games-window input[type=password]:focus,
+.s3games-layer .s3games-window input[type=text]:focus,
+.s3games-layer .s3games-window textarea:focus {
+ background-color:rgba(255,255,255,0.15)
+}
+.s3games-layer .s3games-window button {
+ cursor:pointer;
+ padding:0.5rem 1.5rem
+}
+.s3games-layer .s3games-window button.s3games-primary {
+ background-color:rgba(0,204,0,0.75)
+}
+.s3games-layer .s3games-window button.s3games-primary:hover {
+ background-color:#0c0;
+ box-shadow:0 0 0.5rem #0c0
+}
+.s3games-layer .s3games-window button.s3games-secondary {
+ background-color:rgba(102,102,102,0.75)
+}
+.s3games-layer .s3games-window button.s3games-secondary:hover {
+ background-color:#666;
+ box-shadow:0 0 0.5rem #666
+}
+.s3games-layer .s3games-window input[type=email],
+.s3games-layer .s3games-window input[type=password],
+.s3games-layer .s3games-window input[type=text] {
+ width:400px
+}
+.s3games-layer .s3games-window textarea {
+ line-height:1.5rem;
+ width:600px
+}
+.s3games-layer .s3games-window .s3games-a {
+ color:#666;
+ cursor:pointer
+}
+.s3games-layer .s3games-window .s3games-a:hover {
+ color:#fff;
+ text-shadow:0 0 0.25rem #fff
+}
+.s3games-layer .s3games-window a.s3games-icon {
+ margin:0 0.75rem;
+ opacity:0.75
+}
+.s3games-layer .s3games-window a.s3games-icon:hover {
+ opacity:1
+}
+.s3games-layer .s3games-window .s3games-center {
+ text-align:center
+}
+.s3games-layer .s3games-window .s3games-pill {
+ border:1px solid rgba(255,255,255,0.5);
+ border-radius:0.25rem;
+ color:#fff;
+ cursor:pointer;
+ display:inline-block;
+ font-size:0.85rem;
+ padding:0.5rem;
+ margin:0 0.75rem;
+ text-decoration:none;
+ vertical-align:middle
+}
+.s3games-layer .s3games-window .s3games-pill:hover {
+ background-color:#fff;
+ color:#000
+}
+.s3games-layer .s3games-window .s3games-row {
+ display:flex;
+ flex-direction:row
+}
+.s3games-layer .s3games-window .s3games-row.s3games-justify-between {
+ justify-content:space-between
+}
+.s3games-layer .s3games-window .s3games-row.s3games-justify-center {
+ justify-content:center
+}
+.s3games-layer .s3games-window .s3games-group {
+ margin-bottom:2rem
+}
+.s3games-layer .s3games-window .s3games-group:last-child {
+ margin-bottom:0
+}
+.s3games-layer .s3games-window .s3games-text {
+ line-height:1.5em;
+ max-width:1000px
+}
+.s3games-layer .s3games-window .s3games-note {
+ color:#0e0
+}
+.s3games-layer .s3games-window .top {
+ font-size:14px;
+ width:800px
+}
+.s3games-layer .s3games-window .top tr th,
+.s3games-layer .s3games-window .top tr td {
+ border-bottom:1px solid rgba(255,255,255,0.25);
+ padding:0.75em 0.5em;
+ white-space:nowrap
+}
+.s3games-layer .s3games-window .top tr th:first-child,
+.s3games-layer .s3games-window .top tr td:first-child {
+ text-align:right
+}
+.s3games-layer .s3games-window .top tr th {
+ opacity:0.5
+}
