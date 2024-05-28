@@ -1,3 +1,7 @@
+@font-face {
+ font-family: 'Exo 2';
+  url('/font/Exo2-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
 form {
  display:flex;
  flex-direction:column;
