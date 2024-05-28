@@ -1,0 +1,961 @@
+form {
+ display:flex;
+ flex-direction:column;
+ margin:0;
+ padding:0
+}
+form.form {
+ background-color:rgba(255,255,255,0.05);
+ border:1px solid rgba(255,255,255,0.05);
+ border-radius:0.5rem;
+ padding:2rem
+}
+form .form-group {
+ margin-bottom:1.5rem
+}
+form .form-group:last-child {
+ margin-bottom:0
+}
+label {
+ display:block;
+ font-size:0.9rem;
+ margin-bottom:0.5rem
+}
+input[type=checkbox],
+input[type=radio] {
+ display:none
+}
+.checkbox,
+.radio {
+ display:inline-flex;
+ justify-content:center;
+ align-items:center;
+ cursor:pointer;
+ margin-right:0.5rem;
+ vertical-align:middle;
+ width:2rem;
+ height:2rem
+}
+.checkbox:hover,
+.radio:hover {
+ border-color:rgba(255,255,255,0.5)
+}
+.checkbox.checked,
+.radio.checked {
+ border-color:rgba(0,255,0,0.25);
+ color:#0f0
+}
+.checkbox.checked .checkmark,
+.radio.checked .checkmark {
+ background-color:#0f0
+}
+.checkbox {
+ border-radius:0.25rem
+}
+.checkbox.checked:hover {
+ border-color:rgba(0,255,0,0.5)
+}
+.checkbox.checked .checkmark {
+ border-radius:2px;
+ width:0.75rem;
+ height:0.75rem
+}
+.radio {
+ border-radius:100%
+}
+.radio.checked {
+ cursor:default
+}
+.radio.checked .checkmark {
+ border-radius:inherit;
+ width:1rem;
+ height:1rem
+}
+.checkbox,
+.radio,
+input[type=text],
+select,
+textarea {
+ background-color:rgba(255,255,255,0.05);
+ border:1px solid rgba(255,255,255,0.05);
+ border-radius:0.5rem;
+ box-sizing:border-box
+}
+input[type=text],
+select,
+textarea {
+ color:rgba(255,255,255,0.9);
+ font:inherit;
+ line-height:1em
+}
+input[type=text],
+select,
+textarea {
+ padding:0.5rem;
+ min-width:200px;
+ width:100%
+}
+input[type=text]:focus,
+select:focus,
+textarea:focus {
+ background-color:rgba(0,153,51,0.25)
+}
+input[type=text]::placeholder,
+select::placeholder,
+textarea::placeholder {
+ color:rgba(255,255,255,0.5)
+}
+input[type=text],
+select {
+ max-width:400px
+}
+textarea {
+ line-height:1.5em;
+ max-width:600px
+}
+.btn {
+ border:1px solid;
+ border-radius:0.25em;
+ cursor:pointer;
+ display:inline-block;
+ line-height:1em;
+ font-size:1.25rem;
+ font-weight:bold;
+ padding:0.5em 1.5em
+}
+.btn.btn-blue {
+ background:rgba(0,221,255,0.1);
+ border-color:rgba(0,221,255,0.1);
+ color:#0df
+}
+.btn.btn-blue:hover {
+ background:rgba(0,221,255,0.75);
+ border-color:transparent;
+ box-shadow:0 0 0.5rem #0df
+}
+.btn.btn-green {
+ background:rgba(0,153,51,0.1);
+ border-color:rgba(0,153,51,0.1);
+ color:#093
+}
+.btn.btn-green:hover {
+ background:rgba(0,153,51,0.75);
+ border-color:transparent;
+ box-shadow:0 0 0.5rem #093
+}
+.btn.btn-red {
+ background:rgba(221,0,0,0.1);
+ border-color:rgba(221,0,0,0.1);
+ color:#d00
+}
+.btn.btn-red:hover {
+ background:rgba(221,0,0,0.75);
+ border-color:transparent;
+ box-shadow:0 0 0.5rem #d00
+}
+.btn.btn-small {
+ font-size:1rem;
+ font-weight:normal;
+ padding:0.25em 0.5em
+}
+.btn:hover {
+ border-color:transparent;
+ color:rgba(255,255,255,0.75);
+ text-shadow:0 0 0.5em rgba(255,255,255,0.5)
+}
+.btn .fa,
+.btn .far {
+ opacity:0.5;
+ margin-right:0.25rem
+}
+.btn .fa:last-child,
+.btn .far:last-child {
+ margin-right:0
+}
+.btn-group {
+ display:flex;
+ flex-direction:row;
+ align-items:center
+}
+.btn-group .btn {
+ margin-right:0.5em
+}
+.btn-group .btn:last-child {
+ margin-right:0
+}
+.cover,
+.sidebar .item a .icon,
+.sidebar .item a:visited .icon,
+.featured .container .item,
+.tiles li a .image,
+.admin .thumb {
+ background-position:center;
+ background-repeat:no-repeat;
+ background-size:cover
+}
+*:focus {
+ outline:none
+}
+html,
+body {
+ background-color:#1d1d1d;
+ color:rgba(255,255,255,0.9);
+ font-family:"Exo 2";
+ font-size:16px;
+ margin:0;
+ padding:0;
+ min-width:100vw;
+ min-height:100vh;
+ width:100vw;
+ height:100vh
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+ margin:0;
+ padding:0
+}
+table {
+ border-collapse:collapse
+}
+a,
+a:visited,
+a:hover {
+ color:rgba(255,255,255,0.9);
+ text-decoration:none
+}
+a.href,
+a.href:visited {
+ color:#0df
+}
+a.href:hover,
+a.href:visited:hover {
+ color:#fc0;
+ text-shadow:0 0 0.25rem #fc0
+}
+article {
+ display:flex;
+ flex-direction:column
+}
+article header,
+article section {
+ box-sizing:border-box;
+ margin-bottom:1rem
+}
+article header {
+ text-align:center
+}
+article section+header {
+ margin-top:1rem
+}
+article section.viewport {
+ padding:0
+}
+.inline-block {
+ display:inline-block
+}
+.text {
+ line-height:1.5em
+}
+.text p+h2 {
+ margin-top:2rem
+}
+.text-center {
+ text-align:center
+}
+.text-red {
+ color:#d00
+}
+.text-green {
+ color:#093
+}
+.text-blue {
+ color:#0df
+}
+.text-yellow {
+ color:#fc0
+}
+.hide {
+ display:none
+}
+.grow-1 {
+ flex-grow:1
+}
+.fa.fa-star,
+.fa.fa-star-half-alt {
+ color:#fc0 !important;
+ opacity:1 !important
+}
+.far.fa-star {
+ color:rgba(255,255,255,0.5) !important;
+ opacity:1 !important
+}
+.icon-value,
+.rating {
+ display:flex;
+ flex-direction:row;
+ align-items:center;
+ line-height:0
+}
+.icon-value .fa,
+.icon-value .far,
+.rating .fa,
+.rating .far {
+ margin-right:0.25em
+}
+.icon-value .fa,
+.icon-value .far {
+ opacity:0.5
+}
+.block {
+ margin:1rem
+}
+code {
+ background-color:rgba(255,204,0,0.05);
+ border:1px solid rgba(255,204,0,0.05);
+ border-radius:0.5rem;
+ color:#fc0;
+ display:block;
+ padding:0.5rem
+}
+a[data-favorite] {
+ color:#d00;
+ opacity:0.5
+}
+a[data-favorite]:hover {
+ color:#d00;
+ opacity:1;
+ text-shadow:0 0 0.5rem #d00
+}
+.sidebar {
+ white-space:nowrap
+}
+.sidebar .header {
+ color:#fc0;
+ font-size:1.25rem;
+ font-weight:bold;
+ padding:1.5rem 1rem 0.5rem 1rem
+}
+.sidebar .item a,
+.sidebar .item a:visited {
+ display:block
+}
+.sidebar .item a:hover,
+.sidebar .item a:visited:hover {
+ background-color:#093
+}
+.sidebar .item a .icon,
+.sidebar .item a:visited .icon {
+ border-radius:100%;
+ display:inline-block;
+ margin-right:0.5rem;
+ vertical-align:middle;
+ width:35px;
+ height:35px
+}
+.sidebar .item .name-info.active,
+.sidebar .item .icon-name.active {
+ background-color:rgba(255,255,255,0.1);
+ box-shadow:inset 0.5rem 0 0 -0.25rem #093
+}
+.sidebar .item .image-name,
+.sidebar .item .name-info {
+ padding:0.5rem 1rem
+}
+.sidebar .item .icon-name {
+ padding:0.75rem 1rem
+}
+.sidebar .item .icon-name .fa,
+.sidebar .item .icon-name .far {
+ opacity:0.5;
+ margin-right:0.5rem
+}
+.sidebar .item .name-info {
+ display:flex;
+ flex-direction:row
+}
+.sidebar .item .name-info .name {
+ flex-grow:1;
+ margin-right:1rem
+}
+.sidebar .item .name-info .info {
+ opacity:0.5
+}
+.row-justify-center {
+ justify-content:center
+}
+.row-1,
+.row-2,
+.row-3,
+.row-4 {
+ display:flex;
+ flex-direction:row;
+ align-items:center
+}
+.row-1 .col:last-child,
+.row-2 .col:last-child,
+.row-3 .col:last-child,
+.row-4 .col:last-child {
+ margin-right:0
+}
+.row-1 .col-1,
+.row-2 .col-1,
+.row-3 .col-1,
+.row-4 .col-1 {
+ flex-grow:1
+}
+.row-1 .col {
+ margin-right:0.25rem
+}
+.row-2 .col {
+ margin-right:0.5rem
+}
+.row-3 .col {
+ margin-right:1rem
+}
+.row-4 .col {
+ margin-right:2rem
+}
+.table th,
+.table td {
+ padding:0.5rem
+}
+.features {
+ display:flex;
+ flex-direction:row;
+ justify-content:center
+}
+.features a,
+.features a:visited {
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ margin-right:2rem
+}
+.features a:last-child,
+.features a:visited:last-child {
+ margin-right:0
+}
+.features a:hover img,
+.features a:visited:hover img {
+ opacity:1
+}
+.features a img,
+.features a:visited img {
+ display:block;
+ margin-bottom:0.5rem;
+ opacity:0.75;
+ height:50px
+}
+.scroll-y,
+body aside,
+body .main,
+body .chat-messages,
+.admin main {
+ overflow-y:scroll;
+ scrollbar-color:transparent rgba(255,255,255,0.05);
+ scrollbar-width:none
+}
+.scroll-y::-webkit-scrollbar,
+body aside::-webkit-scrollbar,
+body .main::-webkit-scrollbar,
+body .chat-messages::-webkit-scrollbar,
+.admin main::-webkit-scrollbar {
+ width:0
+}
+.scroll-y::-webkit-scrollbar-track,
+body aside::-webkit-scrollbar-track,
+body .main::-webkit-scrollbar-track,
+body .chat-messages::-webkit-scrollbar-track,
+.admin main::-webkit-scrollbar-track {
+ background-color:transparent
+}
+.scroll-y::-webkit-scrollbar-thumb,
+body aside::-webkit-scrollbar-thumb,
+body .main::-webkit-scrollbar-thumb,
+body .chat-messages::-webkit-scrollbar-thumb,
+.admin main::-webkit-scrollbar-thumb {
+ background-color:rgba(255,255,255,0.05)
+}
+body {
+ display:grid;
+ grid-template-areas:"nav nav nav" "sidebar main name" "sidebar main messages" "sidebar main send";
+ grid-template-columns:auto 1fr 250px;
+ grid-template-rows:auto auto 1fr auto
+}
+body nav {
+ grid-area:nav;
+ background-color:rgba(255,255,255,0.05);
+ border-bottom:1px solid rgba(0,0,0,0.25);
+ display:grid;
+ grid-template-areas:"logo menu lang";
+ grid-template-columns:1fr 3fr 2fr;
+ align-items:center
+}
+body nav .logo {
+ grid-area:logo
+}
+body nav .menu {
+ grid-area:menu
+}
+body nav .lang {
+ grid-area:lang;
+ justify-content:flex-end
+}
+body nav .list {
+ display:flex;
+ flex-direction:row;
+ align-items:center;
+ margin:0;
+ padding:0;
+ white-space:nowrap
+}
+body nav .list .item a,
+body nav .list .item a:visited,
+body nav .list .item .active {
+ display:inline-block;
+ padding:1rem
+}
+body nav .list .item a .icon,
+body nav .list .item a:visited .icon,
+body nav .list .item .active .icon {
+ margin-right:0.5rem;
+ opacity:0.5
+}
+body nav .list .item a:hover,
+body nav .list .item a:visited:hover {
+ background-color:#093
+}
+body nav .list .item a.heart,
+body nav .list .item a:visited.heart {
+ color:#d00
+}
+body nav .list .item .active {
+ background-color:rgba(255,255,255,0.1);
+ box-shadow:inset 0 -0.5rem 0 -0.25rem #093
+}
+body nav .margin {
+ margin:0 1rem
+}
+body aside {
+ grid-area:sidebar;
+ background-color:rgba(255,255,255,0.05);
+ border-right:1px solid rgba(0,0,0,0.25);
+ padding-bottom:2rem
+}
+body .main {
+ grid-area:main;
+ display:flex;
+ flex-direction:column
+}
+body .main main {
+ flex-grow:1
+}
+body .main main .viewport {
+ display:flex;
+ flex-direction:column;
+ height:calc(100vh - 3rem)
+}
+body .main main .viewport .game {
+ border:none;
+ flex-grow:1;
+ width:100%
+}
+body .main main .viewport .footer {
+ display:flex;
+ flex-direction:row;
+ align-items:center;
+ margin:1rem;
+ white-space:nowrap
+}
+body .main main .viewport .footer .item {
+ margin-right:1.5rem
+}
+body .main main .viewport .footer .item:last-child {
+ margin-right:0
+}
+body .main main .reviews iframe {
+ border:none;
+ border-radius:0.5rem;
+ margin-bottom:1rem;
+ max-width:800px;
+ width:100%;
+ height:400px
+}
+body .main main .reviews .thumbs {
+ display:flex;
+ flex-direction:row;
+ text-align:center
+}
+body .main main .reviews .thumbs .item {
+ margin-right:1rem
+}
+body .main main .reviews .thumbs .item:last-child {
+ margin-right:0
+}
+body .main main .reviews .thumbs .item img {
+ border-radius:0.5rem
+}
+body .main main .reviews .thumbs .item a:hover img {
+ box-shadow:0 0 0 2px #fc0
+}
+body .chat-name,
+body .chat-messages,
+body .chat-send {
+ border-left:1px solid rgba(0,0,0,0.25)
+}
+body .chat-name,
+body .chat-send {
+ display:grid;
+ grid-template-areas:"input button";
+ grid-template-columns:1fr auto;
+ align-items:center;
+ background-color:rgba(255,255,255,0.1)
+}
+body .chat-name input[type=text],
+body .chat-send input[type=text] {
+ grid-area:input;
+ background:none;
+ border:none;
+ border-radius:0;
+ padding:0 0.5rem;
+ height:100%;
+ min-width:auto
+}
+body .chat-name input[type=text]:focus,
+body .chat-send input[type=text]:focus {
+ background-color:rgba(0,153,51,0.25)
+}
+body .chat-name i,
+body .chat-send i {
+ grid-area:button;
+ cursor:pointer;
+ padding:1rem
+}
+body .chat-name {
+ grid-area:name
+}
+body .chat-name i:hover {
+ background-color:rgba(255,255,255,0.1)
+}
+body .chat-messages {
+ grid-area:messages;
+ background-color:rgba(255,255,255,0.05);
+ box-sizing:border-box;
+ display:flex;
+ flex-direction:column-reverse;
+ padding:0.5rem;
+ overflow-wrap:break-word
+}
+body .chat-messages .entry {
+ margin-top:1rem
+}
+body .chat-messages .entry a,
+body .chat-messages .entry a:visited {
+ display:inline-block;
+ vertical-align:middle
+}
+body .chat-messages .entry a:hover img,
+body .chat-messages .entry a:visited:hover img {
+ opacity:1
+}
+body .chat-messages .entry a img,
+body .chat-messages .entry a:visited img {
+ opacity:0.5;
+ margin-left:0.5rem
+}
+body .chat-messages .entry .time,
+body .chat-messages .entry .name {
+ font-size:0.9rem
+}
+body .chat-messages .entry .time {
+ opacity:0.5
+}
+body .chat-messages .entry .system {
+ color:#3f0;
+ font-weight:bold;
+ text-shadow:0 0 0.5rem #3f0
+}
+body .chat-send {
+ grid-area:send
+}
+body .chat-send i:hover {
+ background-color:#093
+}
+h1 {
+ font-size:3rem
+}
+footer {
+ display:flex;
+ flex-direction:row;
+ justify-content:center;
+ padding:2rem
+}
+footer .item {
+ margin-right:2rem
+}
+footer .item:last-child {
+ margin-right:0
+}
+.logo {
+ font-size:1.5rem;
+ font-weight:bold
+}
+.logo a:hover .iogames,
+.logo a:visited:hover .iogames {
+ text-shadow:0 0 0.5rem rgba(255,255,255,0.9)
+}
+.logo a:hover .fun,
+.logo a:visited:hover .fun {
+ text-shadow:0 0 0.5rem #fc0
+}
+.logo a .iogames,
+.logo a:visited .iogames {
+ color:rgba(255,255,255,0.9)
+}
+.logo a .fun,
+.logo a:visited .fun {
+ color:#fc0
+}
+.paginator {
+ display:flex;
+ justify-content:center;
+ margin:2rem 0
+}
+.paginator .item {
+ margin-right:1rem
+}
+.paginator .item:last-child {
+ margin-right:0
+}
+.paginator .page,
+.paginator .current {
+ border-radius:100%;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ font-size:1.5rem;
+ width:3.25rem;
+ height:3.25rem
+}
+.paginator .page {
+ background-color:rgba(255,255,255,0.1)
+}
+.paginator .page:hover {
+ background-color:#093
+}
+.paginator .current {
+ background-color:rgba(255,255,255,0.9);
+ color:#000
+}
+.featured {
+ height:400px
+}
+.featured .container {
+ height:0
+}
+.featured .container .item {
+ color:#fff;
+ font-weight:bold;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ justify-content:space-around;
+ text-align:center;
+ white-space:nowrap;
+ height:400px
+}
+.featured .container .item.hide {
+ display:none
+}
+.featured .container .item h2 {
+ font-size:5rem;
+ margin-bottom:1rem;
+ text-shadow:0 0 0.5rem #000
+}
+.featured .container .item .params,
+.featured .container .item .pages {
+ display:flex;
+ flex-direction:row;
+ justify-content:center
+}
+.featured .container .item .params {
+ font-size:1.25rem;
+ text-shadow:0 0 0.5rem #000
+}
+.featured .container .item .params .rating,
+.featured .container .item .params .icon-value {
+ margin-right:2rem
+}
+.featured .container .item .params .rating:last-child,
+.featured .container .item .params .icon-value:last-child {
+ margin-right:0
+}
+.featured .container .item a.button,
+.featured .container .item a.button:visited {
+ background-color:rgba(0,221,255,0.75);
+ border-radius:5rem;
+ display:block;
+ font-size:3rem;
+ padding:0.5rem 3rem
+}
+.featured .container .item a.button:hover,
+.featured .container .item a.button:visited:hover {
+ background-color:#0df;
+ box-shadow:0 0 1rem #0df
+}
+.featured .container .item .pages {
+ align-self:flex-end;
+ margin:0 2rem
+}
+.featured .container .item .pages .page {
+ margin-right:1rem
+}
+.featured .container .item .pages .page:last-child {
+ margin-right:0
+}
+.featured .container .item .pages .page .far {
+ opacity:0.5
+}
+.featured .container .item .pages .page .far:hover {
+ opacity:1
+}
+.layer {
+ background-color:rgba(0,0,0,0.85);
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ position:fixed;
+ left:0;
+ top:0;
+ width:100%;
+ height:100%;
+ z-index:16000000
+}
+.layer .layer-window {
+ background-color:#000;
+ border-radius:1em;
+ box-shadow:0 0 1em #000;
+ display:inline-block;
+ position:fixed;
+ min-width:700px;
+ max-width:900px;
+ width:100%
+}
+.layer .layer-window iframe {
+ border:none;
+ border-radius:1em;
+ width:100%;
+ height:100%
+}
+.layer .window-signin {
+ height:275px
+}
+.layer .window-account {
+ height:424px
+}
+.layer .window-top {
+ top:2em;
+ height:calc(100% - 4em)
+}
+.tiles {
+ display:grid;
+ grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+ grid-gap:1rem;
+ list-style-type:none;
+ margin:0;
+ padding:0
+}
+.tiles li {
+ margin:0;
+ padding:0
+}
+.tiles li a {
+ background-color:rgba(255,255,255,0.1);
+ border-radius:0.5rem;
+ box-shadow:0 0 0.5rem rgba(0,0,0,0.25);
+ display:flex;
+ flex-direction:column;
+ padding:0.5rem
+}
+.tiles li a:hover {
+ background-color:#093
+}
+.tiles li a:hover .info .online {
+ color:rgba(255,255,255,0.9)
+}
+.tiles li a .item {
+ margin-bottom:0.5rem
+}
+.tiles li a .item:last-child {
+ margin-bottom:0
+}
+.tiles li a .image {
+ border-radius:0.5rem;
+ height:150px
+}
+.tiles li a .info {
+ color:rgba(255,255,255,0.5);
+ display:flex;
+ flex-direction:row;
+ font-size:0.8rem
+}
+.tiles li a .info .info-item {
+ margin-right:0.75rem
+}
+.tiles li a .info .info-item:last-child {
+ margin-right:0
+}
+.tiles li a .info .online {
+ flex-grow:1;
+ color:#093;
+ text-align:right
+}
+.admin {
+ grid-template-areas:"nav nav" "sidebar top" "sidebar main";
+ grid-template-columns:auto 1fr;
+ grid-template-rows:auto auto 1fr
+}
+.admin nav {
+ grid-area:nav;
+ background-color:rgba(255,255,255,0.1);
+ padding:2rem
+}
+.admin aside {
+ grid-area:sidebar;
+ background-color:rgba(255,255,255,0.05);
+ padding:2rem
+}
+.admin .top {
+ grid-area:top;
+ background-color:rgba(255,255,255,0.05);
+ margin:0.5rem 0.5rem 0 0.5rem;
+ padding:1.5rem
+}
+.admin main {
+ grid-area:main;
+ background-color:rgba(255,255,255,0.05);
+ margin:0.5rem;
+ padding:1.5rem
+}
+.admin .disabled {
+ opacity:0.5
+}
+.admin .table {
+ white-space:nowrap
+}
+.admin .table tr:hover td {
+ background-color:rgba(255,255,255,0.05)
+}
+.admin .table td {
+ text-align:left;
+ padding:0.5rem
+}
+.admin .thumb {
+ border-radius:100%;
+ width:50px;
+ height:50px
+}
