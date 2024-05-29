@@ -553,7 +553,6 @@ body aside {
 body .main {
  grid-area:main;
  display:flex;
- flex-direction:column
 }
 body .main main {
  flex-grow:1
