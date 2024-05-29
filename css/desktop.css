@@ -553,6 +553,7 @@ body aside {
 body .main {
  grid-area:main;
  display:flex;
+ flex-direction: none;
 }
 body .main main {
  flex-grow:1
@@ -695,6 +696,7 @@ footer {
  display:flex;
  flex-direction:row;
  justify-content:center;
+ padding: 0rem;
 }
 footer .item {
  margin-right:2rem
