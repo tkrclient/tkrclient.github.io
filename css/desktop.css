@@ -496,8 +496,8 @@ body nav {
  background-color:rgba(255,255,255,0.05);
  border-bottom:1px solid rgba(0,0,0,0.25);
  display:grid;
- grid-template-areas:"logo menu lang";
- grid-template-columns:1fr 3fr 2fr;
+ /*grid-template-areas:"logo menu lang";*/
+ /*grid-template-columns:1fr 3fr 2fr;*/
  align-items:center
 }
 body nav .logo {
