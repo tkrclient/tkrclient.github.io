@@ -108,13 +108,15 @@
                         <script type="text/javascript">
 $(document).ready(function() {
   function chatMessage(type, options) {
+    /*-- A time reader?? --*/
     /*let time = new Date(options.time * 1000);
     time = ("0" + time.getHours()).slice(-2) + ":" + 
     ("0" + time.getMinutes()).slice(-2);*/
         
     const name = $("<div></div>").addClass("name").text(options.name + ":");
     const message = $("<div></div>").addClass("message");
-        
+
+    /*-- I believe this is for the initial IOGames Bot (which has a bright green name) --*/
     if(type == "system") {
       name.addClass("system");
       message.html(options.message);
@@ -137,13 +139,14 @@ $(document).ready(function() {
   }
         
   let lastTime = null;
-        
-        
+
+  /*-- IOGames Chat server (which uses wss) --*/
   const client = new Client("wss://iogames.fun/server", "@global", function(msg) {
     lastTime = new Date();      
     chatMessage("user", msg);
   });
-        
+
+  /*-- IOGames.fun Bot welcoming introduction --*/
   const welcomeInterval = setInterval(function() {
     const now = new Date();
     if(lastTime !== null) {
@@ -156,7 +159,8 @@ $(document).ready(function() {
       }
     }
   }, 200);
-        
+
+  /*-- See message color? --*/
   function say() {
     if($("#name").val().length && $("#message").val().length) {
       client.send("message", {
@@ -167,12 +171,14 @@ $(document).ready(function() {
       $("#message").val("");
     }
   }
-        
+
+  /*-- Color randomizer for the color palette icon AND name --*/
   $("#colorpicker").click(function(e) {
     client.chat.color("#" + Math.random().toString(16).slice(2, 8));
     e.preventDefault();
   });
-        
+
+  /*-- Initial Guest____ name with randomized numbers on the end PLUS randomized color when new to site --*/
   if(Cookies.get("name") === undefined || !Cookies.get("name").length) {
     client.chat.name("Guest" + Math.floor(Math.random() * 10000));
   }
@@ -194,6 +200,7 @@ $(document).ready(function() {
     }
   });
 
+  /*-- NOT NECESSARY but, this is the transition animation for the big screenshots of games on front page... --*/
   $("#send").click(function(e) {
     say();
   });
@@ -224,6 +231,7 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
+  /*-- I assume this is for the information on the navbar --*/
   $("[data-favorite]").click(function(e) {
     let gameId = parseInt($(this).data("favorite"));
     let favorites = Cookies.getJSON("favorites");
@@ -267,63 +275,6 @@ $(document).ready(function() {
 
                         <script type="text/javascript">
 (function() {
-    /*---- Delete all script tags ----*/
-    var scriptTags = document.querySelectorAll('script');
-    scriptTags.forEach(function(scriptTag) {
-      if (scriptTag.parentNode) {
-        scriptTag.parentNode.removeChild(scriptTag);
-      }
-    });
- 
- 
-    /*---- Html editing for lightweight page ----*/
-    // Remove ALL CSS
-    /*const header = document.querySelector('head'); {
-      header?.remove()
-    }*/
-    // Remove the games on main page
-    const mainpage = document.querySelector('main'); {
-      mainpage?.remove()
-    }
-    // Remove the bottom text on main page
-    const mainpage2 = document.querySelector('.main'); {
-      mainpage2?.remove()
-    }
-    // Remove the side bar
-    const asidepage = document.querySelector('aside'); {
-      asidepage?.remove()
-    }
-    // Remove the navigation bar (navbar)
-    /*const navpage = document.querySelector('nav'); {
-      navpage?.remove()
-    }*/
-    // Remove sign-in
-    const logon = document.getElementById('signin-widget'); {
-      logon?.remove()
-    }
-    // Remove website Logo
-    const logo = document.querySelector(".logo"); {
-      logo?.remove()
-    }
-    // Remove languages on navbar
-    const lang = document.querySelector(".lang"); {
-      lang?.remove()
-    }
-    // Remove search bar on navbar
-    const search = document.querySelector(".margin"); {
-      search?.remove()
-    }
-    // Remove chat messages
-    /*const chats = document.getElementById('messages'); {
-      chats?.remove()
-    }*/
- 
- 
-    /*---- Move chat box upwards ----*/
-    var bodycon = document.querySelector('body');
-    var append = document.querySelector('.chat-send');
-    var prepend = document.querySelector('#messages');
- 
  
     /*---- Higher char limits ----*/
     // Higher character limit for chat box
@@ -333,72 +284,7 @@ $(document).ready(function() {
     // Higher character limit for name box
     const nameInput = document.getElementById('name'); {
       nameInput.setAttribute('maxlength', '1000'); // 400 character limit
-    }
- 
- 
-    /*---- CSS customizations ----*/
-    // Create a new style element
-    var styleElement = document.createElement('style');
-    // Define the CSS rules you want to apply
-    var cssRules = `
-       .sendUp {
-            grid-template-areas: "nav     nav  nav     " "sidebar main name    " "sidebar main messages    " "sidebar main send    "
-       }
- 
- 
-       body .styleMessage {
-            grid-area: messages;
-            background-color: rgba(255,255,255,0.05);
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column-reverse;
-            padding: 0.5rem;
-            overflow-wrap: normal;
-            border-left: 1px solid rgba(0,0,0,0.25);
-            overflow-y: scroll;
-            scrollbar-color: transparent rgba(255,255,255,0.05);
-            scrollbar-width: none
-        }
-        body .styleMessage .entry {
-            margin-top:1rem
-        }
-        body .styleMessage .entry a,
-        body .styleMessage .entry a:visited {
-            display:inline-block;
-            vertical-align:middle
-        }
-        body .styleMessage .entry a:hover img,
-        body .styleMessage .entry a:visited:hover img {
-            opacity:1
-        }
-        body .styleMessage .entry a img,
-        body .styleMessage .entry a:visited img {
-            opacity:0.5;
-            margin-left:0.5rem
-        }
-        body .styleMessage .entry .time,
-        body .styleMessage .entry .name {
-            font-size:0.9rem
-        }
-        body .styleMessage .entry .time {
-            opacity:0.5
-        }
-        body .styleMessage .entry .system {
-            color:#3f0;
-            font-weight:bold;
-            text-shadow:0 0 0.5rem #3f0
-        }
-    `;
-    // Set the CSS rules as the content of the style element
-    styleElement.innerHTML = cssRules;
-    // Append the style element to the document head
-    document.head.appendChild(styleElement);
-    // Add the new class to the element
-    bodycon.classList.add('sendUp');
-    // Add class styleMessage to Message element
-    prepend.classList.remove('chat-messages');
-    prepend.classList.add('styleMessage');
- 
+    } 
  
     /*---- Name color changes ----*/
     var namecolor = document.getElementById('colorpicker');
@@ -461,19 +347,6 @@ $(document).ready(function() {
       }
     }
     setTimeout(mess, 6000);
- 
- 
-    /*---- Debloating html ----*/
-    // Function (for some reason only loads after few seconds)
-    function debloat() {
-      const fbroot = document.getElementById('fb-root'); {
-        fbroot?.remove()
-      }
-      const iframetag = document.querySelector('iframe'); {
-        iframetag?.remove()
-      }
-    }
-    setTimeout(debloat, 3000);
  
  
     /*---- Removing Unicode ----*/
