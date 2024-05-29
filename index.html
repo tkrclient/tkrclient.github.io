@@ -391,4 +391,197 @@
     <i id="send" class="fa fa-lg fa-paper-plane"></i>
 </div>
 
+            <script type="text/javascript">
+                $(document).ready(function()
+                {
+                    function chatMessage(type, options)
+{
+    /*let time = new Date(options.time * 1000);
+    time = ("0" + time.getHours()).slice(-2) + ":" + 
+           ("0" + time.getMinutes()).slice(-2);*/
+
+    const name = $("<div></div>").addClass("name").text(options.name + ":");
+    const message = $("<div></div>").addClass("message");
+
+    if(type == "system")
+    {
+        name.addClass("system");
+        message.html(options.message);
+    }
+    else
+    {
+        name.css({color : options.color});
+        message.text(options.message);
+    }
+
+    let entry = $("<div></div>")
+        .addClass("entry")
+        .append(name)
+        .append(message);
+
+    $("#messages").prepend(entry);
+
+    while($("#messages .entry").length > 50)
+    {
+        $("#messages .entry").last().remove();
+    }
+}
+
+let lastTime = null;
+
+
+const client = new Client("wss://iogames.fun/server", "@global", function(msg)
+{
+    lastTime = new Date();
+
+    chatMessage("user", msg);
+});
+
+
+const welcomeInterval = setInterval(function()
+{
+    const now = new Date();
+
+    if(lastTime !== null)
+    {
+        if(now - lastTime > 1000)
+        {
+            clearInterval(welcomeInterval);
+            chatMessage("system",
+            {
+                name : "iogames.fun",
+                message : 'Thank you for using IOGames.fun Backup! Below the Games you can see a alternative chat if this one is being spammed or is uncomfortable. </a>'
+            });
+        }
+    }
+}, 200);
+
+function say()
+{
+    if($("#name").val().length && $("#message").val().length)
+    {
+        client.send("message",
+        {
+            name : $("#name").val(),
+            color : $("#colorpicker").css("color"),
+            message : $("#message").val()
+        });
+        $("#message").val("");
+    }
+}
+
+$("#colorpicker").click(function(e)
+{
+    client.chat.color("#" + Math.random().toString(16).slice(2, 8));
+    e.preventDefault();
+});
+
+if(Cookies.get("name") === undefined || !Cookies.get("name").length)
+{
+    client.chat.name("Guest" + Math.floor(Math.random() * 10000));
+}
+else
+{
+    client.chat.name(Cookies.get("name"));
+}
+
+if(Cookies.get("color") === undefined)
+{
+    client.chat.color("#" + Math.random().toString(16).slice(2, 8));
+}
+else
+{
+    client.chat.color(Cookies.get("color"));
+}
+
+$("#name").change(function()
+{
+    Cookies.set("name", $(this).val(), { expires : 3650 });
+});
+
+$("#message").keydown(function(e)
+{
+    if(e.which == 13)
+    {
+        say();
+    }
+});
+
+$("#send").click(function(e)
+{
+    say();
+});
+                    let featuredID = setInterval(function()
+                    {
+                        const featured = $(".featured .item:visible");
+                        featured.fadeOut("slow");
+                        $(featured.data("next")).fadeIn("slow");
+                    }, 7500);
+
+                    $("[data-featured]").click(function(e)
+                    {
+                        if(featuredID)
+                        {
+                            clearInterval(featuredID);
+                            featuredID = null;
+                        }
+
+                        $(".featured .item:visible").fadeOut("fast");
+                        $($(this).data("featured")).show().fadeIn("fast");
+                        e.preventDefault();
+                    });
+
+                    $(".checkbox").click(function()
+                    {
+                        $(this).toggleClass("checked");
+                    });
+
+                    $(".layer").click(function(e)
+                    {
+                        $(this).fadeOut("fast", function()
+                        {
+                            $(".layer iframe").remove();
+                        });
+                        e.preventDefault();
+                    });
+
+                    $("[data-favorite]").click(function(e)
+                    {
+                        let gameId = parseInt($(this).data("favorite"));
+
+                                                    let favorites = Cookies.getJSON("favorites");
+
+                            if($(this).hasClass("icon-toggle-active"))
+                            {
+                                if(favorites !== undefined)
+                                {
+                                    const index = favorites.indexOf(gameId);
+                                    if(index !== -1)
+                                    {
+                                        favorites.splice(index, 1);
+                                        Cookies.set("favorites", favorites, { expires: 3650 });
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if(favorites === undefined)
+                                {
+                                    favorites = [gameId];
+                                }
+                                else
+                                {
+                                    favorites.push(gameId);
+                                }
+                                Cookies.set("favorites", favorites, { expires: 3650 });
+                            }
+                        
+                        $(this).parent().find(".icon-toggle").toggleClass("hide");
+
+                        e.preventDefault();
+                    });
+
+                                    });
+            </script>
+
 </body></html>
