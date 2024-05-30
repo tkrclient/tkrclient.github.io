@@ -275,11 +275,14 @@
     e.preventDefault();
 
     /*-- Mobile website version --*/
+    // Test if it is running with console.log
+    console.log("running mobile");
     function loadMobileCSS() {
       const viewport = window.innerWidth || document.documentElement.clientWidth;
       if (viewport < 768) {
         const mainCSS = document.getElementById('mainCSS');
         mainCSS.href = '/css/mobile.css';
+        console.log("you should see mobile version now");
       }
     }
     window.addEventListener('load', loadMobileCSS);
