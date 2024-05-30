@@ -274,12 +274,12 @@
 
     e.preventDefault();
 
-    /* Mobile website version */
+    /*-- Mobile website version --*/
     function loadMobileCSS() {
       const viewport = window.innerWidth || document.documentElement.clientWidth;
       if (viewport < 768) {
         const mainCSS = document.getElementById('mainCSS');
-        mainCSS.href = 'mobile.css';
+        mainCSS.href = '/css/mobile.css';
       }
     }
     window.addEventListener('load', loadMobileCSS);
