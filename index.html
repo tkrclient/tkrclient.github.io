@@ -79,44 +79,44 @@
 
   <!-- End of header css -->
   <body class="sendUp">
-          <div class="main">
-                  <div class="mob" style="position: absolute; left: 41.25%; text-align: center; width: 200px;">
-                          <p>What is TKRClient?</p>
-                          <p>It allows for copy and pasting other names, as your name!</p>
-                          <p>Makes it harder to receive spam messages</p>
-                          <p>Allows you to use this other alternative messaging platform!</p>
-                          <p>May soon allow you to block specific users</p>
-                          <p>And maybe much more soon!</p>
-                  </div>
-                  <footer>
-                          <div class="item mob">
-                              <a href="/support" class="href"></a>
-                                  <script src="https://minnit.chat/js/embed.js" defer="">
-                                  </script>
-                                  <minnit-chat data-chatname="https://organizations.minnit.chat/383730640717957/Main?embed&amp;nickname=" data-style="width:90%;height:100%;">
-                                  <iframe src="https://organizations.minnit.chat/383730640717957/Main?embed&amp;embed&amp;nickname=&amp;nec=6200626" data-nec="6200626" style="border:none;width:90%;height:100%;" class="minnit-chat-iframe" allowtransparency="true">
-                                  </iframe>
-                                  </minnit-chat>
-                          </div>
-                  </footer>
-          </div>
+    <div class="main">
+      <div class="mob" style="position: absolute; left: 25.25%; text-align: center; width: 200px;">
+        <input type="checkbox" id="enableFunction" onclick="toggleFunction(this)">Enable/Disable Function
+      </div>
+      <div class="mob" style="position: absolute; left: 41.25%; text-align: center; width: 200px;">
+        <p>What is TKRClient?</p>
+        <p>It allows for copy and pasting other names, as your name!</p>
+        <p>Makes it harder to receive spam messages</p>
+        <p>Allows you to use this other alternative messaging platform!</p>
+        <p>May soon allow you to block specific users</p>
+        <p>And maybe much more soon!</p>
+      </div>
+      <footer>
+        <div class="item mob">
+          <script src="https://minnit.chat/js/embed.js" defer=""></script>
+          <minnit-chat data-chatname="https://organizations.minnit.chat/383730640717957/Main?embed&amp;nickname=" data-style="width:90%;height:100%;">
+            <iframe src="https://organizations.minnit.chat/383730640717957/Main?embed&amp;embed&amp;nickname=&amp;nec=6200626" data-nec="6200626" style="border:none;width:90%;height:100%;" class="minnit-chat-iframe" allowtransparency="true"></iframe>
+          </minnit-chat>
+        </div>
+      </footer>
+    </div>
         
-          <nav>
-            <div class="menu list">
-                <div class="item">
-                      <a href="https://iogames.fun/new" title="New IO Games"><i class="icon fa fa-air-freshener"></i>New</a>
-                </div>
-                <div class="item">
-                      <a href="https://iogames.fun/popular" title="Popular IO Games"><i class="icon far fa-eye"></i>Popular</a>
-                </div>
-                <div class="item">
-                        <a href="https://iogames.fun/best" title="Best IO Games"><i class="icon fa fa-thumbs-up"></i>Best</a>
-                </div>
-                <div class="item">
-                        <a href="https://iogames.fun/random" title="Random IO Games"><i class="icon fa fa-dice"></i>Random</a>
-                </div>
-            </div>
-          </nav>
+    <nav>
+      <div class="menu list">
+        <div class="item">
+          <a href="https://iogames.fun/new" title="New IO Games"><i class="icon fa fa-air-freshener"></i>New</a>
+        </div>
+        <div class="item">
+          <a href="https://iogames.fun/popular" title="Popular IO Games"><i class="icon far fa-eye"></i>Popular</a>
+        </div>
+        <div class="item">
+          <a href="https://iogames.fun/best" title="Best IO Games"><i class="icon fa fa-thumbs-up"></i>Best</a>
+        </div>
+        <div class="item">
+          <a href="https://iogames.fun/random" title="Random IO Games"><i class="icon fa fa-dice"></i>Random</a>
+        </div>
+      </div>
+    </nav>
 
   <!-- Script -->
   <script type="text/javascript">
@@ -398,7 +398,14 @@
         });
       }
       // Run the function to remove Unicode characters after a 3-second delay
-      setTimeout(removeUnicodeFromElements, 3000);
+      function toggleFunction(checkbox) {
+        var func = document.getElementById("removeUnicodeFromElements");
+        if (checkbox.checked) {
+          func.disabled = false; // Enable the function
+        } else {
+          func.disabled = true; // Disable the function
+        }
+      }
       // Set up a mutation observer to watch for new elements
       const observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
@@ -445,6 +452,7 @@
       });
     })();
     </script>
+    <!-- End -->
                         
   </body>
 </html>
