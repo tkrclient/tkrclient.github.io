@@ -77,228 +77,228 @@
     </style>
   </head>
 
-/* End of header css */
-<body class="sendUp">
-        <div class="main">
-                <div class="mob" style="position: absolute; left: 41.25%; text-align: center; width: 200px;">
-                        <p>What is TKRClient?</p>
-                        <p>It allows for copy and pasting other names, as your name!</p>
-                        <p>Makes it harder to receive spam messages</p>
-                        <p>Allows you to use this other alternative messaging platform!</p>
-                        <p>May soon allow you to block specific users</p>
-                        <p>And maybe much more soon!</p>
-                </div>
-                <footer>
-                        <div class="item mob">
-                            <a href="/support" class="href"></a>
-                                <script src="https://minnit.chat/js/embed.js" defer="">
-                                </script>
-                                <minnit-chat data-chatname="https://organizations.minnit.chat/383730640717957/Main?embed&amp;nickname=" data-style="width:90%;height:100%;">
-                                <iframe src="https://organizations.minnit.chat/383730640717957/Main?embed&amp;embed&amp;nickname=&amp;nec=6200626" data-nec="6200626" style="border:none;width:90%;height:100%;" class="minnit-chat-iframe" allowtransparency="true">
-                                </iframe>
-                                </minnit-chat>
-                        </div>
-                </footer>
-        </div>
-        
-        <nav>
-          <div class="menu list">
-              <div class="item">
-                    <a href="https://iogames.fun/new" title="New IO Games"><i class="icon fa fa-air-freshener"></i>New</a>
-              </div>
-              <div class="item">
-                    <a href="https://iogames.fun/popular" title="Popular IO Games"><i class="icon far fa-eye"></i>Popular</a>
-              </div>
-              <div class="item">
-                      <a href="https://iogames.fun/best" title="Best IO Games"><i class="icon fa fa-thumbs-up"></i>Best</a>
-              </div>
-              <div class="item">
-                      <a href="https://iogames.fun/random" title="Random IO Games"><i class="icon fa fa-dice"></i>Random</a>
-              </div>
+  /* End of header css */
+  <body class="sendUp">
+          <div class="main">
+                  <div class="mob" style="position: absolute; left: 41.25%; text-align: center; width: 200px;">
+                          <p>What is TKRClient?</p>
+                          <p>It allows for copy and pasting other names, as your name!</p>
+                          <p>Makes it harder to receive spam messages</p>
+                          <p>Allows you to use this other alternative messaging platform!</p>
+                          <p>May soon allow you to block specific users</p>
+                          <p>And maybe much more soon!</p>
+                  </div>
+                  <footer>
+                          <div class="item mob">
+                              <a href="/support" class="href"></a>
+                                  <script src="https://minnit.chat/js/embed.js" defer="">
+                                  </script>
+                                  <minnit-chat data-chatname="https://organizations.minnit.chat/383730640717957/Main?embed&amp;nickname=" data-style="width:90%;height:100%;">
+                                  <iframe src="https://organizations.minnit.chat/383730640717957/Main?embed&amp;embed&amp;nickname=&amp;nec=6200626" data-nec="6200626" style="border:none;width:90%;height:100%;" class="minnit-chat-iframe" allowtransparency="true">
+                                  </iframe>
+                                  </minnit-chat>
+                          </div>
+                  </footer>
           </div>
-        </nav>
+        
+          <nav>
+            <div class="menu list">
+                <div class="item">
+                      <a href="https://iogames.fun/new" title="New IO Games"><i class="icon fa fa-air-freshener"></i>New</a>
+                </div>
+                <div class="item">
+                      <a href="https://iogames.fun/popular" title="Popular IO Games"><i class="icon far fa-eye"></i>Popular</a>
+                </div>
+                <div class="item">
+                        <a href="https://iogames.fun/best" title="Best IO Games"><i class="icon fa fa-thumbs-up"></i>Best</a>
+                </div>
+                <div class="item">
+                        <a href="https://iogames.fun/random" title="Random IO Games"><i class="icon fa fa-dice"></i>Random</a>
+                </div>
+            </div>
+          </nav>
 
-/* Script */
-<script type="text/javascript">
-$(document).ready(function() {
-  //Console log to tell if iogames.fun is loading for you
-  console.log('Loading IOGames.fun chat...');
-  function chatMessage(type, options) {
-    /*-- I believe this collect your timezone AND date information --*/
-    /*let time = new Date(options.time * 1000);
-    time = ("0" + time.getHours()).slice(-2) + ":" + 
-    ("0" + time.getMinutes()).slice(-2);*/
+  /* Script */
+  <script type="text/javascript">
+  $(document).ready(function() {
+    //Console log to tell if iogames.fun is loading for you
+    console.log('Loading IOGames.fun chat...');
+    function chatMessage(type, options) {
+      /*-- I believe this collect your timezone AND date information --*/
+      /*let time = new Date(options.time * 1000);
+      time = ("0" + time.getHours()).slice(-2) + ":" + 
+      ("0" + time.getMinutes()).slice(-2);*/
         
-    const name = $("<div></div>").addClass("name").text(options.name + ":");
-    const message = $("<div></div>").addClass("message");
+      const name = $("<div></div>").addClass("name").text(options.name + ":");
+      const message = $("<div></div>").addClass("message");
 
-    /*-- I believe this is for the initial IOGames Bot (which has a bright green name) --*/
-    if(type == "system") {
-      name.addClass("system");
-      message.html(options.message);
-    }
-    else {
-      name.css({color : options.color});
-      message.text(options.message);
-    }
+      /*-- I believe this is for the initial IOGames Bot (which has a bright green name) --*/
+      if(type == "system") {
+        name.addClass("system");
+        message.html(options.message);
+      }
+      else {
+        name.css({color : options.color});
+        message.text(options.message);
+      }
         
-    let entry = $("<div></div>")
-    .addClass("entry")
-    .append(name)
-    .append(message);
+      let entry = $("<div></div>")
+      .addClass("entry")
+      .append(name)
+      .append(message);
         
-    $("#messages").prepend(entry);
+      $("#messages").prepend(entry);
         
-    while($("#messages .entry").length > 50) {
-        $("#messages .entry").last().remove();
-    }
-  }
-        
-  let lastTime = null;
-
-  /*-- IOGames Chat server (which uses wss) --*/
-  const client = new Client("wss://iogames.fun/server", "@global", function(msg) {
-    lastTime = new Date();      
-    chatMessage("user", msg);
-  });
-
-  /*-- IOGames.fun Bot welcoming introduction --*/
-  const welcomeInterval = setInterval(function() {
-    const now = new Date();
-    if(lastTime !== null) {
-      if(now - lastTime > 1000) {
-        clearInterval(welcomeInterval);
-        chatMessage("system", {
-          name : "iogames.fun",
-          message : 'Thank you for using TKRClient! On the left side you can see an alternative chat if this one is being spammed or is uncomfortable. </a>'
-        });
+      while($("#messages .entry").length > 50) {
+          $("#messages .entry").last().remove();
       }
     }
-  }, 200);
+        
+    let lastTime = null;
 
-  /*-- See message color? --*/
-  function say() {
-    if($("#name").val().length && $("#message").val().length) {
-      client.send("message", {
-        name : $("#name").val(),
-        color : $("#colorpicker").css("color"),
-        message : $("#message").val()
-      });
-      $("#message").val("");
-    }
-  }
-
-  /*-- Color randomizer for the color palette icon AND name --*/
-  $("#colorpicker").click(function(e) {
-    client.chat.color("#" + Math.random().toString(16).slice(2, 8));
-    e.preventDefault();
-  });
-
-  /*-- Initial Guest____ name with randomized numbers on the end PLUS randomized color when new to site --*/
-  if(Cookies.get("name") === undefined || !Cookies.get("name").length) {
-    client.chat.name("Guest" + Math.floor(Math.random() * 10000));
-  }
-  else {
-    client.chat.name(Cookies.get("name"));
-  }      
-  if(Cookies.get("color") === undefined) {
-    client.chat.color("#" + Math.random().toString(16).slice(2, 8));
-  }
-  else {
-    client.chat.color(Cookies.get("color"));
-  }
-  $("#name").change(function() {
-    Cookies.set("name", $(this).val(), { expires : 3650 });
-  });
-  $("#message").keydown(function(e) {
-    if(e.which == 13) {
-      say();
-    }
-  });
-
-  /*-- NOT NECESSARY but, this is the transition animation for the big screenshots of games on front page... --*/
-  $("#send").click(function(e) {
-    say();
-  });
-  let featuredID = setInterval(function() {
-    const featured = $(".featured .item:visible");
-    featured.fadeOut("slow");
-    $(featured.data("next")).fadeIn("slow");
-    }, 7500);
-
-  $("[data-featured]").click(function(e) {
-    if(featuredID) {
-      clearInterval(featuredID);
-      featuredID = null;
-    }
-    $(".featured .item:visible").fadeOut("fast");
-    $($(this).data("featured")).show().fadeIn("fast");
-    e.preventDefault();
-  });
-
-  $(".checkbox").click(function() {
-    $(this).toggleClass("checked");
-  });
-
-  $(".layer").click(function(e) {
-    $(this).fadeOut("fast", function() {
-      $(".layer iframe").remove();
+    /*-- IOGames Chat server (which uses wss) --*/
+    const client = new Client("wss://iogames.fun/server", "@global", function(msg) {
+      lastTime = new Date();      
+      chatMessage("user", msg);
     });
-    e.preventDefault();
-  });
 
-  /*-- I assume this is for the information on the navbar --*/
-  $("[data-favorite]").click(function(e) {
-    let gameId = parseInt($(this).data("favorite"));
-    let favorites = Cookies.getJSON("favorites");
-    if($(this).hasClass("icon-toggle-active")) {
-      if(favorites !== undefined) {
-        const index = favorites.indexOf(gameId);
-        if(index !== -1) {
-          favorites.splice(index, 1);
-          Cookies.set("favorites", favorites, { expires: 3650 });
+    /*-- IOGames.fun Bot welcoming introduction --*/
+    const welcomeInterval = setInterval(function() {
+      const now = new Date();
+      if(lastTime !== null) {
+        if(now - lastTime > 1000) {
+          clearInterval(welcomeInterval);
+          chatMessage("system", {
+            name : "iogames.fun",
+            message : 'Thank you for using TKRClient! On the left side you can see an alternative chat if this one is being spammed or is uncomfortable. </a>'
+          });
         }
       }
+    }, 200);
+
+    /*-- See message color? --*/
+    function say() {
+      if($("#name").val().length && $("#message").val().length) {
+        client.send("message", {
+          name : $("#name").val(),
+          color : $("#colorpicker").css("color"),
+          message : $("#message").val()
+        });
+        $("#message").val("");
+      }
     }
-  else {
-    if(favorites === undefined) {
-      favorites = [gameId];
+
+    /*-- Color randomizer for the color palette icon AND name --*/
+    $("#colorpicker").click(function(e) {
+      client.chat.color("#" + Math.random().toString(16).slice(2, 8));
+      e.preventDefault();
+    });
+
+    /*-- Initial Guest____ name with randomized numbers on the end PLUS randomized color when new to site --*/
+    if(Cookies.get("name") === undefined || !Cookies.get("name").length) {
+      client.chat.name("Guest" + Math.floor(Math.random() * 10000));
     }
     else {
-      favorites.push(gameId);
+      client.chat.name(Cookies.get("name"));
+    }      
+    if(Cookies.get("color") === undefined) {
+      client.chat.color("#" + Math.random().toString(16).slice(2, 8));
     }
-  Cookies.set("favorites", favorites, { expires: 3650 });
-  }
-
-  $(this).parent().find(".icon-toggle").toggleClass("hide");
-
-  e.preventDefault();
-
-  /* Mobile website version */
-  function loadMobileCSS() {
-    const viewport = window.innerWidth || document.documentElement.clientWidth;
-    if (viewport < 768) {
-      const mainCSS = document.getElementById('mainCSS');
-      mainCSS.href = 'mobile.css';
+    else {
+      client.chat.color(Cookies.get("color"));
     }
-  }
-  window.addEventListener('load', loadMobileCSS);
-  window.addEventListener('resize', loadMobileCSS);
+    $("#name").change(function() {
+      Cookies.set("name", $(this).val(), { expires : 3650 });
+    });
+    $("#message").keydown(function(e) {
+      if(e.which == 13) {
+        say();
+      }
+    });
+
+    /*-- NOT NECESSARY but, this is the transition animation for the big screenshots of games on front page... --*/
+    $("#send").click(function(e) {
+      say();
+    });
+    let featuredID = setInterval(function() {
+      const featured = $(".featured .item:visible");
+      featured.fadeOut("slow");
+      $(featured.data("next")).fadeIn("slow");
+      }, 7500);
+
+    $("[data-featured]").click(function(e) {
+      if(featuredID) {
+        clearInterval(featuredID);
+        featuredID = null;
+      }
+      $(".featured .item:visible").fadeOut("fast");
+      $($(this).data("featured")).show().fadeIn("fast");
+      e.preventDefault();
+    });
+
+    $(".checkbox").click(function() {
+      $(this).toggleClass("checked");
+    });
+
+    $(".layer").click(function(e) {
+      $(this).fadeOut("fast", function() {
+        $(".layer iframe").remove();
+      });
+      e.preventDefault();
+    });
+
+    /*-- I assume this is for the information on the navbar --*/
+    $("[data-favorite]").click(function(e) {
+      let gameId = parseInt($(this).data("favorite"));
+      let favorites = Cookies.getJSON("favorites");
+      if($(this).hasClass("icon-toggle-active")) {
+        if(favorites !== undefined) {
+          const index = favorites.indexOf(gameId);
+          if(index !== -1) {
+            favorites.splice(index, 1);
+            Cookies.set("favorites", favorites, { expires: 3650 });
+          }
+        }
+      }
+    else {
+      if(favorites === undefined) {
+        favorites = [gameId];
+      }
+      else {
+        favorites.push(gameId);
+      }
+    Cookies.set("favorites", favorites, { expires: 3650 });
+    }
+
+    $(this).parent().find(".icon-toggle").toggleClass("hide");  
+
+    e.preventDefault();
+
+    /* Mobile website version */
+    function loadMobileCSS() {
+      const viewport = window.innerWidth || document.documentElement.clientWidth;
+      if (viewport < 768) {
+        const mainCSS = document.getElementById('mainCSS');
+        mainCSS.href = 'mobile.css';
+      }
+    }
+    window.addEventListener('load', loadMobileCSS);
+    window.addEventListener('resize', loadMobileCSS);
+    });
   });
-});
-</script>
+  </script>
                         
-<div class="chat-name">
-  <input id="name" type="text" placeholder="Name" maxlength="1000">
-  <i id="colorpicker" class="fa fa-lg fa-palette" style="color: rgb(46, 117, 111);"></i>
-</div>
+  <div class="chat-name">
+    <input id="name" type="text" placeholder="Name" maxlength="1000">
+    <i id="colorpicker" class="fa fa-lg fa-palette" style="color: rgb(46, 117, 111);"></i>
+  </div>
 
-<div id="messages" class="styleMessage"></div>
+  <div id="messages" class="styleMessage"></div>
 
-<div class="chat-send">
-  <input id="message" type="text" placeholder="Message" maxlength="1000">
-  <i id="send" class="fa fa-lg fa-paper-plane"></i>
-</div>
+  <div class="chat-send">
+    <input id="message" type="text" placeholder="Message" maxlength="1000">
+    <i id="send" class="fa fa-lg fa-paper-plane"></i>
+  </div>
 
   /* Next script */
   <script type="text/javascript">
