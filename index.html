@@ -80,8 +80,8 @@
   <!-- End of header css -->
   <body class="sendUp">
     <div class="main">
-      <div class="mob" style="position: absolute; left: 25.25%; text-align: center; width: 200px;">
-        <input type="checkbox" id="enableFunction" onclick="toggleFunction(this)">Enable/Disable Function
+      <div class="mob" style="position: absolute; left: 23.25%; text-align: center; width: 200px;">
+        <input type="checkbox" id="enableFunction" onclick="toggleFunction(this)">On/Off Unicode Remover (Testing)
       </div>
       <div class="mob" style="position: absolute; left: 41.25%; text-align: center; width: 200px;">
         <p>What is TKRClient?</p>
@@ -402,8 +402,11 @@
         var func = document.getElementById("removeUnicodeFromElements");
         if (checkbox.checked) {
           func.disabled = false; // Enable the function
+          // Start observing the "#messages" element for changes after a 3-second delay
+          observer.observe(document.getElementById('messages'), { childList: true });
         } else {
           func.disabled = true; // Disable the function
+          observer.observe(document.getElementById('messages'), { childList: false });
         }
       }
       // Set up a mutation observer to watch for new elements
@@ -415,10 +418,6 @@
           }
         });
       });
-      // Start observing the "#messages" element for changes after a 3-second delay
-      setTimeout(function() {
-        observer.observe(document.getElementById('messages'), { childList: true });
-      }, 3000); 
 
         
       /* Keybindings for [ ] and \ to change colors */
