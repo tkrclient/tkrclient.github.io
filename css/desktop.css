@@ -31,18 +31,9 @@ label {
 }
 input[type=checkbox],
 input[type=radio] {
- display:block;
 }
 .checkbox,
 .radio {
- display:flex;
- justify-content:center;
- align-items:center;
- cursor:pointer;
- margin-right:0.5rem;
- vertical-align:middle;
- width:2rem;
- height:2rem
 }
 .checkbox:hover,
 .radio:hover {
