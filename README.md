@@ -8,6 +8,6 @@ did you guys know tkr client let's you block any person!!!!!1!! 🔥💯💯💯
 https://tkrclient.github.io OR http://funchat.mooo.com
 
 # Check on development of this website
-This is main website, but 
+Beta version of website, that has potentially newer features:
 
-github.com/tkrclient/testing
+github.com/Script14/tkrclient.github.io
