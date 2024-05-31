@@ -6,3 +6,7 @@ it has color picking names, click to copy names, reduce spamming from unicodes, 
 did you guys know tkr client let's you block any person!!!!!1!! 🔥💯💯💯🥵🥵🥵🥵🥵 🥶
 
 https://tkrclient.github.io OR http://funchat.mooo.com
+
+# Check on development of this website
+main branch = stable
+testing branch = testing 
