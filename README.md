@@ -12,4 +12,4 @@ Beta version of website, that has potentially newer features:
 
 https://github.com/script14/script14.github.io
 
-script14.github.io
+https://script14.github.io
