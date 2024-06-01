@@ -517,7 +517,7 @@ body .main .reviews iframe {
     height: 200px;
 }
 body .main .reviews .thumbs {
-    display: flex;
+<!--    display: flex; -->
     flex-direction: row;
     overflow-y: scroll;
     text-align: center;
@@ -533,6 +533,9 @@ body .main .reviews .thumbs .item img {
 }
 body .main .reviews .thumbs .item a:hover img {
     box-shadow: 0 0 0 2px #fc0;
+}
+.main {
+    display: none;
 }
 #chat,
 aside {
