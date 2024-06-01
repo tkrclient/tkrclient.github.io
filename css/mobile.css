@@ -1,5 +1,5 @@
 .mob {
-    z-index: -1
+    z-index: -1;
 }
 form {
     display: flex;
@@ -26,7 +26,7 @@ form .form-group:last-child {
     margin-bottom: 0;
 }
 .desktop {
- display: none
+ display: none;
 }
 label {
     display: block;
