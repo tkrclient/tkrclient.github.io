@@ -1,6 +1,9 @@
 .mob {
     z-index: -1;
 }
+.desktop {
+    display: none;
+}
 form {
     display: flex;
     flex-direction: column;
@@ -24,9 +27,6 @@ form .form-group {
 }
 form .form-group:last-child {
     margin-bottom: 0;
-}
-.desktop {
-    display: none;
 }
 label {
     display: block;
