@@ -173,26 +173,6 @@
       }
     });
 
-    /*-- NOT NECESSARY but, this is the transition animation for the big screenshots of games on front page... --*/
-    $("#send").click(function(e) {
-      say();
-    });
-    let featuredID = setInterval(function() {
-      const featured = $(".featured .item:visible");
-      featured.fadeOut("slow");
-      $(featured.data("next")).fadeIn("slow");
-      }, 7500);
-
-    $("[data-featured]").click(function(e) {
-      if(featuredID) {
-        clearInterval(featuredID);
-        featuredID = null;
-      }
-      $(".featured .item:visible").fadeOut("fast");
-      $($(this).data("featured")).show().fadeIn("fast");
-      e.preventDefault();
-    });
-
     $(".checkbox").click(function() {
       $(this).toggleClass("checked");
     });
@@ -253,7 +233,7 @@
     <i id="colorpicker" class="fa fa-lg fa-palette" style="color: rgb(46, 117, 111);"></i>
   </div>
 
-  <div id="messages" class="styleMessage"></div>
+  <div id="messages" class="chat-messages"></div>
 
   <div class="chat-send">
     <input id="message" type="text" placeholder="Message" maxlength="1000">
