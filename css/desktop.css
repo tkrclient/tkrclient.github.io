@@ -1,7 +1,12 @@
 /*reload*/
 @font-face {
  font-family: 'Exo 2';
-  url('/font/Exo2-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+ url('/font/Exo2-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@media screen and (max-width: 480px) {
+ nav {
+  display: none;
+ }
 }
 form {
  display:flex;
