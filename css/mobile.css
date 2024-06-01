@@ -4,9 +4,6 @@
 .desktop {
     display: none;
 }
-.mobile {
-    display: block;
-}
 form {
     display: flex;
     flex-direction: column;
