@@ -8,17 +8,11 @@
 .mobile {
  display: none;
 }
-.desktop {
- display: block;
-}
 form {
  display:flex;
  flex-direction:column;
  margin:0;
  padding:0
-}
-.mob {
-z-index: 1
 }
 form.form {
  background-color:rgba(255,255,255,0.05);
