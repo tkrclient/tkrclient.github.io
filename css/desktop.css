@@ -3,10 +3,10 @@
  url('/font/Exo2-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 .testing {
- display: none;
+ display: none
 }
 .mobile {
- display: none;
+ display: none
 }
 form {
  display:flex;
