@@ -4,7 +4,7 @@
 .testing {
     display: none
 }
-#colorpicker .fa .fa-lg .fa-palette {
+#colorpicker {
     position: absolute;
     top: 6.5%; 
     right: 1%;
@@ -320,7 +320,7 @@ article section.viewport {
 .grow-1 {
     flex-grow: 1;
 }
-.fa .fa-lg .fa-paper-plane {
+.fa-paper-plane {
     position:absolute;
     bottom: 1%; 
     right:1%;
