@@ -7,6 +7,21 @@
 .desktop {
     display: none
 }
+.explain {
+    position: absolute;
+    display: none;
+    left: 50%; 
+    text-align: center; 
+    width: 100px;
+}
+.commands {
+    position: absolute;
+    display: none;
+    top: 100%
+    left: 50%; 
+    text-align: center; 
+    width: 100px;
+}
 form {
     display: flex;
     flex-direction: column;
