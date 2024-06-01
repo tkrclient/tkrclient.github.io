@@ -315,6 +315,11 @@ article section.viewport {
 .grow-1 {
     flex-grow: 1;
 }
+.fa .fa-lg .fa-paper-plane {
+    position:absolute;
+    bottom: 1%; 
+    right:1%;
+}
 .fa.fa-star,
 .fa.fa-star-half-alt {
     color: #fc0 !important;
