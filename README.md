@@ -10,4 +10,5 @@ https://tkrclient.github.io OR http://funchat.mooo.com
 # Check on development of this website
 Beta version of website, that has potentially newer features:
 
-github.com/script14/script14.github.io
+https://github.com/script14/script14.github.io
+script14.github.io
