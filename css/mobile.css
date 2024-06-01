@@ -642,13 +642,11 @@ aside.active {
     text-shadow: 0 0 0.5rem #3f0;
 }
 .chat-messages {
-<!--    grid-area: messages; -->
     height: 100%;
     display: flex;
     flex-direction: column-reverse;
     overflow-y: scroll;
-<!--    padding: 0.5rem; -->
-<!--    word-break: break-all; -->
+    padding: 0.5rem;
 }
 #chat .chat-send {
     grid-area: send;
