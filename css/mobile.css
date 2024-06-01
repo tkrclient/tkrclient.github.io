@@ -22,6 +22,9 @@
     text-align: center; 
     width: 100px;
 }
+.minnit {
+    display: none;
+}
 form {
     display: flex;
     flex-direction: column;
