@@ -4,6 +4,11 @@
 .testing {
     display: none
 }
+#colorpicker .fa .fa-lg .fa-palette {
+    position: absolute;
+    top: 6.5%; 
+    right: 1%;
+}
 .desktop {
     display: none
 }
