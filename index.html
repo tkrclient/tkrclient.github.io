@@ -81,10 +81,6 @@
     //Console log to tell if iogames.fun is loading for you
     console.log('Loading IOGames.fun chat...');
     function chatMessage(type, options) {
-      /*-- I believe this collect your timezone AND date information --*/
-      /*let time = new Date(options.time * 1000);
-      time = ("0" + time.getHours()).slice(-2) + ":" + 
-      ("0" + time.getMinutes()).slice(-2);*/
         
       const name = $("<div></div>").addClass("name").text(options.name + ":");
       const message = $("<div></div>").addClass("message");
