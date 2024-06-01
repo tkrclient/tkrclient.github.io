@@ -1,7 +1,7 @@
 # tkrclient.github.io
 Website for TKRClient - built for iogames.fun website
 
-TKRClient is a more fully featured front end for the website iogames.fun, which is focused on mainly the chatting aspect
+TKRClient is a more fully-featured chatting front end:
 
 it has color picking names, click to copy names, reduce spamming from unicodes, disasble text wrapping to also reduce spam, and it has AN EXTRA BACKUP CHAT!
 
