@@ -2,14 +2,20 @@
  font-family: 'Exo 2';
  url('/font/Exo2-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
+.testing {
+ display: none;
+}
+.mobile {
+ display: none;
+}
+.desktop {
+ display: block;
+}
 form {
  display:flex;
  flex-direction:column;
  margin:0;
  padding:0
-}
-.mobile {
- display: none
 }
 .mob {
 z-index: 1
