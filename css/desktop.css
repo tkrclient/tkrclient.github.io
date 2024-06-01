@@ -1,10 +1,6 @@
-/*reload*/
 @font-face {
  font-family: 'Exo 2';
  url('/font/Exo2-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
-}
-.mobile {
- display: none;
 }
 form {
  display:flex;
@@ -12,8 +8,11 @@ form {
  margin:0;
  padding:0
 }
+.mobile {
+ display: none
+}
 .mob {
-z-index: 1;
+z-index: 1
 }
 form.form {
  background-color:rgba(255,255,255,0.05);
