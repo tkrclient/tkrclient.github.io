@@ -11,6 +11,18 @@
 .mobile {
  display: none
 }
+.explain {
+ position: absolute; 
+ left: 41.25%; 
+ text-align: center; 
+ width: 200px;
+}
+.commands {
+ position: absolute; 
+ left: 25%; 
+ text-align: center; 
+ width: 150px;
+}
 form {
  display:flex;
  flex-direction:column;
