@@ -620,6 +620,9 @@ aside.active {
 #chat .chat-messages .entry {
     margin-top: 1rem;
 }
+.entry {
+    margin-top: 1rem;
+}
 #chat .chat-messages .entry a,
 #chat .chat-messages .entry a:visited {
     display: inline-block;
