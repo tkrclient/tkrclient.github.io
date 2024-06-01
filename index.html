@@ -219,24 +219,10 @@
     $(this).parent().find(".icon-toggle").toggleClass("hide");  
 
     e.preventDefault();
-
-    /*-- Mobile website version --*/
-    // Test if it is running with console.log
-    console.log("running mobile");
-    function loadMobileCSS() {
-      const viewport = window.innerWidth || document.documentElement.clientWidth;
-      if (viewport < 768) {
-        const mainCSS = document.getElementById('mainCSS');
-        mainCSS.href = '/css/mobile.css';
-        console.log("you should see mobile version now");
-      }
-    }
-    window.addEventListener('load', loadMobileCSS);
-    window.addEventListener('resize', loadMobileCSS);
     });
   });
   </script>
-  <!-- End ------------------------------------->
+  <!-- End ------------------->
                         
   <div class="chat-name">
     <input id="name" type="text" placeholder="Name" maxlength="1000">
@@ -250,7 +236,7 @@
     <i id="send" class="fa fa-lg fa-paper-plane"></i>
   </div>
 
-  <!-- Next script ------------------------------>
+  <!-- Script ---------------->
   <script type="text/javascript">
   (function() {
  
@@ -398,7 +384,7 @@
       });
     })();
     </script>
-    <!-- End ----------------------->
+    <!-- End ------------------->
                         
   </body>
 </html>
