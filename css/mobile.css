@@ -25,6 +25,9 @@ form .form-group {
 form .form-group:last-child {
     margin-bottom: 0;
 }
+.desktop {
+ display: none
+}
 label {
     display: block;
     font-size: 0.9rem;
