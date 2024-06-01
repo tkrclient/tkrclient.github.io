@@ -1,8 +1,14 @@
 .mob {
     z-index: -1;
 }
+.testing {
+    display: none;
+}
 .desktop {
     display: none;
+}
+.mobile {
+    display: block;
 }
 form {
     display: flex;
