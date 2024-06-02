@@ -147,6 +147,7 @@ input[type="text"],
 select {
     max-width: 400px;
     height: 45px;
+    border-radius: 0;
 }
 textarea {
     line-height: 1.5em;
