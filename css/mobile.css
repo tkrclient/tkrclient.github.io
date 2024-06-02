@@ -645,7 +645,7 @@ aside.active {
     text-shadow: 0 0 0.5rem #3f0;
 }
 .chat-messages {
-    height: 96%;
+    height: 94%;
     display: flex;
     flex-direction: column-reverse;
     overflow-y: scroll;
