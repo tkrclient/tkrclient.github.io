@@ -146,6 +146,7 @@ textarea::placeholder {
 input[type="text"],
 select {
     max-width: 400px;
+    height: 45px;
 }
 textarea {
     line-height: 1.5em;
