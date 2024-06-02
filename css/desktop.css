@@ -694,6 +694,11 @@ body .chat-messages .entry .system {
  font-weight:bold;
  text-shadow:0 0 0.5rem #3f0
 }
+.system {
+ color:#3f0;
+ font-weight:bold;
+ text-shadow:0 0 0.5rem #3f0
+}
 body .chat-send {
  grid-area:send
 }
