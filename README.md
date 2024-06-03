@@ -16,3 +16,9 @@ https://script14.github.io
 
 Test website github:
 https://github.com/script14/script14.github.io
+
+# ideas
+socket.io
+cbox 
+minnit chat
+iogames.fun
