@@ -16,3 +16,14 @@ https://script14.github.io
 
 Test website github:
 https://github.com/script14/script14.github.io
+
+# ideas
+socket.io <br>
+cbox <br>
+minnit chat <br>
+iogames.fun <br>
+kiwi irc?
+
+# please debug with me
+https://webchat.freenode.net/ <br>
+CHANNEL: #tkrclient

@@ -30,7 +30,7 @@ $(document).ready(function() {
       
   let lastTime = null;
 
-  /*-- IOGames Chat server (which uses wss) --*/
+  /*-- IOGames Chat server (which uses wss websockets, which reminds me of socket.io) --*/
   const client = new Client("wss://iogames.fun/server", "@global", function(msg) {
     lastTime = new Date();      
     chatMessage("user", msg);
