@@ -657,12 +657,13 @@ body .chat-name i:hover {
  background-color:rgba(255,255,255,0.1)
 }
 body .chat-messages {
- grid-area:messages;
- background-color:rgba(255,255,255,0.05);
- box-sizing:border-box;
- display:flex;
- flex-direction:column-reverse;
- padding:0.5rem;
+ grid-area: messages;
+ background-color: rgba(255,255,255,0.05);
+ box-sizing: border-box;
+ display: flex;
+ flex-direction: column-reverse;
+ padding: 0.5rem;
+ overflow-wrap: none;
 }
 body .chat-messages .entry {
  margin-top:1rem
