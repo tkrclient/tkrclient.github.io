@@ -663,7 +663,6 @@ body .chat-messages {
  display:flex;
  flex-direction:column-reverse;
  padding:0.5rem;
- overflow-wrap:break-word
 }
 body .chat-messages .entry {
  margin-top:1rem
