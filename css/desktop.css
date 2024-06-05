@@ -494,7 +494,7 @@ body aside::-webkit-scrollbar-thumb,
 body .main::-webkit-scrollbar-thumb,
 body .chat-messages::-webkit-scrollbar-thumb,
 .admin main::-webkit-scrollbar-thumb {
- background-color:rgba(255,255,255,0.05)
+ background-color: #292929;
 }
 body {
  display:grid;
@@ -628,7 +628,7 @@ body .chat-send {
  grid-template-areas:"input button";
  grid-template-columns:1fr auto;
  align-items:center;
- background-color:rgba(255,255,255,0.1)
+ background-color: #343434;
 }
 body .chat-name input[type=text],
 body .chat-send input[type=text] {
@@ -642,7 +642,7 @@ body .chat-send input[type=text] {
 }
 body .chat-name input[type=text]:focus,
 body .chat-send input[type=text]:focus {
- background-color:rgba(0,153,51,0.25)
+ background-color: #163c23;
 }
 body .chat-name i,
 body .chat-send i {
@@ -658,7 +658,7 @@ body .chat-name i:hover {
 }
 body .chat-messages {
  grid-area: messages;
- background-color: rgba(255,255,255,0.05);
+ background-color: #292929;
  box-sizing: border-box;
  display: flex;
  flex-direction: column-reverse;
