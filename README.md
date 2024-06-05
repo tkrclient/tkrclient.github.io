@@ -24,6 +24,6 @@ minnit chat <br>
 iogames.fun <br>
 kiwi irc?
 
-# please debug with me
+# please debug with me lorenzino 
 https://webchat.freenode.net/ <br>
 CHANNEL: #tkrclient
