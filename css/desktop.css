@@ -16,12 +16,20 @@
  left: 41.25%; 
  text-align: center; 
  width: 200px;
+ z-index: -10;
 }
 .commands {
  position: absolute; 
  left: 25%; 
  text-align: center; 
  width: 150px;
+ z-index: -10;
+}
+.foot {
+ bottom: 2%;
+ left: 40%;
+ position: absolute;
+ z-index: -10;
 }
 form {
  display:flex;
@@ -629,6 +637,7 @@ body .chat-send {
  grid-template-columns:1fr auto;
  align-items:center;
  background-color: #343434;
+ z-index: 10;
 }
 body .chat-name input[type=text],
 body .chat-send input[type=text] {
@@ -638,23 +647,28 @@ body .chat-send input[type=text] {
  border-radius:0;
  padding:0 0.5rem;
  height:100%;
- min-width:auto
+ min-width:auto;
+ z-index: 10;
 }
 body .chat-name input[type=text]:focus,
 body .chat-send input[type=text]:focus {
  background-color: #163c23;
+ z-index: 10;
 }
 body .chat-name i,
 body .chat-send i {
  grid-area:button;
  cursor:pointer;
- padding:1rem
+ padding: 1rem;
+ z-index: 10;
 }
 body .chat-name {
- grid-area:name
+ grid-area:name;
+ z-index: 10;
 }
 body .chat-name i:hover {
- background-color:rgba(255,255,255,0.1)
+ background-color:rgba(255,255,255,0.1);
+ z-index: 10;
 }
 body .chat-messages {
  grid-area: messages;
@@ -664,40 +678,49 @@ body .chat-messages {
  flex-direction: column-reverse;
  padding: 0.5rem;
  overflow-wrap: none;
+ z-index: 10;
 }
 body .chat-messages .entry {
- margin-top:1rem
+ margin-top:1rem;
+ z-index: 10;
 }
 body .chat-messages .entry a,
 body .chat-messages .entry a:visited {
  display:inline-block;
- vertical-align:middle
+ vertical-align:middle;
+ z-index: 10;
 }
 body .chat-messages .entry a:hover img,
 body .chat-messages .entry a:visited:hover img {
- opacity:1
+ opacity:1;
+ z-index: 10;
 }
 body .chat-messages .entry a img,
 body .chat-messages .entry a:visited img {
  opacity:0.5;
- margin-left:0.5rem
+ margin-left:0.5rem;
+ z-index: 10;
 }
 body .chat-messages .entry .time,
 body .chat-messages .entry .name {
- font-size:0.9rem
+ font-size:0.9rem;
+ z-index: 10;
 }
 body .chat-messages .entry .time {
- opacity:0.5
+ opacity:0.5;
+ z-index: 10;
 }
 body .chat-messages .entry .system {
  color:#3f0;
  font-weight:bold;
- text-shadow:0 0 0.5rem #3f0
+ text-shadow:0 0 0.5rem #3f0;
+ z-index: 10;
 }
 .system {
  color:#3f0;
  font-weight:bold;
- text-shadow:0 0 0.5rem #3f0
+ text-shadow:0 0 0.5rem #3f0;
+ z-index: 10;
 }
 body .chat-send {
  grid-area:send
