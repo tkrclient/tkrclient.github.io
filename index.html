@@ -88,6 +88,21 @@
           <i class="fa fa-bars" style="display:block; top: 1%; right: 1%; position: absolute;"></i>
         </a>
       </div>
+      
+      <div id="chatDesktop" class="chatClass">
+        <div class="chat-send">
+          <input id="message" type="text" placeholder="Message" maxlength="1000">
+          <i id="send" class="fa fa-lg fa-paper-plane"></i>
+        </div>
+        
+        <div id="messages" class="chat-messages"></div>
+    
+        <div class="chat-name">
+          <input id="name" type="text" placeholder="Name" maxlength="1000">
+          <i id="colorpicker" class="fa fa-lg fa-palette"></i>
+        </div>
+        
+      </div>
     </nav>
     <nav class="mobile">
       <a class="item" href="#" id="toggleButtonFullscreen">
@@ -99,25 +114,26 @@
       <a class="item" href="#" title="" id="toggleButtonSidebar">
         <i class="fa fa-bars"></i>
       </a>
+      
+      <div id="chat" class="chatClass">
+        <div class="chat-send">
+          <input id="message" type="text" placeholder="Message" maxlength="1000">
+          <i id="send" class="fa fa-lg fa-paper-plane"></i>
+        </div>
+        
+        <div id="messages" class="chat-messages"></div>
+    
+        <div class="chat-name">
+          <input id="name" type="text" placeholder="Name" maxlength="1000">
+          <i id="colorpicker" class="fa fa-lg fa-palette"></i>
+        </div>
+        
+      </div>
     </nav>
 
   <!-- Script ---------------->
   <script src="/js/iochat.js"></script>
   <!-- End ------------------->
-
-  <div id="chat" class="chatClass">
-    <div class="chat-send">
-      <input id="message" type="text" placeholder="Message" maxlength="1000">
-      <i id="send" class="fa fa-lg fa-paper-plane"></i>
-    </div>
-    
-    <div id="messages" class="chat-messages"></div>
-
-    <div class="chat-name">
-      <input id="name" type="text" placeholder="Name" maxlength="1000">
-      <i id="colorpicker" class="fa fa-lg fa-palette" style="color: rgb(46, 117, 111);"></i>
-    </div>
-  </div>
 
   <aside id="sidebars">
     <div class="sidebars">
