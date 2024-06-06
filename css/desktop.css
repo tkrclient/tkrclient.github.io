@@ -683,6 +683,7 @@ body .chat-messages {
  padding: 0.5rem;
  overflow-wrap: none;
  z-index: 10;
+ height: 100%;
 }
 body .chat-messages .entry {
  margin-top:1rem;
