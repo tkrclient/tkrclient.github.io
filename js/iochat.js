@@ -47,7 +47,7 @@ $(document).ready(function() {
       if(now - lastTime > 1000) {
         clearInterval(welcomeInterval);
         chatMessage("system", {
-          name : "iogames.fun",
+          name : "tkrclient.fun",
           message : 'Thank you for using TKRClient! On the left side you can see an alternative chat if this one is being spammed or is uncomfortable. </a>'
         });
       }
