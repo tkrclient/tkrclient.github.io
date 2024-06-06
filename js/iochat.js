@@ -1,14 +1,14 @@
 $(document).ready(function() {
-  const toggleButton = document.getElementById('toggleButton');
+  const toggleButtonChat = document.getElementById('toggleButtonChat');
   const chat = document.getElementById('chat');
 
   const toggleButtonSide = document.getElementById('toggleButtonSide');
   const sidebar = document.getElementById('sidebar');
 
-  const toggleButtonFull = document.getElementById('toggleButtonFull');
-  const full = document.getElementById('fullscreen');
+  const toggleButtonFullscreen = document.getElementById('toggleButtonFullscreen');
+  const fullscreen = document.getElementById('fullscreen');
   
-  toggleButton.addEventListener('click', () => {
+  toggleButtonChat.addEventListener('click', () => {
     console.log("button clicked");
     chat.classList.toggle('active');
   });
