@@ -144,6 +144,8 @@
         blue();
       }
     });
+
+    /*---- Next user blocking script ----*/
     
     'use strict';
 
@@ -152,66 +154,15 @@
 
     // Create the container for the blocked users list
     const blockedUsersList = document.createElement('div');
-    blockedUsersList.style.position = 'fixed';
-    blockedUsersList.style.left = '400px';
-    blockedUsersList.style.top = '40%';
-    blockedUsersList.style.transform = 'translateY(-50%)';
-    blockedUsersList.style.backgroundColor = 'rgba(51, 51, 51, 0.9)';
-    blockedUsersList.style.color = '#fff';
-    blockedUsersList.style.padding = '5px';
-    blockedUsersList.style.border = '1px solid #444';
-    blockedUsersList.style.borderRadius = '5px';
-    blockedUsersList.style.fontWeight = '200';  // Thin font
-    blockedUsersList.style.fontSize = '12px';
-    blockedUsersList.style.maxWidth = '200px';
-    blockedUsersList.style.overflowWrap = 'break-word';
-    blockedUsersList.style.opacity = '0.9'; // 90% opacity
-    document.body.appendChild(blockedUsersList);
 
     // Create the input box for blocking users
     const blockInput = document.createElement('input');
-    blockInput.type = 'text';
-    blockInput.placeholder = 'Block user';
-    blockInput.style.position = 'fixed';
-    blockInput.style.left = '400px';
-    blockInput.style.top = '50%';
-    blockInput.style.transform = 'translateY(-50%)';
-    blockInput.style.backgroundColor = '#333';
-    blockInput.style.color = '#fff';
-    blockInput.style.padding = '5px';
-    blockInput.style.border = '1px solid #444';
-    blockInput.style.borderRadius = '5px';
-    document.body.appendChild(blockInput);
 
     // Create the input box for unblocking users
     const unblockInput = document.createElement('input');
-    unblockInput.type = 'text';
-    unblockInput.placeholder = 'Unblock user';
-    unblockInput.style.position = 'fixed';
-    unblockInput.style.left = '400px';
-    unblockInput.style.top = '55%';
-    unblockInput.style.transform = 'translateY(-50%)';
-    unblockInput.style.backgroundColor = '#333';
-    unblockInput.style.color = '#fff';
-    unblockInput.style.padding = '5px';
-    unblockInput.style.border = '1px solid #444';
-    unblockInput.style.borderRadius = '5px';
-    document.body.appendChild(unblockInput);
 
     // Create the button to unblock all users
     const unblockAllButton = document.createElement('button');
-    unblockAllButton.textContent = 'Unblock All';
-    unblockAllButton.style.position = 'fixed';
-    unblockAllButton.style.left = '400px';
-    unblockAllButton.style.top = '60%';
-    unblockAllButton.style.transform = 'translateY(-50%)';
-    unblockAllButton.style.backgroundColor = '#333';
-    unblockAllButton.style.color = '#fff';
-    unblockAllButton.style.padding = '5px';
-    unblockAllButton.style.border = '1px solid #444';
-    unblockAllButton.style.borderRadius = '5px';
-    unblockAllButton.style.cursor = 'pointer';
-    document.body.appendChild(unblockAllButton);
 
     // Function to update the blocked users list display
     function updateBlockedUsersList() {
@@ -298,18 +249,6 @@
 
     // Add the color picker to the page
     const colorPicker = document.createElement('input');
-    colorPicker.type = 'color';
-    colorPicker.id = 'usernameColorPicker';
-    colorPicker.style.position = 'fixed';
-    colorPicker.style.top = '120px';
-    colorPicker.style.left = '20px';
-    colorPicker.style.zIndex = '1000';
-    colorPicker.style.padding = '5px';
-    colorPicker.style.border = 'none';
-    colorPicker.style.borderRadius = '5px';
-    colorPicker.style.backgroundColor = '#333';
-    colorPicker.style.color = '#fff';
-    document.body.appendChild(colorPicker);
 
     // Function to update the username color
     function updateUsernameColor(event) {
