@@ -34,6 +34,14 @@ Go to settings.<br><br>
 
 <img src="https://github.com/tkrclient/tkrclient.github.io/assets/170660737/76797e70-a0ea-4cfc-9538-3b19ed9fcdb9" width="200px"><br>
 Rename your fork to (YOUR GITHUB USERNAME).github.io, then click pages on the sidebar.<br><br>
+If you dont use your exact github username, then your url would be https://(YOUR GITHUB USERNAME).github.io/(REPO'S NAME)
+If you do use your exact github username (including .github.io), then your url would just be https://(YOUR GITHUB USERNAME).github.io
 
 <img src="https://github.com/tkrclient/tkrclient.github.io/assets/170660737/02847135-0cfe-4aae-aaf5-48311cd98d17" width="200px"><br>
 Pick main branch. Then click save.<br><br>
+
+<img src="https://github.com/tkrclient/tkrclient.github.io/assets/170660737/59caf8c6-ef37-4a11-b722-822e0d8e0470" width="200px"><br>
+Should see it update
+
+<img src="https://github.com/tkrclient/tkrclient.github.io/assets/170660737/09cc111e-b815-4ee8-a758-d1169dcb639d" width="200px"><br>
+Now it's done
