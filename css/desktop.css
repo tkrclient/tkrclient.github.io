@@ -660,8 +660,7 @@ aside {
     height: calc(100vh - 2rem);
     transition: left 0.25s;
 }
-#chatDesktop,
-aside {
+#chatDesktop {
     background-color: #1d1d1d;
     border-radius: 0 1rem 0 0;
     box-shadow: 0 0 1rem #000;
