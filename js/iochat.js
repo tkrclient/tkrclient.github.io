@@ -2,7 +2,7 @@ $(document).ready(function() {
   
   const toggleButtonChat = document.getElementById('toggleButtonChat');
   const chat = document.getElementById('chat');
-  const toggleButtonSide = document.getElementById('toggleButtonSide');
+  const toggleButtonSidebar = document.getElementById('toggleButtonSidebar');
   const sidebar = document.getElementById('sidebar');
   const toggleButtonFullscreen = document.getElementById('toggleButtonFullscreen');
   
@@ -10,7 +10,7 @@ $(document).ready(function() {
     console.log("button clicked");
     chat.classList.toggle('active');
   });
-  toggleButtonSide.addEventListener('click', () => {
+  toggleButtonSidebar.addEventListener('click', () => {
     console.log("button clicked");
     sidebar.classList.toggle('active');
   });
