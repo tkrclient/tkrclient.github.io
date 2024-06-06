@@ -2,8 +2,10 @@ $(document).ready(function() {
   
   const toggleButtonChat = document.getElementById('toggleButtonChat');
   const chat = document.getElementById('chat');
+  console.log("sidebar");
   const toggleButtonSidebar = document.getElementById('toggleButtonSidebar');
   const sidebars = document.getElementById('sidebars');
+  console.log("sidebar again");
   const toggleButtonFullscreen = document.getElementById('toggleButtonFullscreen');
   
   toggleButtonChat.addEventListener('click', () => {
