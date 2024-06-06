@@ -6,6 +6,7 @@ $(document).ready(function() {
   const toggleButtonSidebar = document.getElementById('toggleButtonSidebar');
   const sidebars = document.getElementById('sidebars');
   console.log("sidebar again");
+  const toggleButtonSidebarDesktop = document.getElementById('toggleButtonSidebarDesktop');
   const toggleButtonFullscreen = document.getElementById('toggleButtonFullscreen');
   
   toggleButtonChat.addEventListener('click', () => {
@@ -17,7 +18,11 @@ $(document).ready(function() {
     console.log("button clicked");
     sidebars.classList.toggle('active');
   });
-  console.log("side again");
+  console.log("side");
+  toggleButtonSidebarDesktop.addEventListener('click', () => {
+    console.log("button clicked");
+    sidebars.classList.toggle('active');
+  });
   function toggleFullscreen() {
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
