@@ -642,9 +642,14 @@ aside.active {
     opacity: 0.5;
 }
 #chat .chat-messages .entry .system {
-    color: #3f0;
-    font-weight: bold;
-    text-shadow: 0 0 0.5rem #3f0;
+ /* color:#3f0; */
+ font-weight:bold;
+ /* text-shadow:0 0 0.5rem #3f0; */
+ text-shadow: 0 0 0.5rem #aaa;
+ z-index: 10;
+ background: radial-gradient(circle, violet, indigo, #7ff, green, yellow, orange, red);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
 }
 .chat-messages {
     height: 94%;
