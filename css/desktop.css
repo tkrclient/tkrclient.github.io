@@ -25,6 +25,9 @@
  width: 150px;
  z-index: -10;
 }
+.mobile-minnit {
+ display: none;
+}
 .foot {
  bottom: 2%;
  left: 40%;
