@@ -566,39 +566,40 @@ body aside {
  grid-area:sidebar;
  background-color:rgba(255,255,255,0.05);
  border-right:1px solid rgba(0,0,0,0.25);
- padding-bottom:2rem
+ padding-bottom:2rem;
 }
 body .main {
  grid-area:main;
  display:flex;
  flex-direction: none;
  overflow: hidden;
+ z-index: 0;
 }
 body .main main {
- flex-grow:1
+ flex-grow:1;
 }
 body .main main .viewport {
  display:flex;
  flex-direction:column;
- height:calc(100vh - 3rem)
+ height:calc(100vh - 3rem);
 }
 body .main main .viewport .game {
  border:none;
  flex-grow:1;
- width:100%
+ width:100%;
 }
 body .main main .viewport .footer {
  display:flex;
  flex-direction:row;
  align-items:center;
  margin:1rem;
- white-space:nowrap
+ white-space:nowrap;
 }
 body .main main .viewport .footer .item {
- margin-right:1.5rem
+ margin-right:1.5rem;
 }
 body .main main .viewport .footer .item:last-child {
- margin-right:0
+ margin-right:0;
 }
 body .main main .reviews iframe {
  border:none;
@@ -606,29 +607,29 @@ body .main main .reviews iframe {
  margin-bottom:1rem;
  max-width:800px;
  width:100%;
- height:400px
+ height:400px;
 }
 body .main main .reviews .thumbs {
  display:flex;
  flex-direction:row;
- text-align:center
+ text-align:center;
 }
 body .main main .reviews .thumbs .item {
- margin-right:1rem
+ margin-right:1rem;
 }
 body .main main .reviews .thumbs .item:last-child {
- margin-right:0
+ margin-right:0;
 }
 body .main main .reviews .thumbs .item img {
- border-radius:0.5rem
+ border-radius:0.5rem;
 }
 body .main main .reviews .thumbs .item a:hover img {
- box-shadow:0 0 0 2px #fc0
+ box-shadow:0 0 0 2px #fc0;
 }
 body .chat-name,
 body .chat-messages,
 body .chat-send {
- border-left:1px solid rgba(0,0,0,0.25)
+ border-left:1px solid rgba(0,0,0,0.25);
 }
 body .chat-name,
 body .chat-send {
