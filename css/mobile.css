@@ -27,6 +27,14 @@
     text-align: center; 
     width: 100px;
 }
+.mobile-minnit {
+    display: block;
+    position: absolute;
+    left: 1%;
+    bottom: 1%;
+    width: 100%;
+    height: 90%;
+}
 .minnit {
     /* display: none; */
 }
