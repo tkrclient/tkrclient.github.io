@@ -153,13 +153,13 @@
     let blockedUsers = JSON.parse(localStorage.getItem('blockedUsers')) || [];
 
     // Create the container for the blocked users list
-    const blockedUsersList = document.querySelectorAll('blockedUsersClass');
+    const blockedUsersList = document.getElementsByClassName('blockedUsersClass');
     // Create the input box for blocking users
-    const blockInput = document.querySelectorAll('blockInputClass');
+    const blockInput = document.getElementsByClassName('blockInputClass');
     // Create the input box for unblocking users
-    const unblockInput = document.querySelectorAll('unblockInputClass');
+    const unblockInput = document.getElementsByClassName('unblockInputClass');
     // Create the button to unblock all users
-    const unblockAllButton = document.querySelectorAll('unblockAllButtonClass');
+    const unblockAllButton = document.getElementsByClassName('unblockAllButtonClass');
 
     // Function to update the blocked users list display
     function updateBlockedUsersList() {
@@ -245,7 +245,7 @@
     'use strict';
 
     // Add the color picker to the page
-    const colorPicker = document.querySelectorAll('colorPickerClass');
+    const colorPicker = document.getElementsByClassName('colorPickerClass');
 
     // Function to update the username color
     function updateUsernameColor(event) {
