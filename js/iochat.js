@@ -16,7 +16,7 @@ $(document).ready(function() {
     console.log("button clicked");
     chat.classList.toggle('active');
   });
-  toggleButtonFull.addEventListener('click', () => {
+  toggleButtonFullscreen.addEventListener('click', () => {
     console.log("button clicked");
     chat.classList.toggle('active');
   });
