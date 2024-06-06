@@ -702,6 +702,9 @@ aside.active {
 #chat .chat-messages .entry {
     margin-top: 1rem;
 }
+#chatDesktop {
+    display: none;
+}
 .entry {
     margin-top: 1rem;
 }
