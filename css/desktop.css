@@ -657,6 +657,19 @@ aside {
     height: calc(100vh - 2rem);
     transition: left 0.25s;
 }
+#chatDesktop,
+aside {
+    background-color: #1d1d1d;
+    border-radius: 0 1rem 0 0;
+    box-shadow: 0 0 1rem #000;
+    box-sizing: border-box;
+    position: fixed;
+    left: -200vw;
+    top: 2rem;
+    z-index: 16000000;
+    width: calc(100vw - 2rem);
+    height: calc(100vh - 2rem);
+}
 /* body aside {
  grid-area:sidebars;
  background-color:rgba(255,255,255,0.05);
