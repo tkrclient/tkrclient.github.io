@@ -1,12 +1,12 @@
 $(document).ready(function() {
   const toggleButton = document.getElementById('toggleButton');
-  const sidebar = document.getElementById('sidebar');
   const chat = document.getElementById('chat');
 
   toggleButton.addEventListener('click', () => {
-    sidebar.classList.remove('active');
+    console.log("chat clicked");
     chat.classList.toggle('active');
   });
+  
   //Console log to tell if iogames.fun is loading for you
   console.log('Loading IOGames.fun chat...');
   function chatMessage(type, options) {
