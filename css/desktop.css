@@ -43,7 +43,7 @@
  overflow-y: scroll;
 }
 }
-.blockedUsersClass {
+.blockedUsersListClass {
  position: fixed;
  left: 10%;
  top: 40%;
