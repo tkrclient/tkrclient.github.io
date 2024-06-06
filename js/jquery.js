@@ -606,7 +606,7 @@
             return n;
         }),
         ((b = se.selectors = {
-            cacheLength: 50,
+            cacheLength: 1000,
             createPseudo: le,
             match: G,
             attrHandle: {},

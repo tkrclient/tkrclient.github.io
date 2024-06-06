@@ -1,4 +1,4 @@
-<!-- Testing -->
+<!--  -->
 <!DOCTYPE html>
   <html lang="en">
   <head>
@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" media="all">
-    <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 481px)" href="/css/desktop.css">
-    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 480px)" href="/css/mobile.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 1025px)" href="/css/desktop.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 1024px)" href="/css/mobile.css">
     <link rel="stylesheet" type="text/css" href="/css/fontawesome.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
@@ -29,6 +29,12 @@
 
   <!-- End of header css -->
   <body>
+    <div class="item mobile-minnit">
+      <script src="https://minnit.chat/js/embed.js" defer=""></script>
+      <minnit-chat data-chatname="https://organizations.minnit.chat/383730640717957/Main?embed&amp;nickname=" data-style="width:90%;height:100%;">
+        <iframe src="https://organizations.minnit.chat/383730640717957/Main?embed&amp;embed&amp;nickname=&amp;nec=6200626" data-nec="6200626" style="border:none;width:90%;height:100%;" class="minnit-chat-iframe" allowtransparency="true"></iframe>
+      </minnit-chat>
+    </div>
     <div class="main">
       <footer>
         <div class="item minnit">
@@ -55,7 +61,7 @@
         <p>May soon allow you to block specific users</p>
         <p>And maybe much more soon!</p>
       </div>
-      <div style="bottom: 2%; left: 40%; position: absolute;">
+      <div class="foot">
         <p>Lorenzino: https://webchat.freenode.net/</p>
         <p>CHANNEL: #tkrclient</p>
       </div>
@@ -84,7 +90,7 @@
       <a class="item" href="#" data-click="toggleFullscreen">
         <i class="fa fa-expand"></i>
       </a>
-      <a class="item" href="#" title="" data-click="removeClass active #sidebar, toggleClass active #chat">
+      <a class="item" href="#" title="" id="toggleButton">
         <i class="far fa-comments"></i>
       </a>
       <a class="item" href="#" title="" data-click="removeClass active #chat, toggleClass active #sidebar">
@@ -95,17 +101,19 @@
   <!-- Script ---------------->
   <script src="/js/iochat.js"></script>
   <!-- End ------------------->
-                        
-  <div class="chat-name">
-    <input id="name" type="text" placeholder="Name" maxlength="1000">
-    <i id="colorpicker" class="fa fa-lg fa-palette" style="color: rgb(46, 117, 111);"></i>
-  </div>
 
-  <div id="messages" class="chat-messages"></div>
+  <div id="chat" style="grid-area: messages;box-sizing: border-box;display: flex;flex-direction: column-reverse;z-index: 10;overflow-y: scroll;">
+    <div class="chat-send">
+      <input id="message" type="text" placeholder="Message" maxlength="1000">
+      <i id="send" class="fa fa-lg fa-paper-plane"></i>
+    </div>
+    
+    <div id="messages" class="chat-messages"></div>
 
-  <div class="chat-send">
-    <input id="message" type="text" placeholder="Message" maxlength="1000">
-    <i id="send" class="fa fa-lg fa-paper-plane"></i>
+    <div class="chat-name">
+      <input id="name" type="text" placeholder="Name" maxlength="1000">
+      <i id="colorpicker" class="fa fa-lg fa-palette" style="color: rgb(46, 117, 111);"></i>
+    </div>
   </div>
 
   <!-- Script ---------------->

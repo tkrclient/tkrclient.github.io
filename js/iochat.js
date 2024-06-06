@@ -1,4 +1,12 @@
 $(document).ready(function() {
+  const toggleButton = document.getElementById('toggleButton');
+  const chat = document.getElementById('chat');
+
+  toggleButton.addEventListener('click', () => {
+    console.log("chat clicked");
+    chat.classList.toggle('active');
+  });
+  
   //Console log to tell if iogames.fun is loading for you
   console.log('Loading IOGames.fun chat...');
   function chatMessage(type, options) {
@@ -22,8 +30,9 @@ $(document).ready(function() {
     .append(message);
       
     $("#messages").prepend(entry);
-      
-    while($("#messages .entry").length > 50) {
+    
+    /*-- IOGames AMOUNT OF MESSAGES! --*/
+    while($("#messages .entry").length > 1000) {
         $("#messages .entry").last().remove();
     }
   }
@@ -43,7 +52,7 @@ $(document).ready(function() {
       if(now - lastTime > 1000) {
         clearInterval(welcomeInterval);
         chatMessage("system", {
-          name : "iogames.fun",
+          name : "tkrclient.fun",
           message : 'Thank you for using TKRClient! On the left side you can see an alternative chat if this one is being spammed or is uncomfortable. </a>'
         });
       }
