@@ -642,8 +642,11 @@ body nav .margin {
 aside.active {
     left: 0;
     transition: left 0.25s;
+    display: none;
 }
-#chat,
+#chat {
+ display: none;
+}
 aside {
     background-color: #1d1d1d;
     border-radius: 0 1rem 0 0;
