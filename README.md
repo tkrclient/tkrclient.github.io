@@ -1,4 +1,3 @@
-<!-- testing -->
 # tkrclient.github.io
 Website for TKRClient - built for iogames.fun website
 
