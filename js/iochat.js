@@ -2,8 +2,22 @@ $(document).ready(function() {
   const toggleButton = document.getElementById('toggleButton');
   const chat = document.getElementById('chat');
 
+  const toggleButtonSide = document.getElementById('toggleButtonSide');
+  const sidebar = document.getElementById('sidebar');
+
+  const toggleButtonFull = document.getElementById('toggleButtonFull');
+  const full = document.getElementById('fullscreen');
+  
   toggleButton.addEventListener('click', () => {
-    console.log("chat clicked");
+    console.log("button clicked");
+    chat.classList.toggle('active');
+  });
+  toggleButtonSide.addEventListener('click', () => {
+    console.log("button clicked");
+    chat.classList.toggle('active');
+  });
+  toggleButtonFull.addEventListener('click', () => {
+    console.log("button clicked");
     chat.classList.toggle('active');
   });
   
