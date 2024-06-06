@@ -3,7 +3,7 @@ $(document).ready(function() {
   const toggleButtonChat = document.getElementById('toggleButtonChat');
   const chat = document.getElementById('chat');
   const toggleButtonSidebar = document.getElementById('toggleButtonSidebar');
-  const sidebar = document.getElementById('sidebar');
+  const sidebars = document.getElementById('sidebars');
   const toggleButtonFullscreen = document.getElementById('toggleButtonFullscreen');
   
   toggleButtonChat.addEventListener('click', () => {
@@ -12,7 +12,7 @@ $(document).ready(function() {
   });
   toggleButtonSidebar.addEventListener('click', () => {
     console.log("button clicked");
-    sidebar.classList.toggle('active');
+    sidebars.classList.toggle('active');
   });
   function toggleFullscreen() {
     if (!document.fullscreenElement) {
