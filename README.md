@@ -33,7 +33,7 @@ CHANNEL: #tkrclient
 Go to settings.<br><br>
 
 <img src="https://github.com/tkrclient/tkrclient.github.io/assets/170660737/76797e70-a0ea-4cfc-9538-3b19ed9fcdb9" width="200px"><br>
-Rename your fork to (YOUR_NAME).github.io, then click pages on the sidebar.<br><br>
+Rename your fork to (YOUR GITHUB USERNAME).github.io, then click pages on the sidebar.<br><br>
 
 <img src="https://github.com/tkrclient/tkrclient.github.io/assets/170660737/02847135-0cfe-4aae-aaf5-48311cd98d17" width="200px"><br>
 Pick main branch. Then click save.<br><br>
