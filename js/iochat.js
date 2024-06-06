@@ -12,10 +12,12 @@ $(document).ready(function() {
     console.log("button clicked");
     chat.classList.toggle('active');
   });
+  console.log("side");
   toggleButtonSidebar.addEventListener('click', () => {
     console.log("button clicked");
     sidebars.classList.toggle('active');
   });
+  console.log("side again");
   function toggleFullscreen() {
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
