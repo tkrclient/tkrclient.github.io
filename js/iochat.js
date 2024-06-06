@@ -24,7 +24,7 @@ $(document).ready(function() {
       
     $("#messages").prepend(entry)/*.prepend(tkrclient)*/;
 
-    /* tkrclient: : $("#colorpicker").css("color") */
+    /* tkrclient : $("#colorpicker").css("color") */
     
     /*-- IOGames AMOUNT OF MESSAGES! --*/
     while($("#messages .entry").length > 1000) {
