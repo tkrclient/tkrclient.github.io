@@ -22,8 +22,9 @@ $(document).ready(function() {
     .append(message);
       
     $("#messages").prepend(entry);
-      
-    while($("#messages .entry").length > 50) {
+
+    /*-- IOGames AMOUNT OF MESSAGES! --*/
+    while($("#messages .entry").length > 1000) {
         $("#messages .entry").last().remove();
     }
   }
