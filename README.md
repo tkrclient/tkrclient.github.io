@@ -27,3 +27,13 @@ kiwi irc?
 # please debug with me lorenzino 
 https://webchat.freenode.net/ <br>
 CHANNEL: #tkrclient
+
+# HOW TO WORK WITH US (CONTRIBUTE)
+<img src="https://github.com/tkrclient/tkrclient.github.io/assets/170660737/8d595092-33ba-4a30-86ec-bf596a99d851" width="200px">
+Go to settings.
+
+<img src="https://github.com/tkrclient/tkrclient.github.io/assets/170660737/76797e70-a0ea-4cfc-9538-3b19ed9fcdb9" width="200px">
+Rename your fork to (YOUR_NAME).github.io, then click pages on the sidebar.
+
+<img src="https://github.com/tkrclient/tkrclient.github.io/assets/170660737/02847135-0cfe-4aae-aaf5-48311cd98d17" width="200px">
+Pick main branch. Then click save.
