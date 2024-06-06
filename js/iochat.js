@@ -18,13 +18,10 @@ $(document).ready(function() {
       
     let entry = $("<div></div>")
     .addClass("entry")
-    /* .addClass("tkrclient") */
     .append(name)
     .append(message);
       
-    $("#messages").prepend(entry)/*.prepend(tkrclient)*/;
-
-    /* tkrclient : $("#colorpicker").css("color") */
+    $("#messages").prepend(entry);
     
     /*-- IOGames AMOUNT OF MESSAGES! --*/
     while($("#messages .entry").length > 1000) {
