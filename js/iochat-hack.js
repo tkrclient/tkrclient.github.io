@@ -207,26 +207,30 @@
     }
 
     // Event listener for blocking users
-    blockInput.addEventListener('keypress', function(event) {
-        if (event.key === 'Enter') {
-            const username = blockInput.value.trim();
-            if (username) {
-                blockUser(username);
-                blockInput.value = '';
+    if (blockInput) {
+        blockInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const username = blockInput.value.trim();
+                if (username) {
+                    blockUser(username);
+                    blockInput.value = '';
+                }
             }
-        }
-    });
+        });
+    }
 
     // Event listener for unblocking users
-    unblockInput.addEventListener('keypress', function(event) {
-        if (event.key === 'Enter') {
-            const username = unblockInput.value.trim();
-            if (username) {
-                unblockUser(username);
-                unblockInput.value = '';
+    if (unblockInput) {
+        unblockInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const username = unblockInput.value.trim();
+                if (username) {
+                    unblockUser(username);
+                    unblockInput.value = '';
+                }
             }
-        }
-    });
+        });
+    }
 
     // Event listener for unblocking all users
     unblockAllButton.addEventListener('click', unblockAllUsers);
