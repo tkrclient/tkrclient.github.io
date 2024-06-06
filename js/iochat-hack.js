@@ -155,9 +155,13 @@
     // Create the container for the blocked users list
     const blockedUsersList = document.getElementsByClassName('blockedUsersClass');
     // Create the input box for blocking users
-    const blockInput = document.getElementsByClassName('blockInputClass');
+    function blockInput() {
+        const blockInput = document.getElementsByClassName('blockInputClass');
+    }
     // Create the input box for unblocking users
-    const unblockInput = document.getElementsByClassName('unblockInputClass');
+    function unblockInput() {
+        const unblockInput = document.getElementsByClassName('unblockInputClass');
+    }
     // Create the button to unblock all users
     const unblockAllButton = document.getElementsByClassName('unblockAllButtonClass');
 
