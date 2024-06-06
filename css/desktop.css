@@ -1,15 +1,15 @@
 @font-face {
  font-family: 'Exo 2';
- url('/font/Exo2-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+ url('/font/Exo2-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 .mob {
- z-index: 1
+ z-index: 1;
 }
 .testing {
- display: none
+ display: none;
 }
 .mobile {
- display: none
+ display: none;
 }
 .explain {
  position: absolute; 
@@ -35,24 +35,24 @@ form {
  display:flex;
  flex-direction:column;
  margin:0;
- padding:0
+ padding:0;
 }
 form.form {
  background-color:rgba(255,255,255,0.05);
  border:1px solid rgba(255,255,255,0.05);
  border-radius:0.5rem;
- padding:2rem
+ padding:2rem;
 }
 form .form-group {
- margin-bottom:1.5rem
+ margin-bottom:1.5rem;
 }
 form .form-group:last-child {
- margin-bottom:0
+ margin-bottom:0;
 }
 label {
  display:block;
  font-size:0.9rem;
- margin-bottom:0.5rem
+ margin-bottom:0.5rem;
 }
 input[type=checkbox],
 input[type=radio] {
@@ -62,22 +62,22 @@ input[type=radio] {
 }
 .checkbox:hover,
 .radio:hover {
- border-color:rgba(255,255,255,0.5)
+ border-color:rgba(255,255,255,0.5);
 }
 .checkbox.checked,
 .radio.checked {
  border-color:rgba(0,255,0,0.25);
- color:#0f0
+ color:#0f0;
 }
 .checkbox.checked .checkmark,
 .radio.checked .checkmark {
- background-color:#0f0
+ background-color:#0f0;
 }
 .checkbox {
- border-radius:0.25rem
+ border-radius:0.25rem;
 }
 .checkbox.checked:hover {
- border-color:rgba(0,255,0,0.5)
+ border-color:rgba(0,255,0,0.5);
 }
 .checkbox.checked .checkmark {
  border-radius:2px;
@@ -982,23 +982,23 @@ footer .item:last-child {
  grid-area:main;
  background-color:rgba(255,255,255,0.05);
  margin:0.5rem;
- padding:1.5rem
+ padding:1.5rem;
 }
 .admin .disabled {
- opacity:0.5
+ opacity:0.5;
 }
 .admin .table {
- white-space:nowrap
+ white-space:nowrap'
 }
 .admin .table tr:hover td {
- background-color:rgba(255,255,255,0.05)
+ background-color:rgba(255,255,255,0.05);
 }
 .admin .table td {
  text-align:left;
- padding:0.5rem
+ padding:0.5rem;
 }
 .admin .thumb {
  border-radius:100%;
  width:50px;
- height:50px
+ height:50px;
 }
