@@ -1,5 +1,7 @@
 (function() {
 
+    /*---- Testing ----*/
+    
     /*---- Higher char limits ----*/
     // Higher character limit for chat box
     const messageInput = document.getElementById('message'); {
