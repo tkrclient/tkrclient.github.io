@@ -154,19 +154,19 @@
 
     // Create the container for the blocked users list
     const blockedUsersList = document.createElement('div');
-    document.body.appendClass(blockedUsersListClass);
+    document.body.classList.add(blockedUsersListClass);
     document.body.appendChild(blockedUsersList);
     // Create the input box for blocking users
     const blockInput = document.createElement('input');
-    document.body.appendClass(blockInputClass);
+    document.body.classList.add(blockInputClass);
     document.body.appendChild(blockInput);
     // Create the input box for unblocking users
     const unblockInput = document.createElement('input');
-    document.body.appendClass(unblockInputClass);
+    document.body.classList.add(unblockInputClass);
     document.body.appendChild(unblockInput);
     // Create the button to unblock all users
     const unblockAllButton = document.createElement('button');
-    document.body.appendClass(unblockAllButtonClass);
+    document.body.classList.add(unblockAllButtonClass);
     document.body.appendChild(unblockAllButton);
 
     // Function to update the blocked users list display
@@ -258,7 +258,7 @@
 
     // Add the color picker to the page
     const colorPicker = document.createElement('input');
-    document.body.appendClass(colorPickerClass);
+    document.body.classList.add(colorPickerClass);
     document.body.appendChild(colorPicker);
 
     // Function to update the username color
