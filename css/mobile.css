@@ -28,7 +28,7 @@
     width: 100px;
 }
 .minnit {
-    display: none;
+    /* display: none; */
 }
 form {
     display: flex;
