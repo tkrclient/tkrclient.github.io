@@ -1,10 +1,9 @@
 $(document).ready(function() {
+  
   const toggleButtonChat = document.getElementById('toggleButtonChat');
   const chat = document.getElementById('chat');
-
   const toggleButtonSide = document.getElementById('toggleButtonSide');
   const sidebar = document.getElementById('sidebar');
-
   const toggleButtonFullscreen = document.getElementById('toggleButtonFullscreen');
   const fullscreen = document.getElementById('fullscreen');
   
@@ -14,11 +13,11 @@ $(document).ready(function() {
   });
   toggleButtonSide.addEventListener('click', () => {
     console.log("button clicked");
-    chat.classList.toggle('active');
+    sidebar.classList.toggle('active');
   });
   toggleButtonFullscreen.addEventListener('click', () => {
     console.log("button clicked");
-    chat.classList.toggle('active');
+    fullscreen.classList.toggle('active');
   });
   
   //Console log to tell if iogames.fun is loading for you
