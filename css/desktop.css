@@ -34,6 +34,15 @@
  position: absolute;
  z-index: -10;
 }
+.chatClass {
+ grid-area: messages;
+ box-sizing: border-box;
+ display: flex;
+ flex-direction: column-reverse;
+ z-index: 10;
+ overflow-y: scroll;
+}
+}
 .blockedUsersClass {
  position: fixed;
  left: 10%;
