@@ -39,9 +39,9 @@
     overflow-y: scroll;
 }
 .blockedUsersListClass {
- position: fixed;
- left: 10%;
- top: 40%;
+ position: absolute;
+ left: 2%;
+ top: 70%;
  transform: translateY(-50%);
  background-color: rgba(51, 51, 51, 0.9);
  color: rgb(255, 255, 255);
@@ -55,9 +55,9 @@
  opacity: 0.9;
 }
 .blockInputClass {
- position: fixed;
- left: 10%;
- top: 50%;
+ position: absolute;
+ left: 0%;
+ top: 79%;
  transform: translateY(-50%);
  background-color: rgb(51, 51, 51);
  color: rgb(255, 255, 255);
@@ -67,9 +67,9 @@
  width: 10px;
 }
 .unblockInputClass {
- position: fixed;
- left: 10%;
- top: 55%;
+ position: absolute;
+ left: 0%;
+ top: 87%;
  transform: translateY(-50%);
  background-color: rgb(51, 51, 51);
  color: rgb(255, 255, 255);
@@ -79,9 +79,9 @@
  width: 10px;
 }
 .unblockAllButtonClass {
- position: fixed;
- left: 10%;
- top: 60%;
+ position: absolute;
+ left: 2%;
+ top: 95%;
  transform: translateY(-50%);
  background-color: rgb(51, 51, 51);
  color: rgb(255, 255, 255);
@@ -91,9 +91,9 @@
  cursor: pointer;
 }
 .colorPickerClass {
- position: fixed;
- top: 120px;
- left: 45%;
+ position: absolute;
+ top: 70%;
+ left: 82%;
  z-index: 1000;
  padding: 5px;
  border: none;
