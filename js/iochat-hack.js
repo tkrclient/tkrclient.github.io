@@ -146,24 +146,24 @@
     });
 
     /*---- Next user blocking script ----*/
-    
-    /*'use strict';
+    // BLOCK USERS FEATURE
+    'use strict';
 
     // Load blocked users from localStorage
     let blockedUsers = JSON.parse(localStorage.getItem('blockedUsers')) || [];
 
+
     // Create the container for the blocked users list
-    const blockedUsersList = document.createElement('div');
-    blockedUsersList.document.querySelctorAll(".blockedUsersListClass");
+    const blockedUsersList = document.querySelector('.blockedUsersListClass');
     // Create the input box for blocking users
-    const blockInput = document.createElement('input');
-    blockedUsersList.document.querySelectorAll.(".blockInputClass");
+    const blockInput = document.querySelector('.blockInputClass');
     // Create the input box for unblocking users
-    const unblockInput = document.createElement('input');
-    unblockInput.document.querySelectorAll(".unblockInputClass");
+    const unblockInput = document.querySelector('.unblockInputClass');
     // Create the button to unblock all users
-    const unblockAllButton = document.createElement('button');
-    unblockAllButton.document.querySelectorAll(".unblockAllButtonClass");
+    const unblockAllButton = document.querySelector('.unblockAllButtonClass');
+    // Add the color picker to the page
+    const colorPicker = document.querySelector('.colorPickerClass');
+
 
     // Function to update the blocked users list display
     function updateBlockedUsersList() {
@@ -211,50 +211,40 @@
     }
 
     // Event listener for blocking users
-    if (blockInput) {
-        blockInput.addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                const username = blockInput.value.trim();
-                if (username) {
-                    blockUser(username);
-                    blockInput.value = '';
-                }
+    blockInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            const username = blockInput.value.trim();
+            if (username) {
+                blockUser(username);
+                blockInput.value = '';
             }
-        });
-    }
+        }
+    });
 
     // Event listener for unblocking users
-    if (unblockInput) {
-        unblockInput.addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                const username = unblockInput.value.trim();
-                if (username) {
-                    unblockUser(username);
-                    unblockInput.value = '';
-                }
+    unblockInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            const username = unblockInput.value.trim();
+            if (username) {
+                unblockUser(username);
+                unblockInput.value = '';
             }
-        });
-    }
+        }
+    });
 
     // Event listener for unblocking all users
     unblockAllButton.addEventListener('click', unblockAllUsers);
 
     // Observe the messages container for new messages
-    const observer2 = new MutationObserver(() => filterMessages());
+    const observer = new MutationObserver(() => filterMessages());
     const messagesContainer = document.getElementById('messages');
     if (messagesContainer) {
-        observer2.observe(messagesContainer, { childList: true, subtree: true });
+        observer.observe(messagesContainer, { childList: true, subtree: true });
     }
 
     // Initial call to display the blocked users and filter messages
     updateBlockedUsersList();
     filterMessages();
-
-    'use strict';
-
-    // Add the color picker to the page
-    const colorPicker = document.createElement('input');
-    colorPicker.document.querySelectorAll(".colorPickerClass");
 
     // Function to update the username color
     function updateUsernameColor(event) {
@@ -268,5 +258,5 @@
 
     // Optionally, set an initial color
     colorPicker.value = '#ff0000'; // Red
-    updateUsernameColor({target: {value: colorPicker.value}}); */
+    updateUsernameColor({target: {value: colorPicker.value}});
 })();
