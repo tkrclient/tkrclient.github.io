@@ -2,6 +2,9 @@
  font-family: 'Exo 2';
  url('/font/Exo2-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
+.all {
+ position: absolute;
+}
 .mob {
  z-index: 1;
 }
