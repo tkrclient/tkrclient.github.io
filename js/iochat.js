@@ -9,9 +9,15 @@ $(document).ready(function() {
   const toggleButtonSidebarDesktop = document.getElementById('toggleButtonSidebarDesktop');
   const toggleButtonFullscreen = document.getElementById('toggleButtonFullscreen');
   
-  toggleButtonChat.addEventListener('click', () => {
+  /* toggleButtonChat.addEventListener('click', () => {
     console.log("button clicked");
     chat.classList.toggle('active');
+  }); */
+  toggleButtonChat.addEventListener('click', () => {
+    console.log("button clicked");
+    chatElements.forEach(chatElement => {
+      chatElement.classList.toggle('active');
+    });
   });
   console.log("side");
   toggleButtonSidebar.addEventListener('click', () => {
