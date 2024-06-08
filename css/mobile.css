@@ -1,6 +1,9 @@
 .mob {
     z-index: 1
 }
+.all {
+    position: absolute;
+}
 .testing {
     display: none
 }
