@@ -9,8 +9,8 @@
 }
 #colorpicker {
     position: absolute;
-    top: 6.5%; 
-    right: 1%;
+    top: 0%; 
+    right: 0%;
 }
 .desktop {
     display: none
@@ -405,9 +405,9 @@ article section.viewport {
     flex-grow: 1;
 }
 .fa-paper-plane {
-    position:absolute;
-    bottom: 1%; 
-    right:1%;
+    position: absolute;
+    bottom: 0%; 
+    right: 0%;
 }
 .fa.fa-star,
 .fa.fa-star-half-alt {
