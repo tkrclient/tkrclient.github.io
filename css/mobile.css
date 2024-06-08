@@ -27,7 +27,7 @@
     text-align: center; 
     width: 100px;
 }
-.chatClass {
+.chatMobile {
     grid-area: messages;
     box-sizing: border-box;
     display: flex;
@@ -702,7 +702,7 @@ aside.active {
 #chat .chat-messages .entry {
     margin-top: 1rem;
 }
-#chatDesktop {
+.chatDesktop {
     display: none;
 }
 .entry {
