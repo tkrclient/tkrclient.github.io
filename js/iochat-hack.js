@@ -147,7 +147,7 @@
 
     /*---- Next user blocking script ----*/
     
-    'use strict';
+    /*'use strict';
 
     // Load blocked users from localStorage
     let blockedUsers = JSON.parse(localStorage.getItem('blockedUsers')) || [];
@@ -268,5 +268,5 @@
 
     // Optionally, set an initial color
     colorPicker.value = '#ff0000'; // Red
-    updateUsernameColor({target: {value: colorPicker.value}});
+    updateUsernameColor({target: {value: colorPicker.value}}); */
 })();
