@@ -644,9 +644,6 @@ aside.active {
     transition: left 0.25s;
     display: none;
 }
-#chat {
- display: none;
-}
 aside {
     background-color: #1d1d1d;
     border-radius: 0 1rem 0 0;
@@ -660,7 +657,7 @@ aside {
     height: calc(100vh - 2rem);
     transition: left 0.25s;
 }
-#chatDesktop {
+.chatDesktop {
     background-color: #1d1d1d;
     border-radius: 0 1rem 0 0;
     box-shadow: 0 0 1rem #000;
@@ -671,6 +668,9 @@ aside {
     z-index: 16000000;
     width: calc(100vw - 2rem);
     height: calc(100vh - 2rem);
+}
+.chatMobile {
+ display: none;
 }
 /* body aside {
  grid-area:sidebars;
