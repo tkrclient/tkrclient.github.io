@@ -440,11 +440,14 @@ a[data-favorite]:hover {
  white-space:nowrap
 }
 .sidebars .header {
- color:#fc0;
- font-size:1.25rem;
- font-weight:bold;
- padding:1.5rem 1rem 0.5rem 1rem;
-/* display: none; */
+ /* color: #fc0; */
+ font-size: 1.25rem;
+ font-weight: bold;
+ padding: 1.5rem 1rem 0.5rem 1rem;
+ background: radial-gradient(circle, violet, indigo, #7ff, green, yellow, orange, red);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ /* display: none; */
 }
 .sidebars .item a,
 .sidebars .item a:visited {
