@@ -641,6 +641,14 @@ body nav .list .item .active {
 body nav .margin {
  margin:0 1rem
 }
+#chat {
+ grid-area: messages;
+ box-sizing: border-box;
+ display: flex;
+ flex-direction: column-reverse;
+ z-index: 10;
+ overflow-y: scroll;
+}
 #chat.active,
 aside.active {
     left: 0;
