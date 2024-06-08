@@ -2,6 +2,10 @@
  font-family: 'Exo 2';
  url('/font/Exo2-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
+.fa-bars {
+ display: block;
+ padding: 0.5rem 1rem;
+}
 .all {
  position: absolute;
 }
