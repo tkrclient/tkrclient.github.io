@@ -1,7 +1,7 @@
 $(document).ready(function() {
   
   const toggleButtonChat = document.getElementById('toggleButtonChat');
-  const chat = document.getElementsByClassName('chatMobile');
+  const chat = document.querySelectorAll('.chatMobile');
   console.log("sidebar");
   const toggleButtonSidebar = document.getElementById('toggleButtonSidebar');
   const sidebars = document.getElementById('sidebars');
