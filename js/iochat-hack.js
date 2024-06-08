@@ -1,5 +1,7 @@
 (function() {
 
+    /*---- Testing ----*/
+    
     /*---- Higher char limits ----*/
     // Higher character limit for chat box
     const messageInput = document.getElementById('message'); {
@@ -142,4 +144,119 @@
         blue();
       }
     });
-  })();
+
+    /*---- Next user blocking script ----*/
+    // BLOCK USERS FEATURE
+    'use strict';
+
+    // Load blocked users from localStorage
+    let blockedUsers = JSON.parse(localStorage.getItem('blockedUsers')) || [];
+
+
+    // Create the container for the blocked users list
+    const blockedUsersList = document.querySelector('.blockedUsersListClass');
+    // Create the input box for blocking users
+    const blockInput = document.querySelector('.blockInputClass');
+    // Create the input box for unblocking users
+    const unblockInput = document.querySelector('.unblockInputClass');
+    // Create the button to unblock all users
+    const unblockAllButton = document.querySelector('.unblockAllButtonClass');
+    // Add the color picker to the page
+    const colorPicker = document.querySelector('.colorPickerClass');
+
+
+    // Function to update the blocked users list display
+    function updateBlockedUsersList() {
+        blockedUsersList.textContent = 'Blocked Users:\n' + blockedUsers.join('\n');
+        localStorage.setItem('blockedUsers', JSON.stringify(blockedUsers));
+    }
+
+    // Function to block a user
+    function blockUser(username) {
+        if (!blockedUsers.includes(username)) {
+            blockedUsers.push(username);
+            updateBlockedUsersList();
+            filterMessages();
+        }
+    }
+
+    // Function to unblock a user
+    function unblockUser(username) {
+        blockedUsers = blockedUsers.filter(user => user !== username);
+        updateBlockedUsersList();
+        filterMessages();
+    }
+
+    // Function to unblock all users
+    function unblockAllUsers() {
+        blockedUsers = [];
+        updateBlockedUsersList();
+        filterMessages();
+    }
+
+    // Function to filter messages from blocked users
+    function filterMessages() {
+        const messagesContainer = document.getElementById('messages');
+        if (messagesContainer) {
+            const messageEntries = messagesContainer.querySelectorAll('.entry');
+            messageEntries.forEach(entry => {
+                const usernameElement = entry.querySelector('.name');
+                if (usernameElement && blockedUsers.includes(usernameElement.textContent.replace(':', '').trim())) {
+                    entry.style.display = 'none';
+                } else {
+                    entry.style.display = '';
+                }
+            });
+        }
+    }
+
+    // Event listener for blocking users
+    blockInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            const username = blockInput.value.trim();
+            if (username) {
+                blockUser(username);
+                blockInput.value = '';
+            }
+        }
+    });
+
+    // Event listener for unblocking users
+    unblockInput.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter') {
+            const username = unblockInput.value.trim();
+            if (username) {
+                unblockUser(username);
+                unblockInput.value = '';
+            }
+        }
+    });
+
+    // Event listener for unblocking all users
+    unblockAllButton.addEventListener('click', unblockAllUsers);
+
+    // Observe the messages container for new messages
+    const observer2 = new MutationObserver(() => filterMessages());
+    const messagesContainer = document.getElementById('messages');
+    if (messagesContainer) {
+        observer2.observe(messagesContainer, { childList: true, subtree: true });
+    }
+
+    // Initial call to display the blocked users and filter messages
+    updateBlockedUsersList();
+    filterMessages();
+
+    // Function to update the username color
+    function updateUsernameColor(event) {
+        const nameColor = document.getElementById('colorpicker');
+        nameColor.style.removeProperty('all');
+        nameColor.style.color = event.target.value;
+    }
+
+    // Add event listener to the color picker
+    colorPicker.addEventListener('input', updateUsernameColor);
+
+    // Optionally, set an initial color
+    colorPicker.value = '#ff0000'; // Red
+    updateUsernameColor({target: {value: colorPicker.value}});
+})();

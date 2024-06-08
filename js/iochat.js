@@ -1,11 +1,44 @@
 $(document).ready(function() {
-  const toggleButton = document.getElementById('toggleButton');
+  
+  const toggleButtonChat = document.getElementById('toggleButtonChat');
   const chat = document.getElementById('chat');
-
-  toggleButton.addEventListener('click', () => {
-    console.log("chat clicked");
+  console.log("sidebar");
+  const toggleButtonSidebar = document.getElementById('toggleButtonSidebar');
+  const sidebars = document.getElementById('sidebars');
+  console.log("sidebar again");
+  const toggleButtonSidebarDesktop = document.getElementById('toggleButtonSidebarDesktop');
+  const toggleButtonFullscreen = document.getElementById('toggleButtonFullscreen');
+  
+  toggleButtonChat.addEventListener('click', () => {
+    console.log("button clicked");
     chat.classList.toggle('active');
   });
+  /* toggleButtonChat.addEventListener('click', () => {
+    console.log("button clicked");
+    chatElements.forEach(chatElement => {
+      chatElement.classList.toggle('active');
+    });
+  }); */
+  console.log("side");
+  toggleButtonSidebar.addEventListener('click', () => {
+    console.log("button clicked");
+    sidebars.classList.toggle('active');
+  });
+  console.log("side");
+  toggleButtonSidebarDesktop.addEventListener('click', () => {
+    console.log("button clicked");
+    sidebars.classList.toggle('active');
+  });
+  function toggleFullscreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  }
+  toggleButtonFullscreen.addEventListener('click', toggleFullscreen);
   
   //Console log to tell if iogames.fun is loading for you
   console.log('Loading IOGames.fun chat...');
