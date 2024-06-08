@@ -440,7 +440,7 @@ a[data-favorite]:hover {
  font-size:1.25rem;
  font-weight:bold;
  padding:1.5rem 1rem 0.5rem 1rem;
- display: none;
+/* display: none; */
 }
 .sidebars .item a,
 .sidebars .item a:visited {
