@@ -645,7 +645,7 @@ body nav .margin {
 aside.active {
     left: 0;
     transition: left 0.25s;
-    display: none;
+   /* display: none; */
 }
 aside {
     background-color: #1d1d1d;
