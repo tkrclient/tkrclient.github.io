@@ -661,6 +661,7 @@ aside.active {
     left: 0;
     transition: left 0.25s;
    /* display: none; */
+    width: 25%;
 }
 aside {
     background-color: #1d1d1d;
@@ -671,7 +672,8 @@ aside {
     left: -200vw;
     top: 2rem;
     z-index: 16000000;
-    width: calc(100vw - 2rem);
+    /* width: calc(100vw - 2rem); */
+    width: 25%;
     height: calc(100vh - 2rem);
     transition: left 0.25s;
 }
