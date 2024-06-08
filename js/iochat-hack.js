@@ -236,10 +236,10 @@
     unblockAllButton.addEventListener('click', unblockAllUsers);
 
     // Observe the messages container for new messages
-    const observer = new MutationObserver(() => filterMessages());
+    const observer2 = new MutationObserver(() => filterMessages());
     const messagesContainer = document.getElementById('messages');
     if (messagesContainer) {
-        observer.observe(messagesContainer, { childList: true, subtree: true });
+        observer2.observe(messagesContainer, { childList: true, subtree: true });
     }
 
     // Initial call to display the blocked users and filter messages
