@@ -1,7 +1,7 @@
 $(document).ready(function() {
   
   const toggleButtonChat = document.getElementById('toggleButtonChat');
-  const chatElements = document.querySelectorAll('.chatMobile');
+  const chat = document.getElementById('chat');
   console.log("sidebar");
   const toggleButtonSidebar = document.getElementById('toggleButtonSidebar');
   const sidebars = document.getElementById('sidebars');
@@ -9,16 +9,16 @@ $(document).ready(function() {
   const toggleButtonSidebarDesktop = document.getElementById('toggleButtonSidebarDesktop');
   const toggleButtonFullscreen = document.getElementById('toggleButtonFullscreen');
   
-  /* toggleButtonChat.addEventListener('click', () => {
+  toggleButtonChat.addEventListener('click', () => {
     console.log("button clicked");
     chat.classList.toggle('active');
-  }); */
-  toggleButtonChat.addEventListener('click', () => {
+  });
+  /* toggleButtonChat.addEventListener('click', () => {
     console.log("button clicked");
     chatElements.forEach(chatElement => {
       chatElement.classList.toggle('active');
     });
-  });
+  }); */
   console.log("side");
   toggleButtonSidebar.addEventListener('click', () => {
     console.log("button clicked");
