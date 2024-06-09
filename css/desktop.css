@@ -676,6 +676,7 @@ aside {
     z-index: 16000000;
     /* width: calc(100vw - 2rem); */
     width: 25%;
+    max-width: 366px;
     height: calc(100vh - 2rem);
     transition: left 0.25s;
 }
