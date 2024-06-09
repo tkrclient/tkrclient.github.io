@@ -663,6 +663,7 @@ aside.active {
     transition: left 0.25s;
    /* display: none; */
     width: 25%;
+    max-width: 366px;
 }
 aside {
     background-color: #1d1d1d;
