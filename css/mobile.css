@@ -53,6 +53,7 @@
  max-width: 200px;
  overflow-wrap: break-word;
  opacity: 0.9;
+ overflow-x: scroll;
 }
 .blockInputClass {
  position: absolute;
