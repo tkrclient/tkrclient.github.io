@@ -663,7 +663,7 @@ aside.active {
     transition: left 0.25s;
    /* display: none; */
     width: 25%;
-    max-width: 366px;
+    max-width: 302px;
 }
 aside {
     background-color: #1d1d1d;
@@ -676,7 +676,7 @@ aside {
     z-index: 16000000;
     /* width: calc(100vw - 2rem); */
     width: 25%;
-    max-width: 366px;
+    max-width: 302px;
     height: calc(100vh - 2rem);
     transition: left 0.25s;
 }
