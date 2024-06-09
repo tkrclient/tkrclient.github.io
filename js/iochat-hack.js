@@ -13,18 +13,18 @@
     } 
 
     /*---- Name color changes ----*/
-    /* var namecolor = document.getElementById('colorpicker');
+    var namecolor = document.getElementById('colorpicker');
     // Function (for some reason only loads after few seconds)
     function func() {
       namecolor.style.removeProperty('all');
       // namecolor.style.color = 'rgb(255, 0, 0)'; // CHANGE COLOR HERE! <---------------------------
     }
-    setTimeout(func, 3000); */
+    setTimeout(func, 3000);
 
 
     /*---- Click colors and names ----*/
     // Function (for some reason only loads after few seconds)
-    /* function mess() {
+    function mess() {
       // Get the elements whose color and text you want to copy
       const sourceElements = document.querySelectorAll('#messages .entry .name');
       // Get the elements where you want to copy the color and text
@@ -72,7 +72,7 @@
         };
       }
     }
-    setTimeout(mess, 6000); */
+    setTimeout(mess, 6000);
 
 
     /*---- Removing Unicode ----*/
