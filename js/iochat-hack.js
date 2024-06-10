@@ -16,7 +16,7 @@
     var namecolor = document.getElementById('colorpicker');
     // Function (for some reason only loads after few seconds)
     function func() {
-      namecolor.style.removeProperty('all');
+      //namecolor.style.removeProperty('all');
       // namecolor.style.color = 'rgb(255, 0, 0)'; // CHANGE COLOR HERE! <---------------------------
     }
     setTimeout(func, 3000);
@@ -117,7 +117,7 @@
       
     /* Keybindings for [ ] and \ to change colors */
     // Listen for the 'keypress' event on the document
-    document.addEventListener('keypress', function(event) {
+    /*document.addEventListener('keypress', function(event) {
       // Check if the pressed key is the 'Enter' key
       function red() {
         namecolor.style.removeProperty('all');
@@ -143,7 +143,7 @@
         // Call the function you want to activate
         blue();
       }
-    });
+    });*/
 
     /*---- Next user blocking script ----*/
     // BLOCK USERS FEATURE
@@ -257,6 +257,6 @@
     colorPicker.addEventListener('input', updateUsernameColor);
 
     // Optionally, set an initial color
-    colorPicker.value = '#ff0000'; // Red
+    //colorPicker.value = '#ff0000'; // Red
     updateUsernameColor({target: {value: colorPicker.value}});
 })();
