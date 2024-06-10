@@ -13,13 +13,13 @@
     } 
 
     /*---- Name color changes ----*/
-    /* var namecolor = document.getElementById('colorpicker');
+    var namecolor = document.getElementById('colorpicker');
     // Function (for some reason only loads after few seconds)
     function func() {
       namecolor.style.removeProperty('all');
       // namecolor.style.color = 'rgb(255, 0, 0)'; // CHANGE COLOR HERE! <---------------------------
     }
-    setTimeout(func, 3000); */
+    setTimeout(func, 3000);
 
 
     /*---- Click colors and names ----*/
