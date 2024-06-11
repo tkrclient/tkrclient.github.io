@@ -151,7 +151,7 @@
     'use strict';
 
     // Load blocked users from localStorage
-    let blockedUsers = JSON.parse(localStorage.getItem('blockedUsers')) || [];
+    let blockedUsers = JSON.parse(localStorage.getItem('blockedUsers')) || ["a bot"];
 
 
     // Create the container for the blocked users list
@@ -175,9 +175,14 @@
     // Function to block a user
     function blockUser(username) {
         // Check if the username is "a bot"
-        if (username.toLowerCase() === "a bot:") {
-            // If it is, don't add it to the blockedUsers array
-            console.log("Cannot block the user 'a bot'");
+        if (username.toLowerCase() === "a bot") {
+            // Add "a bot" to the blockedUsers array
+            blockedUsers.push(username);
+            updateBlockedUsersList();
+            filterMessages();
+
+            // Log a message to the console
+            console.log("The user 'a bot' has been blocked");
             return;
         }
 
@@ -197,8 +202,8 @@
 
     // Function to unblock all users
     function unblockAllUsers() {
-        blockedUsers = [];
-        updateBlockedUsersList();
+        blockedUsers = ["a bot"];
+        updateBlockedUsersList("a bot");
         filterMessages();
     }
 
@@ -251,7 +256,7 @@
     }
 
     // Initial call to display the blocked users and filter messages
-    updateBlockedUsersList();
+    updateBlockedUsersList("a bot");
     filterMessages();
 
     // Function to update the username color
