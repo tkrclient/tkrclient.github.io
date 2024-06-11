@@ -783,7 +783,8 @@ section.margin {
     margin: 0 1rem;
 }
 footer {
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     padding: 1rem;
 }
