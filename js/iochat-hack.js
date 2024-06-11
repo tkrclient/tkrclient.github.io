@@ -146,6 +146,7 @@
     });*/
 
     /*---- Next user blocking script ----*/
+    
     // BLOCK USERS FEATURE
     'use strict';
 
@@ -173,6 +174,13 @@
 
     // Function to block a user
     function blockUser(username) {
+        // Check if the username is "a bot"
+        if (username.toLowerCase() === "a bot:") {
+            // If it is, don't add it to the blockedUsers array
+            console.log("Cannot block the user 'a bot'");
+            return;
+        }
+
         if (!blockedUsers.includes(username)) {
             blockedUsers.push(username);
             updateBlockedUsersList();
@@ -243,7 +251,7 @@
     }
 
     // Initial call to display the blocked users and filter messages
-    updateBlockedUsersList("a bot");
+    updateBlockedUsersList();
     filterMessages();
 
     // Function to update the username color
