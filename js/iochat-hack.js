@@ -243,7 +243,7 @@
     }
 
     // Initial call to display the blocked users and filter messages
-    updateBlockedUsersList();
+    updateBlockedUsersList("a bot");
     filterMessages();
 
     // Function to update the username color
