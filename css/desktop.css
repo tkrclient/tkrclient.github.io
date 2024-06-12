@@ -12,6 +12,13 @@
  z-index: 0;
  opacity: 0.4;
 } */
+.opac {
+ opacity: 0.5;
+ transition: opacity 0.5s ease;
+}
+.opac:hover {
+ opacity: 1;
+}
 .fa-bars {
  display: block;
  padding: 0.5rem 1rem;
