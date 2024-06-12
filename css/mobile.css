@@ -631,7 +631,7 @@ body .reviews .thumbs .item a:hover img {
     box-shadow: 0 0 0 2px #fc0;
 }
 .main {
-    display: none;
+    /* display: none; */
 }
 #chat,
 aside {
@@ -782,7 +782,7 @@ section.margin {
 }
 footer {
     /* display: flex; */
-    display: none;
+    /* display: none; */
     flex-direction: column;
     padding: 1rem;
 }
