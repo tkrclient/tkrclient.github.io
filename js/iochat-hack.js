@@ -272,4 +272,45 @@
     // Optionally, set an initial color
     //colorPicker.value = '#ff0000'; // Red
     updateUsernameColor({target: {value: colorPicker.value}});
+
+    /* VIDEO BACKGROUND */
+    // URL of your actual video
+    var videoUrl = 'https://cdn.pixabay.com/video/2024/05/29/214405_large.mp4';
+
+    // Create video element
+    var video = document.createElement('video');
+    video.id = 'video-background';
+    video.autoplay = true;
+    video.loop = true;
+    video.muted = true;
+
+    // Set source
+    var source = document.createElement('source');
+    source.src = videoUrl;
+    source.type = 'video/mp4';
+    video.appendChild(source);
+
+    // Append video to body
+    document.body.insertBefore(video, document.body.firstChild);
+
+    // Add styles for video background
+    var css = `
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 0.4; /* Adjust opacity here */
+        }
+    `;
+
+    // Create a style element
+    var style = document.createElement('style');
+    style.appendChild(document.createTextNode(css));
+
+    // Append style to head
+    document.head.appendChild(style);
 })();
