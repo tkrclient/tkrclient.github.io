@@ -2,7 +2,7 @@
  font-family: 'Exo 2';
  url('/font/Exo2-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
-#video-background {
+/* #video-background {
  position: fixed;
  top: 0;
  left: 0;
@@ -10,8 +10,8 @@
  height: 100vh;
  object-fit: cover;
  z-index: 0;
- opacity: 0.4; /* Adjust opacity here */
-}
+ opacity: 0.4;
+} */
 .fa-bars {
  display: block;
  padding: 0.5rem 1rem;
