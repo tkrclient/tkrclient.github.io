@@ -19,11 +19,16 @@
  display: none;
 }
 .explain {
- position: absolute; 
- left: 41.25%; 
- text-align: center; 
  width: 200px;
  z-index: -10;
+ position: absolute; 
+ bottom: 260px; 
+ left: 50%; 
+ text-align: center;
+ justify-content: center; 
+ vertical-align: middle;
+ display: inline-block; 
+ transform: translate(-50%, -50%);
 }
 .commands {
  position: absolute; 

@@ -1,6 +1,7 @@
 <!-- testing -->
 <!DOCTYPE html>
   <html lang="en">
+  <!-- Header -->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,13 +27,10 @@
     <meta property="og:url" content="https://iogames.fun/">
     <link rel="canonical" href="https://iogames.fun/">
   </head>
+  <!-- End -->
 
-  <!-- End of header css -->
+  <!-- Desktop Information + Alternative Chat -->
   <body>
-    <div class="item mobile-minnit">
-      <!-- <iframe src="https://kiwiirc.hybridirc.com/?theme=Dark#tkrclient" style="border:0; width:100%; height:100%;"></iframe> -->
-      <iframe src="https://www3.cbox.ws/box/?boxid=3538311&boxtag=KK9MuO" width="90%" height="100%" allowtransparency="no" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
-    </div>
     <div class="main">
       <footer>
         <div class="item minnit">
@@ -49,7 +47,7 @@
         <input type="checkbox" id="enableFunction" onclick="toggleFunction(this)" checked>Name Copier (Not Ready) <br><br>
         <input type="checkbox" id="enableFunction" onclick="toggleFunction(this)" checked>Color Chooser (Not Ready) <br><br>
       </p>
-      <div class="explain" style="position: absolute; bottom: 260px; left: 50%; text-align: center;justify-content: center; vertical-align: middle;display: inline-block; transform: translate(-50%, -50%);">
+      <div class="explain">
         <p>What is TKRClient?</p>
         <p>You can block people, Press top right button ☰</p>
         <p>It allows for copy and pasting other names, as your name!</p>
@@ -58,16 +56,13 @@
         <p>May soon allow you to block specific users</p>
         <p>And maybe much more soon!</p>
       </div>
-      <div class="foot">
+      <div class="foot" style="position: absolute;bottom: 20px;left: 50%; text-align: center;justify-content: center; vertical-align: middle;display: inline-block; transform: translate(-50%, -50%);z-index: -10;"> 
+        Source Code: https://github.com/tkrclient/tkrclient.github.io 
       </div>
-      <!-- Footer -->
-      <div style="position: absolute;bottom: 20px;left: 50%; text-align: center;justify-content: center; vertical-align: middle;display: inline-block; transform: translate(-50%, -50%);z-index: -10;"> Source Code: https://github.com/tkrclient/tkrclient.github.io </div>
-      <!-- END -->
-      <!-- <div style="position: absolute; right: 20%;">
-        <iframe src="https://www3.cbox.ws/box/?boxid=3538311&amp;boxtag=KK9MuO" width="100%" height="800px" frameborder="0"></iframe>	
-      </div> -->
     </div>
+    <!-- End -->
 
+    <!-- Desktop Nav -->
     <nav class="desktop">
       <div class="menu list">
         <p style="position: absolute; left: 1%; font-size: 1.5rem; font-weight: bold;">
@@ -95,7 +90,9 @@
       </div>
       </div>
     </nav>
-    
+    <!-- End -->
+
+    <!-- Mobile Nav -->
     <nav class="mobile">
       <p style="position: absolute; left: 1%; font-size: 1.5rem; font-weight: bold;">
         <p style="position: absolute;left: 0.5%;top: 0%;margin: 0px;font-size: 16px;">
@@ -115,6 +112,7 @@
         <i class="fa" style="font-weight:1;">☰</i>
       </a>
     </nav>
+    <!-- End -->
 
   <!-- Script ---------------->
   <script src="/js/iochat.js"></script>
@@ -135,23 +133,8 @@
     </div>
   </div>
   <!-- End -->
-    
-  <!-- MOBILE CHAT -->
-  <!-- <div id="chat" class="chatMobile">
-    <div class="chat-send">
-      <input id="message" type="text" placeholder="Message" maxlength="1000">
-      <i id="send" class="fa fa-lg fa-paper-plane"></i>
-    </div>
-    
-    <div id="messages" class="chat-messages"></div>
 
-    <div class="chat-name">
-      <input id="name" type="text" placeholder="Name" maxlength="1000">
-      <i id="colorpicker" class="fa fa-lg fa-palette"></i>
-    </div>
-  </div> -->
-  <!-- END -->
-
+  <!-- Sidebars -->
   <aside id="sidebars">
     <div class="sidebars">
       <div class="header">
@@ -223,6 +206,7 @@
     </div>
     
   </aside>
+  <!-- End -->
 
   <!-- Script ---------------->
   <script src="/js/iochat-hack.js"></script>
