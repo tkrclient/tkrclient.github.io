@@ -917,6 +917,12 @@ footer .item:last-child {
  font-size:1.5rem;
  font-weight:bold
 }
+.iogames:hover {
+ text-shadow:0 0 0.5rem rgba(255,255,255,0.9);
+}
+.fun:hover {
+ text-shadow:0 0 0.5rem #fc0;
+}
 .logo a:hover .iogames,
 .logo a:visited:hover .iogames {
  text-shadow:0 0 0.5rem rgba(255,255,255,0.9)
