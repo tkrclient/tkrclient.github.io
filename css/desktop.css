@@ -63,6 +63,9 @@
  width: 150px;
  z-index: -10;
 }
+.mobile-minnit {
+ display: none;
+}
 .foot {
  bottom: 2%;
  left: 40%;
@@ -626,12 +629,10 @@ body {
 }
 body nav {
  grid-area:nav;
- background-color: #292929;
- border-bottom: #292929;
+ background-color:rgba(255,255,255,0.05);
+ border-bottom:1px solid rgba(0,0,0,0.25);
  display:grid;
- align-items:center;
- top: 0%;
- flex-grow: 1;
+ align-items:center
 }
 body nav .logo {
  grid-area:logo
