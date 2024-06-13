@@ -733,7 +733,7 @@ aside {
 } */
 body .main {
  grid-area:main;
- display:flex;
+ display:grid;
  flex-direction: none;
  overflow: hidden;
  z-index: 0;
