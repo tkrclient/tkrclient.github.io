@@ -628,7 +628,7 @@ body nav {
  grid-area:nav;
  background-color: #292929;
  border-bottom: #292929;
- display: flex;
+ display:grid;
  align-items:center;
  top: 0%;
  flex-grow: 1;
@@ -733,7 +733,7 @@ aside {
 } */
 body .main {
  grid-area:main;
- display:grid;
+ display:flex;
  flex-direction: none;
  overflow: hidden;
  z-index: 0;
