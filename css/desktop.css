@@ -22,7 +22,7 @@
  width: 200px;
  z-index: -10;
  position: absolute; 
- bottom: 260px; 
+ bottom: -50px;
  left: 50%; 
  text-align: center;
  justify-content: center; 
