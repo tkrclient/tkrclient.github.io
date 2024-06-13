@@ -303,7 +303,7 @@
             height: 100vh;
             object-fit: cover;
             z-index: 0;
-            opacity: 0.4; /* Adjust opacity here */
+            opacity: 0; /* Adjust opacity here */
         }
     `;
 
