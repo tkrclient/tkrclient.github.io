@@ -631,8 +631,6 @@ body {
 }
 body nav {
  grid-area:nav;
- background-color: #292929;
- border-bottom: #292929;
  display:grid;
  align-items:center;
 }
@@ -803,7 +801,6 @@ body .chat-send {
  grid-template-areas:"input button";
  grid-template-columns:1fr auto;
  align-items:center;
- background-color: #343434;
  z-index: 10;
 }
 body .chat-name input[type=text],
@@ -839,7 +836,6 @@ body .chat-name i:hover {
 }
 body .chat-messages {
  grid-area: messages;
- background-color: #292929;
  box-sizing: border-box;
  display: flex;
  flex-direction: column-reverse;
