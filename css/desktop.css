@@ -7,6 +7,9 @@
   justify-content: space-between;
   align-items: center;
 }
+.minnit {
+ height: 100%;
+}
 /* #video-background {
  position: fixed;
  top: 0;
@@ -58,9 +61,6 @@
  text-align: center; 
  width: 150px;
  z-index: -10;
-}
-.mobile-minnit {
- display: none;
 }
 .foot {
  bottom: 2%;
