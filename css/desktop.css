@@ -627,9 +627,10 @@ body nav {
  grid-area:nav;
  background-color: #292929;
  border-bottom: #292929;
- display:grid;
+ display: flex;
  align-items:center;
  top: 0%;
+ flex-grow: 1;
 }
 body nav .logo {
  grid-area:logo
