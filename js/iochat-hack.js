@@ -359,6 +359,7 @@
         if (match) {
           const img = document.createElement('img');
           img.src = match[0];
+          img.style.maxWidth = '100%'; // Set the max-width to 100%
           message.innerHTML = '';
           message.appendChild(img);
         }
