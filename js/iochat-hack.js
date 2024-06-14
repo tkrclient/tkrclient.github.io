@@ -311,6 +311,9 @@
     const b6 = document.querySelector('.b6')
     var b6videoUrl = 'https://cdn.pixabay.com/video/2019/10/09/27669-365224683_large.mp4';
 
+    // Remove background
+    const rem = document.querySelector('.rem')
+
     // Functions to detect if clicked on
     function b1change() {
         elementToRemove.remove();
@@ -355,5 +358,12 @@
     b4.addEventListener('click', b4change);
     b5.addEventListener('click', b5change);
     b6.addEventListener('click', b6change);
-    
+
+    // Remove background click
+    function remchange() {
+        elementToRemove.remove();
+    }
+
+    rem.addEventListener('click', remchange);
+
 })();
