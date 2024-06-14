@@ -295,7 +295,7 @@
 
     /* BACKGROUNDS JS */
     // Remove the background first variable
-    const elementToRemove = document.getElementById('video-background');
+    /* const elementToRemove = document.getElementById('video-background');
 
     // Pick which background variables
     const b1 = document.querySelector('.b1')
@@ -364,6 +364,6 @@
         elementToRemove.remove();
     }
 
-    rem.addEventListener('click', remchange);
+    rem.addEventListener('click', remchange); */
 
 })();
