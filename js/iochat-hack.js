@@ -293,24 +293,69 @@
     // Append video to body
     document.body.insertBefore(video, document.body.firstChild);
 
-    // Add styles for video background
-    var css = `
-        #video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            z-index: 0;
-            opacity: 1; /* Adjust opacity here */
-        }
-    `;
+    /* BACKGROUNDS JS */
+    // Remove the background first variable
+    const elementToRemove = document.getElementById('video-background');
 
-    // Create a style element
-    var style = document.createElement('style');
-    style.appendChild(document.createTextNode(css));
+    // Pick which background variables
+    const b1 = document.querySelector('.b1')
+    var b1videoUrl = 'https://cdn.pixabay.com/video/2024/05/29/214405_large.mp4';
+    const b2 = document.querySelector('.b2')
+    var b2videoUrl = 'https://cdn.pixabay.com/video/2024/06/08/215762_large.mp4';
+    const b3 = document.querySelector('.b3')
+    var b3videoUrl = 'https://cdn.pixabay.com/video/2024/03/01/202587-918431513_large.mp4';
+    const b4 = document.querySelector('.b4')
+    var b4videoUrl = 'https://cdn.pixabay.com/video/2021/04/15/71122-537102350_large.mp4';
+    const b5 = document.querySelector('.b5')
+    var b5videoUrl = 'https://cdn.pixabay.com/video/2021/10/10/91562-629172467_large.mp4';
+    const b6 = document.querySelector('.b6')
+    var b6videoUrl = 'https://cdn.pixabay.com/video/2019/10/09/27669-365224683_large.mp4';
 
-    // Append style to head
-    document.head.appendChild(style);
+    // Functions to detect if clicked on
+    function b1change() {
+        elementToRemove.remove();
+        var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
+        var source = document.createElement('source'); source.src = videoUrl; source.type = 'video/mp4'; video.appendChild(source);
+        document.body.insertBefore(video, document.body.firstChild);
+    }
+    function b2change() {
+        elementToRemove.remove();
+        var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
+        var source = document.createElement('source'); source.src = videoUrl; source.type = 'video/mp4'; video.appendChild(source);
+        document.body.insertBefore(video, document.body.firstChild);
+    }
+    function b3change() {
+        elementToRemove.remove();
+        var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
+        var source = document.createElement('source'); source.src = videoUrl; source.type = 'video/mp4'; video.appendChild(source);
+        document.body.insertBefore(video, document.body.firstChild);
+    }
+        function b4change() {
+        elementToRemove.remove();
+        var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
+        var source = document.createElement('source'); source.src = videoUrl; source.type = 'video/mp4'; video.appendChild(source);
+        document.body.insertBefore(video, document.body.firstChild);
+    }
+    function b5change() {
+        elementToRemove.remove();
+        var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
+        var source = document.createElement('source'); source.src = videoUrl; source.type = 'video/mp4'; video.appendChild(source);
+        document.body.insertBefore(video, document.body.firstChild);
+    }
+    function b6change() {
+        elementToRemove.remove();
+        var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
+        var source = document.createElement('source'); source.src = videoUrl; source.type = 'video/mp4'; video.appendChild(source);
+        document.body.insertBefore(video, document.body.firstChild);
+    }
+
+    b1.addEventListener('click', b1change);
+    b2.addEventListener('click', b2change);
+    b3.addEventListener('click', b3change);
+    b4.addEventListener('click', b4change);
+    b5.addEventListener('click', b5change);
+    b6.addEventListener('click', b6change);
+    
+
+    
 })();
