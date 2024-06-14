@@ -339,6 +339,9 @@
 
     rem.addEventListener('click', remchange);
 
+    // LOAD BACKGROUND 5
+    const changeBackground(.b5);
+    
     // Load the last clicked background on page load
     window.addEventListener('load', () => {
       const lastBackground = localStorage.getItem('lastBackground');
