@@ -11,6 +11,7 @@
  width: 100%;
  word-break: break-all;
  text-wrap: wrap;
+ padding-left: 15px;
 }
 .chatalt {
  backdrop-filter: blur(9px);
