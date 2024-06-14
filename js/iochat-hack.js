@@ -315,37 +315,37 @@
     function b1change() {
         elementToRemove.remove();
         var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
-        var source = document.createElement('source'); source.src = videoUrl; source.type = 'video/mp4'; video.appendChild(source);
+        var source = document.createElement('source'); source.src = b1videoUrl; source.type = 'video/mp4'; video.appendChild(source);
         document.body.insertBefore(video, document.body.firstChild);
     }
     function b2change() {
         elementToRemove.remove();
         var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
-        var source = document.createElement('source'); source.src = videoUrl; source.type = 'video/mp4'; video.appendChild(source);
+        var source = document.createElement('source'); source.src = b2videoUrl; source.type = 'video/mp4'; video.appendChild(source);
         document.body.insertBefore(video, document.body.firstChild);
     }
     function b3change() {
         elementToRemove.remove();
         var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
-        var source = document.createElement('source'); source.src = videoUrl; source.type = 'video/mp4'; video.appendChild(source);
+        var source = document.createElement('source'); source.src = b3videoUrl; source.type = 'video/mp4'; video.appendChild(source);
         document.body.insertBefore(video, document.body.firstChild);
     }
         function b4change() {
         elementToRemove.remove();
         var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
-        var source = document.createElement('source'); source.src = videoUrl; source.type = 'video/mp4'; video.appendChild(source);
+        var source = document.createElement('source'); source.src = b4videoUrl; source.type = 'video/mp4'; video.appendChild(source);
         document.body.insertBefore(video, document.body.firstChild);
     }
     function b5change() {
         elementToRemove.remove();
         var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
-        var source = document.createElement('source'); source.src = videoUrl; source.type = 'video/mp4'; video.appendChild(source);
+        var source = document.createElement('source'); source.src = b5videoUrl; source.type = 'video/mp4'; video.appendChild(source);
         document.body.insertBefore(video, document.body.firstChild);
     }
     function b6change() {
         elementToRemove.remove();
         var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
-        var source = document.createElement('source'); source.src = videoUrl; source.type = 'video/mp4'; video.appendChild(source);
+        var source = document.createElement('source'); source.src = b6videoUrl; source.type = 'video/mp4'; video.appendChild(source);
         document.body.insertBefore(video, document.body.firstChild);
     }
 
@@ -355,7 +355,5 @@
     b4.addEventListener('click', b4change);
     b5.addEventListener('click', b5change);
     b6.addEventListener('click', b6change);
-    
-
     
 })();
