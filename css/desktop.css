@@ -128,7 +128,7 @@
 }
 .unblockAllButtonClass {
  position: absolute;
- left: 2%;
+ left: 0%;
  top: 95%;
  transform: translateY(-50%);
  background-color: rgb(51, 51, 51);
