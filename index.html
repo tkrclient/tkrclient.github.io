@@ -32,30 +32,30 @@
   <!-- Desktop Information + Alternative Chat -->
   <body>
     <div class="main">
-      <footer style="backdrop-filter: blur(9px); height: calc(100% - 50px); position: absolute; top: 47px;">
-        <div class="item minnit" style="backdrop-filter: blur(3px);">
-          <iframe src="https://www3.cbox.ws/box/?boxid=3538311&boxtag=KK9MuO" width="100%" height="100%" allowtransparency="no" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
+      <footer class="chatalt">
+        <div class="item minnit">
+          <iframe src="https://www3.cbox.ws/box/?boxid=3538311&boxtag=KK9MuO" width="100%" height="100%" allowtransparency="no" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>	
         </div>
       </footer>
-      <div class="sidebars" style="position:absolute;left: 322px;height: 100%;bottom: 43px;width: 186px;">
+      <div class="sidebars">
         <div class="item opac">
-          <div class="blockedUsersListClass all" style="/* box-shadow:0 0 0.5rem #ffff00; */ max-width: 126px; /* height: 16px; */ backdrop-filter: blur(3px); background-color: rgba(29, 29, 29, 0.8);">Blocked Users:</div>
+          <div class="blockedUsersListClass all">Blocked Users:</div>
         </div>
         <div class="item opac">
-          <input type="text" placeholder="Block user" style="/* box-shadow:0 0 0.5rem #ffff00; */ backdrop-filter: blur(3px); background-color: rgba(29, 29, 29, 0.8);" class="blockInputClass">
+          <input type="text" placeholder="Block user" class="blockInputClass">
         </div>
         <div class="item opac">
-          <input type="text" placeholder="Unblock user" style="/* box-shadow:0 0 0.5rem #ffff00; */ backdrop-filter: blur(3px); background-color: rgba(29, 29, 29, 0.8);" class="unblockInputClass">
+          <input type="text" placeholder="Unblock user" class="unblockInputClass">
         </div>
         <div class="item opac">
-          <button class="unblockAllButtonClass" style="/* box-shadow:0 0 0.5rem #ffff00; */ backdrop-filter: blur(3px); background-color: rgba(29, 29, 29, 0.8);">Unblock All</button>
+          <button class="unblockAllButtonClass">Unblock All</button>
         </div>
         <div class="item opac">
-          <input type="color" id="usernameColorPicker" style="/* box-shadow:0 0 0.5rem #ffff00; */ backdrop-filter: blur(3px); top: 64%; left: 0%; background-color: rgba(29, 29, 29, 0.8);" class="colorPickerClass">
+          <input type="color" id="usernameColorPicker" class="colorPickerClass">
         </div>
       </div>
-      <img src="images/TKRLOGO2-cropped.png" style="width: 312px;position: absolute;bottom: -24px;left: 50%;text-align: center;justify-content: center;vertical-align: middle;display: inline-block;transform: translate(-50%, -50%);z-index: -10;">
-      <div class="foot opac" style="position: absolute;bottom: 20px;left: 50%; text-align: center;justify-content: center; vertical-align: middle;display: inline-block; transform: translate(-50%, -50%);z-index: -10; /* text-shadow: 0 0 0.5rem #ffff00; */"> 
+      <img src="images/TKRLOGO2-cropped.png" class="logotkr">
+      <div class="foot opac"> 
         Source Code: https://github.com/tkrclient/tkrclient.github.io 
       </div>
     </div>
@@ -108,7 +108,7 @@
   <!-- End ------------------->
 
   <!-- IOGAMES.FUN CHAT -->
-  <div id="chat" style="height: calc(100% - 50px);position: absolute;top: 50px;right: 0%;width: 250px;backdrop-filter:blur(9px);">
+  <div id="chat">
     <div class="chat-send opac">
       <input id="message" type="text" placeholder="Message" maxlength="1000">
       <i id="send" class="fa fa-lg fa-paper-plane"></i>
@@ -129,12 +129,7 @@
       <div class="header">
         TKR Client
       </div>
-      <div class="" style="
-    overflow-x: scroll;
-    height: 300px;
-    width: 100%;
-    word-break: break-all;
-    text-wrap: wrap;">
+      <div class="backgroundstyles">
         <p class="b1">
           Background 1
         </p>
