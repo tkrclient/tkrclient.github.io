@@ -292,8 +292,7 @@
     
     // Function to remove existing video-background elements
     function removeVideoBackground() {
-      const existingVideos = document.querySelectorAll('#video-background');
-      existingVideos.forEach(video => {
+      elementToRemove.forEach(video => {
         video.remove();
       });
     }
@@ -321,6 +320,7 @@
       if (videoUrl) {
         removeVideoBackground();
         createVideoBackground(videoUrl);
+        localStorage.setItem('lastBackground', videoKey); // Store the last clicked background
       }
     }
     
@@ -333,8 +333,17 @@
     // Remove background click
     function remchange() {
       removeVideoBackground();
+      localStorage.removeItem('lastBackground'); // Remove the stored last background
     }
     
     rem.addEventListener('click', remchange);
+    
+    // Load the last clicked background on page load
+    window.addEventListener('load', () => {
+      const lastBackground = localStorage.getItem('lastBackground');
+      if (lastBackground && videoUrls[lastBackground]) {
+        createVideoBackground(videoUrls[lastBackground]);
+      }
+    });
 
 })();
