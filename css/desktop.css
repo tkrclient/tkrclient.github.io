@@ -10,7 +10,7 @@
 .minnit {
  height: 100%;
 }
-/* #video-background {
+#video-background {
  position: fixed;
  top: 0;
  left: 0;
@@ -18,8 +18,8 @@
  height: 100vh;
  object-fit: cover;
  z-index: 0;
- opacity: 0.4;
-} */
+ opacity: 1; /* Adjust opacity here */
+}
 .opac {
  opacity: 0.75;
  /* backdrop-filter: blur(3px); */
