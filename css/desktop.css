@@ -517,7 +517,7 @@ a[data-favorite]:hover {
 }
 .sidebars {
  white-space:nowrap;
- position:absolute;
+ /* position:absolute; */
  left: 322px;
  height: 100%;
  bottom: 43px;
