@@ -760,6 +760,7 @@ aside.active {
    /* display: none; */
     width: 25%;
     max-width: 302px;
+    overflow-y: hidden;
 }
 aside {
     background-color: #1d1d1d;
