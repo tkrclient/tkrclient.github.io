@@ -275,7 +275,7 @@
 
     /* BACKGROUNDS JS */
     // Remove the background first variable
-    const elementToRemove = document.querySelectorAll('#video-background');
+    /* const elementToRemove = document.querySelectorAll('#video-background');
     
     // Pick which background variables
     const videoUrls = {
@@ -292,6 +292,7 @@
     
     // Function to remove existing video-background elements
     function removeVideoBackground() {
+      const existingVideos = document.querySelectorAll('#video-background');
       elementToRemove.forEach(video => {
         video.remove();
       });
@@ -344,6 +345,6 @@
       if (lastBackground && videoUrls[lastBackground]) {
         createVideoBackground(videoUrls[lastBackground]);
       }
-    });
+    }); */
 
 })();
