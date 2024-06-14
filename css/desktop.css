@@ -37,6 +37,9 @@
  z-index: 0;
  opacity: 1; /* Adjust opacity here */
 }
+.mobileblock {
+ display: none;
+}
 .opac {
  opacity: 0.75;
  /* backdrop-filter: blur(3px); */
