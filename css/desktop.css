@@ -3,7 +3,20 @@
  url('/font/Exo2-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 ::-webkit-scrollbar {
-  display: none;
+ display: none;
+}
+.backgroundstyles {
+ overflow-x: scroll;
+ height: 300px;
+ width: 100%;
+ word-break: break-all;
+ text-wrap: wrap;
+}
+.chatalt {
+ backdrop-filter: blur(9px);
+ height: calc(100% - 50px);
+ position: absolute;
+ top: 47px;
 }
 .container {
   display: flex;
@@ -12,6 +25,7 @@
 }
 .minnit {
  height: 100%;
+ backdrop-filter: blur(3px);
 }
 #video-background {
  position: fixed;
@@ -72,9 +86,14 @@
  display: none;
 }
 .foot {
- bottom: 2%;
- left: 40%;
  position: absolute;
+ bottom: 20px;
+ left: 50%;
+ text-align: center;
+ justify-content: center;
+ vertical-align: middle;
+ display: inline-block;
+ transform: translate(-50%, -50%);
  z-index: -10;
 }
 .chatClass {
@@ -90,64 +109,82 @@
  left: 0%;
  top: 72%;
  transform: translateY(-50%);
- background-color: rgba(51, 51, 51, 0.9);
  color: rgb(255, 255, 255);
  padding: 5px;
  border: 1px solid rgb(68, 68, 68);
  border-radius: 5px;
  font-weight: 200;
  font-size: 12px;
- max-width: 200px;
  overflow-wrap: break-word;
  opacity: 0.9;
  overflow-x: scroll;
+ max-width: 126px; 
+ backdrop-filter: blur(3px); 
+ background-color: rgba(29, 29, 29, 0.8);
 }
 .blockInputClass {
  position: absolute;
  left: 0%;
  top: 79%;
  transform: translateY(-50%);
- background-color: rgb(51, 51, 51);
  color: rgb(255, 255, 255);
  padding: 5px;
  border: 1px solid rgb(68, 68, 68);
  border-radius: 5px;
  width: 10px;
+ backdrop-filter: blur(3px); 
+ background-color: rgba(29, 29, 29, 0.8);
 }
 .unblockInputClass {
  position: absolute;
  left: 0%;
  top: 87%;
  transform: translateY(-50%);
- background-color: rgb(51, 51, 51);
  color: rgb(255, 255, 255);
  padding: 5px;
  border: 1px solid rgb(68, 68, 68);
  border-radius: 5px;
  width: 10px;
+ backdrop-filter: blur(3px); 
+ background-color: rgba(29, 29, 29, 0.8);
 }
 .unblockAllButtonClass {
  position: absolute;
  left: 0%;
  top: 95%;
  transform: translateY(-50%);
- background-color: rgb(51, 51, 51);
  color: rgb(255, 255, 255);
  padding: 5px;
  border: 1px solid rgb(68, 68, 68);
  border-radius: 5px;
  cursor: pointer;
+ backdrop-filter: blur(3px);
+ background-color: rgba(29, 29, 29, 0.8);
 }
 .colorPickerClass {
  position: absolute;
- top: 70%;
  left: 82%;
  z-index: 1000;
  padding: 5px;
  border: none;
  border-radius: 5px;
- background-color: rgb(51, 51, 51);
  color: rgb(255, 255, 255);
+ backdrop-filter: blur(3px); 
+ top: 64%; 
+ left: 0%; 
+ background-color: rgba(29, 29, 29, 0.8);
+}
+.logotkr {
+ width: 312px;
+ position: absolute;
+ bottom: -24px;
+ left: 50%;
+ text-align: center;
+ justify-content: center;
+ vertical-align: middle;
+ display: inline-block;
+ transform: translate(-50%, -50%);
+ z-index: -10;
 }
 form {
  display:flex;
@@ -476,7 +513,12 @@ a[data-favorite]:hover {
  text-shadow:0 0 0.5rem #d00
 }
 .sidebars {
- white-space:nowrap
+ white-space:nowrap;
+ position:absolute;
+ left: 322px;
+ height: 100%;
+ bottom: 43px;
+ width: 186px;
 }
 .sidebars .header {
  /* color: #fc0; */
@@ -692,6 +734,12 @@ body nav .margin {
  flex-direction: column-reverse;
  z-index: 10;
  overflow-y: scroll;
+ height: calc(100% - 50px);
+ position: absolute;
+ top: 50px;
+ right: 0%;
+ width: 250px;
+ backdrop-filter:blur(9px);
 }
 #chat.active,
 aside.active {
