@@ -273,97 +273,67 @@
     //colorPicker.value = '#ff0000'; // Red
     updateUsernameColor({target: {value: colorPicker.value}});
 
-    /* VIDEO BACKGROUND */
-    // URL of your actual video
-    var videoUrl = 'https://cdn.pixabay.com/video/2024/05/29/214405_large.mp4';
-
-    // Create video element
-    var video = document.createElement('video');
-    video.id = 'video-background';
-    video.autoplay = true;
-    video.loop = true;
-    video.muted = true;
-
-    // Set source
-    var source = document.createElement('source');
-    source.src = videoUrl;
-    source.type = 'video/mp4';
-    video.appendChild(source);
-
-    // Append video to body
-    document.body.insertBefore(video, document.body.firstChild);
-
     /* BACKGROUNDS JS */
     // Remove the background first variable
-    /* const elementToRemove = document.getElementById('video-background');
-
+    const elementToRemove = document.querySelectorAll('#video-background');
+    
     // Pick which background variables
-    const b1 = document.querySelector('.b1')
-    var b1videoUrl = 'https://cdn.pixabay.com/video/2024/05/29/214405_large.mp4';
-    const b2 = document.querySelector('.b2')
-    var b2videoUrl = 'https://cdn.pixabay.com/video/2024/06/08/215762_large.mp4';
-    const b3 = document.querySelector('.b3')
-    var b3videoUrl = 'https://cdn.pixabay.com/video/2024/03/01/202587-918431513_large.mp4';
-    const b4 = document.querySelector('.b4')
-    var b4videoUrl = 'https://cdn.pixabay.com/video/2021/04/15/71122-537102350_large.mp4';
-    const b5 = document.querySelector('.b5')
-    var b5videoUrl = 'https://cdn.pixabay.com/video/2021/10/10/91562-629172467_large.mp4';
-    const b6 = document.querySelector('.b6')
-    var b6videoUrl = 'https://cdn.pixabay.com/video/2019/10/09/27669-365224683_large.mp4';
-
+    const videoUrls = {
+      b1: 'https://cdn.pixabay.com/video/2024/05/29/214405_large.mp4',
+      b2: 'https://cdn.pixabay.com/video/2024/06/08/215762_large.mp4',
+      b3: 'https://cdn.pixabay.com/video/2024/03/01/202587-918431513_large.mp4',
+      b4: 'https://cdn.pixabay.com/video/2021/04/15/71122-537102350_large.mp4',
+      b5: 'https://cdn.pixabay.com/video/2021/10/10/91562-629172467_large.mp4',
+      b6: 'https://cdn.pixabay.com/video/2019/10/09/27669-365224683_large.mp4'
+    };
+    
     // Remove background
-    const rem = document.querySelector('.rem')
-
-    // Functions to detect if clicked on
-    function b1change() {
-        elementToRemove.remove();
-        var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
-        var source = document.createElement('source'); source.src = b1videoUrl; source.type = 'video/mp4'; video.appendChild(source);
-        document.body.insertBefore(video, document.body.firstChild);
+    const rem = document.querySelector('.rem');
+    
+    // Function to remove existing video-background elements
+    function removeVideoBackground() {
+      const existingVideos = document.querySelectorAll('#video-background');
+      existingVideos.forEach(video => {
+        video.remove();
+      });
     }
-    function b2change() {
-        elementToRemove.remove();
-        var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
-        var source = document.createElement('source'); source.src = b2videoUrl; source.type = 'video/mp4'; video.appendChild(source);
-        document.body.insertBefore(video, document.body.firstChild);
+    
+    // Function to create a new video-background element
+    function createVideoBackground(videoUrl) {
+      var video = document.createElement('video');
+      video.id = 'video-background';
+      video.autoplay = true;
+      video.loop = true;
+      video.muted = true;
+      var source = document.createElement('source');
+      source.src = videoUrl;
+      source.type = 'video/mp4';
+      video.appendChild(source);
+      document.body.insertBefore(video, document.body.firstChild);
     }
-    function b3change() {
-        elementToRemove.remove();
-        var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
-        var source = document.createElement('source'); source.src = b3videoUrl; source.type = 'video/mp4'; video.appendChild(source);
-        document.body.insertBefore(video, document.body.firstChild);
+    
+    // Event listener function for background changes
+    function changeBackground(event) {
+      const videoKey = event.target.classList[0];
+      const videoUrl = videoUrls[videoKey];
+    
+      if (videoUrl) {
+        removeVideoBackground();
+        createVideoBackground(videoUrl);
+      }
     }
-        function b4change() {
-        elementToRemove.remove();
-        var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
-        var source = document.createElement('source'); source.src = b4videoUrl; source.type = 'video/mp4'; video.appendChild(source);
-        document.body.insertBefore(video, document.body.firstChild);
-    }
-    function b5change() {
-        elementToRemove.remove();
-        var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
-        var source = document.createElement('source'); source.src = b5videoUrl; source.type = 'video/mp4'; video.appendChild(source);
-        document.body.insertBefore(video, document.body.firstChild);
-    }
-    function b6change() {
-        elementToRemove.remove();
-        var video = document.createElement('video'); video.id = 'video-background'; video.autoplay = true; video.loop = true; video.muted = true;
-        var source = document.createElement('source'); source.src = b6videoUrl; source.type = 'video/mp4'; video.appendChild(source);
-        document.body.insertBefore(video, document.body.firstChild);
-    }
-
-    b1.addEventListener('click', b1change);
-    b2.addEventListener('click', b2change);
-    b3.addEventListener('click', b3change);
-    b4.addEventListener('click', b4change);
-    b5.addEventListener('click', b5change);
-    b6.addEventListener('click', b6change);
-
+    
+    // Add event listeners to background elements
+    const backgroundElements = document.querySelectorAll('.b1, .b2, .b3, .b4, .b5, .b6');
+    backgroundElements.forEach(element => {
+      element.addEventListener('click', changeBackground);
+    });
+    
     // Remove background click
     function remchange() {
-        elementToRemove.remove();
+      removeVideoBackground();
     }
-
-    rem.addEventListener('click', remchange); */
+    
+    rem.addEventListener('click', remchange);
 
 })();
