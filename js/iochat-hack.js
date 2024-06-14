@@ -305,6 +305,7 @@
       video.autoplay = true;
       video.loop = true;
       video.muted = true;
+      video.style.opacity = 0.6;
       var source = document.createElement('source');
       source.src = videoUrl;
       source.type = 'video/mp4';
