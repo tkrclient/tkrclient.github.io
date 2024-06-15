@@ -18,9 +18,9 @@
 }
 .chatalt {
  backdrop-filter: blur(9px);
- height: calc(100% - 50px);
+ height: calc(102% - 50px);
  position: absolute;
- top: 47px;
+ top: 50px;
 }
 .container {
   display: flex;
@@ -28,7 +28,7 @@
   align-items: center;
 }
 .minnit {
- height: 100%;
+ height: 101%;
  backdrop-filter: blur(3px);
 }
 .blocksidebar {
