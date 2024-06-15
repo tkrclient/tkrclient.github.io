@@ -21,6 +21,8 @@
  height: calc(100% - 50px);
  position: absolute;
  top: 50px;
+ scrollbar-color: transparent rgba(255, 255, 255, 0.05);
+ scrollbar-width: none;
 }
 .container {
   display: flex;
