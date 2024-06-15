@@ -11,6 +11,9 @@
     z-index: 0;
     opacity: 1; /* Adjust opacity here */
 }
+.bar {
+    height: 40px;
+}
 .foot {
     display: none;
 }
