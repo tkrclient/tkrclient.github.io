@@ -146,30 +146,31 @@
     });*/
 
     /*---- Next user blocking script ----*/
-    
+
     // BLOCK USERS FEATURE
     'use strict';
 
     // Load blocked users from localStorage
     let blockedUsers = JSON.parse(localStorage.getItem('blockedUsers')) || ["a bot"];
 
-
     // Create the container for the blocked users list
-    const blockedUsersList = document.querySelector('.blockedUsersListClass');
+    const blockedUsersList = document.querySelectorAll('.blockedUsersListClass');
     // Create the input box for blocking users
-    const blockInput = document.querySelector('.blockInputClass');
+    const blockInput = document.querySelectorAll('.blockInputClass');
     // Create the input box for unblocking users
-    const unblockInput = document.querySelector('.unblockInputClass');
+    const unblockInput = document.querySelectorAll('.unblockInputClass');
     // Create the button to unblock all users
-    const unblockAllButton = document.querySelector('.unblockAllButtonClass');
+    const unblockAllButton = document.querySelectorAll('.unblockAllButtonClass');
     // Add the color picker to the page
-    const colorPicker = document.querySelector('.colorPickerClass');
+    const colorPicker = document.querySelectorAll('.colorPickerClass');
 
 
     // Function to update the blocked users list display
     function updateBlockedUsersList() {
-        blockedUsersList.textContent = 'Blocked Users:\n' + blockedUsers.join('\n');
-        localStorage.setItem('blockedUsers', JSON.stringify(blockedUsers));
+      blockedUsersList.forEach(element => {
+        element.textContent = 'Blocked Users:\n' + blockedUsers.join('\n');
+      });
+      localStorage.setItem('blockedUsers', JSON.stringify(blockedUsers));
     }
 
     // Function to block a user
@@ -224,29 +225,35 @@
     }
 
     // Event listener for blocking users
-    blockInput.addEventListener('keypress', function(event) {
-        if (event.key === 'Enter') {
-            const username = blockInput.value.trim();
-            if (username) {
-                blockUser(username);
-                blockInput.value = '';
+    blockInput.forEach(input => {
+        input.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const username = input.value.trim();
+                if (username) {
+                    blockUser(username);
+                    input.value = '';
+                }
             }
-        }
+        });
     });
 
     // Event listener for unblocking users
-    unblockInput.addEventListener('keypress', function(event) {
-        if (event.key === 'Enter') {
-            const username = unblockInput.value.trim();
-            if (username) {
-                unblockUser(username);
-                unblockInput.value = '';
+    unblockInput.forEach(input => {
+        input.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const username = input.value.trim();
+                if (username) {
+                    unblockUser(username);
+                    input.value = '';
+                }
             }
-        }
+        });
     });
 
     // Event listener for unblocking all users
-    unblockAllButton.addEventListener('click', unblockAllUsers);
+    unblockAllButton.forEach(button => {
+        button.addEventListener('click', unblockAllUsers);
+    });
 
     // Observe the messages container for new messages
     const observer2 = new MutationObserver(() => filterMessages());
@@ -267,11 +274,13 @@
     }
 
     // Add event listener to the color picker
-    colorPicker.addEventListener('input', updateUsernameColor);
+    colorPicker.forEach(picker => {
+        picker.addEventListener('input', updateUsernameColor);
+    });
 
     // Optionally, set an initial color
-    //colorPicker.value = '#ff0000'; // Red
-    updateUsernameColor({target: {value: colorPicker.value}});
+    /* colorPicker.value = '#ff0000'; // Red
+    updateUsernameColor({target: {value: colorPicker.value}}); */
 
 /* BACKGROUNDS JS */
 // Remove the background first variable
