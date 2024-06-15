@@ -766,6 +766,8 @@ aside.active {
     max-width: 302px;
     overflow-y: hidden;
     overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
 }
 aside {
     background-color: #1d1d1d;
