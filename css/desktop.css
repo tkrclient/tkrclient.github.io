@@ -914,7 +914,6 @@ body .chat-messages {
  display: flex;
  flex-direction: column-reverse;
  padding: 0.5rem;
- overflow-wrap: none;
  z-index: 10;
  height: 100%;
 }
