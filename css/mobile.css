@@ -149,7 +149,7 @@
     height: 100%;
     border-radius: 10px;
     backdrop-filter: blur(3px);
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.77);
 }
 form {
     display: flex;
