@@ -5,6 +5,9 @@
 ::-webkit-scrollbar {
  display: none;
 }
+.bar {
+ height: 50px;
+}
 .backgroundstyles {
  overflow-x: scroll;
  height: 300px;
