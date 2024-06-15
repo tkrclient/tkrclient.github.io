@@ -18,7 +18,7 @@
 }
 .chatalt {
  backdrop-filter: blur(9px);
- height: calc(102% - 50px);
+ height: calc(100% - 50px);
  position: absolute;
  top: 50px;
 }
