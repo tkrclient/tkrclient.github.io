@@ -5,6 +5,10 @@
 ::-webkit-scrollbar {
  display: none;
 }
+#messages {
+ scrollbar-color: transparent rgba(255, 255, 255, 0.05);
+ scrollbar-width: none;
+}
 .bar {
  height: 50px;
 }
