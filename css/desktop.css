@@ -19,6 +19,8 @@
  word-break: break-all;
  text-wrap: wrap;
  padding-left: 15px;
+ scrollbar-color: transparent rgba(255, 255, 255, 0.05);
+ scrollbar-width: none;
 }
 .chatalt {
  backdrop-filter: blur(9px);
