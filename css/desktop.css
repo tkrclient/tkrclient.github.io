@@ -21,6 +21,8 @@
  height: calc(100% - 50px);
  position: absolute;
  top: 50px;
+ scrollbar-color: transparent rgba(255, 255, 255, 0.05);
+ scrollbar-width: none;
 }
 .container {
   display: flex;
@@ -914,7 +916,6 @@ body .chat-messages {
  display: flex;
  flex-direction: column-reverse;
  padding: 0.5rem;
- overflow-wrap: none;
  z-index: 10;
  height: 100%;
 }
