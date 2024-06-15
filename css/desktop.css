@@ -289,7 +289,7 @@ select,
 textarea {
  padding:0.5rem;
  min-width:200px;
- width:100%
+ /* width:100% */
 }
 input[type=text]:focus,
 select:focus,
