@@ -155,15 +155,15 @@
 
 
     // Create the container for the blocked users list
-    const blockedUsersList = document.querySelector('.blockedUsersListClass');
+    const blockedUsersList = document.querySelectorAll('.blockedUsersListClass');
     // Create the input box for blocking users
-    const blockInput = document.querySelector('.blockInputClass');
+    const blockInput = document.querySelectorAll('.blockInputClass');
     // Create the input box for unblocking users
-    const unblockInput = document.querySelector('.unblockInputClass');
+    const unblockInput = document.querySelectorAll('.unblockInputClass');
     // Create the button to unblock all users
-    const unblockAllButton = document.querySelector('.unblockAllButtonClass');
+    const unblockAllButton = document.querySelectorAll('.unblockAllButtonClass');
     // Add the color picker to the page
-    const colorPicker = document.querySelector('.colorPickerClass');
+    const colorPicker = document.querySelectorAll('.colorPickerClass');
 
 
     // Function to update the blocked users list display
