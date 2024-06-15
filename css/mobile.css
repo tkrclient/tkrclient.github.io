@@ -1,6 +1,10 @@
 .mob {
     z-index: 1
 }
+.chatalt {
+    scrollbar-color: transparent rgba(255, 255, 255, 0.05);
+    scrollbar-width: none;
+}
 #video-background {
     position: fixed;
     top: 0;
