@@ -2,6 +2,67 @@
  font-family: 'Exo 2';
  url('/font/Exo2-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
+::-webkit-scrollbar {
+ display: none;
+}
+.bar {
+ height: 50px;
+}
+.backgroundstyles {
+ overflow-x: scroll;
+ height: 300px;
+ width: 100%;
+ word-break: break-all;
+ text-wrap: wrap;
+ padding-left: 15px;
+}
+.chatalt {
+ backdrop-filter: blur(9px);
+ height: calc(100% - 50px);
+ position: absolute;
+ top: 50px;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.minnit {
+ height: 100%;
+ backdrop-filter: blur(3px);
+}
+.blocksidebar {
+ white-space: nowrap;
+ position: absolute;
+ left: 322px;
+ height: 100%;
+ bottom: 43px;
+ width: 100%;
+ overflow-y: hidden;
+}
+#video-background {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100vw;
+ height: 100vh;
+ object-fit: cover;
+ z-index: 0;
+ opacity: 1; /* Adjust opacity here */
+}
+.mobileblock {
+ display: none;
+}
+.opac {
+ /* opacity: 0.75; */
+ /* backdrop-filter: blur(3px); */
+ /* transition: opacity 0.5s ease; */
+ transition: opacity 1s linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%);
+}
+.opac:hover {
+ opacity: 1;
+ /* backdrop-filter: blur(3px); */
+}
 .fa-bars {
  display: block;
  padding: 0.5rem 1rem;
@@ -41,9 +102,14 @@
  display: none;
 }
 .foot {
- bottom: 2%;
- left: 40%;
  position: absolute;
+ bottom: 20px;
+ left: 50%;
+ text-align: center;
+ justify-content: center;
+ vertical-align: middle;
+ display: inline-block;
+ transform: translate(-50%, -50%);
  z-index: -10;
 }
 .chatClass {
@@ -56,67 +122,84 @@
 }
 .blockedUsersListClass {
  position: absolute;
- left: 2%;
- top: 74%;
+ left: 325px;
+ top: 72%;
  transform: translateY(-50%);
- background-color: rgba(51, 51, 51, 0.9);
  color: rgb(255, 255, 255);
  padding: 5px;
- border: 1px solid rgb(68, 68, 68);
+ border: 1px solid rgba(255,255,255,0.15);
  border-radius: 5px;
  font-weight: 200;
  font-size: 12px;
- max-width: 200px;
  overflow-wrap: break-word;
  opacity: 0.9;
  overflow-x: scroll;
+ max-width: 126px; 
+ backdrop-filter: blur(3px); 
+ background-color: rgba(29, 29, 29, 0.8);
 }
 .blockInputClass {
  position: absolute;
- left: 0%;
+ left: 325px;
  top: 79%;
  transform: translateY(-50%);
- background-color: rgb(51, 51, 51);
  color: rgb(255, 255, 255);
  padding: 5px;
- border: 1px solid rgb(68, 68, 68);
+ border: 1px solid rgba(255,255,255,0.15);
  border-radius: 5px;
  width: 10px;
+ backdrop-filter: blur(3px); 
+ background-color: rgba(29, 29, 29, 0.8);
 }
 .unblockInputClass {
  position: absolute;
- left: 0%;
+ left: 325px;
  top: 87%;
  transform: translateY(-50%);
- background-color: rgb(51, 51, 51);
  color: rgb(255, 255, 255);
  padding: 5px;
- border: 1px solid rgb(68, 68, 68);
+ border: 1px solid rgba(255,255,255,0.15);
  border-radius: 5px;
  width: 10px;
+ backdrop-filter: blur(3px); 
+ background-color: rgba(29, 29, 29, 0.8);
 }
 .unblockAllButtonClass {
  position: absolute;
- left: 2%;
+ left: 325px;
  top: 95%;
  transform: translateY(-50%);
- background-color: rgb(51, 51, 51);
  color: rgb(255, 255, 255);
  padding: 5px;
- border: 1px solid rgb(68, 68, 68);
+ border: 1px solid rgba(255,255,255,0.15);
  border-radius: 5px;
  cursor: pointer;
+ backdrop-filter: blur(3px);
+ background-color: rgba(29, 29, 29, 0.8);
 }
 .colorPickerClass {
  position: absolute;
- top: 70%;
- left: 82%;
+ left: 325px;
  z-index: 1000;
  padding: 5px;
- border: none;
+ border: 1px solid rgba(255,255,255,0.15);
  border-radius: 5px;
- background-color: rgb(51, 51, 51);
  color: rgb(255, 255, 255);
+ backdrop-filter: blur(3px); 
+ top: 64%; 
+ background-color: rgba(29, 29, 29, 0.8);
+}
+.logotkr {
+ width: 312px;
+ position: absolute;
+ bottom: -24px;
+ left: 50%;
+ text-align: center;
+ justify-content: center;
+ vertical-align: middle;
+ display: inline-block;
+ transform: translate(-50%, -50%);
+ z-index: -10;
 }
 form {
  display:flex;
@@ -187,7 +270,7 @@ input[type=radio] {
 input[type=text],
 select,
 textarea {
- background-color:rgba(255,255,255,0.05);
+ /* background-color:rgba(255,255,255,0.05); */
  border:1px solid rgba(255,255,255,0.05);
  border-radius:0.5rem;
  box-sizing:border-box
@@ -209,7 +292,8 @@ textarea {
 input[type=text]:focus,
 select:focus,
 textarea:focus {
- background-color:rgba(0,153,51,0.25)
+ /* background-color:rgba(0,153,51,0.25); */
+ background-color: rgba(0, 0, 0, 0);
 }
 input[type=text]::placeholder,
 select::placeholder,
@@ -218,7 +302,7 @@ textarea::placeholder {
 }
 input[type=text],
 select {
- max-width:400px
+ max-width:200px;
 }
 textarea {
  line-height:1.5em;
@@ -309,6 +393,8 @@ textarea {
 }
 html,
 body {
+ scrollbar-width: none;
+ -ms-overflow-style: none;
  background-color:#1d1d1d;
  color:rgba(255,255,255,0.9);
  font-family:"Exo 2";
@@ -318,7 +404,8 @@ body {
  min-width:100vw;
  min-height:100vh;
  width:100vw;
- height:100vh
+ height:100vh;
+ overflow-y: hidden;
 }
 h1,
 h2,
@@ -442,7 +529,12 @@ a[data-favorite]:hover {
  text-shadow:0 0 0.5rem #d00
 }
 .sidebars {
- white-space:nowrap
+ white-space:nowrap;
+ /* position:absolute; */
+ left: 322px;
+ height: 100%;
+ bottom: 43px;
+ width: 186px;
 }
 .sidebars .header {
  /* color: #fc0; */
@@ -603,10 +695,8 @@ body {
 }
 body nav {
  grid-area:nav;
- background-color:rgba(255,255,255,0.05);
- border-bottom:1px solid rgba(0,0,0,0.25);
  display:grid;
- align-items:center
+ align-items:center;
 }
 body nav .logo {
  grid-area:logo
@@ -660,6 +750,12 @@ body nav .margin {
  flex-direction: column-reverse;
  z-index: 10;
  overflow-y: scroll;
+ height: calc(100% - 50px);
+ position: absolute;
+ top: 50px;
+ right: 0%;
+ width: 250px;
+ backdrop-filter:blur(9px);
 }
 #chat.active,
 aside.active {
@@ -668,6 +764,10 @@ aside.active {
    /* display: none; */
     width: 25%;
     max-width: 302px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
 }
 aside {
     background-color: #1d1d1d;
@@ -775,7 +875,6 @@ body .chat-send {
  grid-template-areas:"input button";
  grid-template-columns:1fr auto;
  align-items:center;
- background-color: #343434;
  z-index: 10;
 }
 body .chat-name input[type=text],
@@ -811,7 +910,6 @@ body .chat-name i:hover {
 }
 body .chat-messages {
  grid-area: messages;
- background-color: #292929;
  box-sizing: border-box;
  display: flex;
  flex-direction: column-reverse;
@@ -890,6 +988,12 @@ footer .item:last-child {
 .logo {
  font-size:1.5rem;
  font-weight:bold
+}
+.iogames:hover {
+ text-shadow:0 0 0.5rem rgba(255,255,255,0.9);
+}
+.fun:hover {
+ text-shadow:0 0 0.5rem #fc0;
 }
 .logo a:hover .iogames,
 .logo a:visited:hover .iogames {

@@ -146,30 +146,31 @@
     });*/
 
     /*---- Next user blocking script ----*/
-    
+
     // BLOCK USERS FEATURE
     'use strict';
 
     // Load blocked users from localStorage
     let blockedUsers = JSON.parse(localStorage.getItem('blockedUsers')) || ["a bot"];
 
-
     // Create the container for the blocked users list
-    const blockedUsersList = document.querySelector('.blockedUsersListClass');
+    const blockedUsersList = document.querySelectorAll('.blockedUsersListClass');
     // Create the input box for blocking users
-    const blockInput = document.querySelector('.blockInputClass');
+    const blockInput = document.querySelectorAll('.blockInputClass');
     // Create the input box for unblocking users
-    const unblockInput = document.querySelector('.unblockInputClass');
+    const unblockInput = document.querySelectorAll('.unblockInputClass');
     // Create the button to unblock all users
-    const unblockAllButton = document.querySelector('.unblockAllButtonClass');
+    const unblockAllButton = document.querySelectorAll('.unblockAllButtonClass');
     // Add the color picker to the page
-    const colorPicker = document.querySelector('.colorPickerClass');
+    const colorPicker = document.querySelectorAll('.colorPickerClass');
 
 
     // Function to update the blocked users list display
     function updateBlockedUsersList() {
-        blockedUsersList.textContent = 'Blocked Users:\n' + blockedUsers.join('\n');
-        localStorage.setItem('blockedUsers', JSON.stringify(blockedUsers));
+      blockedUsersList.forEach(element => {
+        element.textContent = 'Blocked Users:\n' + blockedUsers.join('\n');
+      });
+      localStorage.setItem('blockedUsers', JSON.stringify(blockedUsers));
     }
 
     // Function to block a user
@@ -224,29 +225,35 @@
     }
 
     // Event listener for blocking users
-    blockInput.addEventListener('keypress', function(event) {
-        if (event.key === 'Enter') {
-            const username = blockInput.value.trim();
-            if (username) {
-                blockUser(username);
-                blockInput.value = '';
+    blockInput.forEach(input => {
+        input.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const username = input.value.trim();
+                if (username) {
+                    blockUser(username);
+                    input.value = '';
+                }
             }
-        }
+        });
     });
 
     // Event listener for unblocking users
-    unblockInput.addEventListener('keypress', function(event) {
-        if (event.key === 'Enter') {
-            const username = unblockInput.value.trim();
-            if (username) {
-                unblockUser(username);
-                unblockInput.value = '';
+    unblockInput.forEach(input => {
+        input.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const username = input.value.trim();
+                if (username) {
+                    unblockUser(username);
+                    input.value = '';
+                }
             }
-        }
+        });
     });
 
     // Event listener for unblocking all users
-    unblockAllButton.addEventListener('click', unblockAllUsers);
+    unblockAllButton.forEach(button => {
+        button.addEventListener('click', unblockAllUsers);
+    });
 
     // Observe the messages container for new messages
     const observer2 = new MutationObserver(() => filterMessages());
@@ -267,9 +274,110 @@
     }
 
     // Add event listener to the color picker
-    colorPicker.addEventListener('input', updateUsernameColor);
+    colorPicker.forEach(picker => {
+        picker.addEventListener('input', updateUsernameColor);
+    });
 
     // Optionally, set an initial color
-    //colorPicker.value = '#ff0000'; // Red
-    updateUsernameColor({target: {value: colorPicker.value}});
+    /* colorPicker.value = '#ff0000'; // Red
+    updateUsernameColor({target: {value: colorPicker.value}}); */
+
+/* BACKGROUNDS JS */
+// Remove the background first variable
+const elementToRemove = document.querySelectorAll('#video-background');
+
+// Pick which background variables
+const videoUrls = {
+  b1: 'https://cdn.pixabay.com/video/2024/05/29/214405_large.mp4',
+  b2: 'https://cdn.pixabay.com/video/2024/06/08/215762_large.mp4',
+  b3: 'https://cdn.pixabay.com/video/2024/03/01/202587-918431513_large.mp4',
+  b4: 'https://cdn.pixabay.com/video/2021/04/15/71122-537102350_large.mp4',
+  b5: 'https://cdn.pixabay.com/video/2021/10/10/91562-629172467_large.mp4',
+  b6: 'https://cdn.pixabay.com/video/2019/10/09/27669-365224683_large.mp4'
+};
+
+// Remove background
+const rem = document.querySelector('.rem');
+
+// Function to remove existing video-background elements
+function removeVideoBackground() {
+  const existingVideos = document.querySelectorAll('#video-background');
+  existingVideos.forEach(video => {
+    video.remove();
+  });
+}
+
+// Function to create a new video-background element
+function createVideoBackground(videoUrl) {
+  var video = document.createElement('video');
+  video.id = 'video-background';
+  video.autoplay = true;
+  video.loop = true;
+  video.muted = true;
+  video.style.opacity = 0.6;
+  var source = document.createElement('source');
+  source.src = videoUrl;
+  source.type = 'video/mp4';
+  video.appendChild(source);
+  document.body.insertBefore(video, document.body.firstChild);
+}
+
+// Event listener function for background changes
+function changeBackground(event) {
+  const videoKey = event.target.classList[0];
+  const videoUrl = videoUrls[videoKey];
+
+  if (videoUrl) {
+    removeVideoBackground();
+    createVideoBackground(videoUrl);
+    localStorage.setItem('lastBackground', videoKey); // Store the last clicked background
+  }
+}
+
+// Add event listeners to background elements
+const backgroundElements = document.querySelectorAll('.b1, .b2, .b3, .b4, .b5, .b6');
+backgroundElements.forEach(element => {
+  element.addEventListener('click', changeBackground);
+});
+
+// Remove background click
+function remchange() {
+  removeVideoBackground();
+  localStorage.removeItem('lastBackground'); // Remove the stored last background
+}
+
+rem.addEventListener('click', remchange);
+
+// Load the last clicked background on page load
+window.addEventListener('load', () => {
+  const lastBackground = localStorage.getItem('lastBackground');
+  if (lastBackground && videoUrls[lastBackground]) {
+    createVideoBackground(videoUrls[lastBackground]);
+  } else {
+    // If no last background is stored, load background 5
+    createVideoBackground(videoUrls['b5']);
+  }
+});
+
+    /* GIF AUTOMATIC LOADING SUPPORT */
+    setTimeout(function() {
+      const messages = document.querySelectorAll('.message');
+
+      function convertGifUrlToImage(message) {
+        const text = message.textContent.trim();
+        const regex = /https?:\/\/\S+\.(gif)/i;
+        const match = text.match(regex);
+
+        if (match) {
+          const img = document.createElement('img');
+          img.src = match[0];
+          img.style.maxWidth = '200px'; // Set the max-width to 100%
+          message.innerHTML = '';
+          message.appendChild(img);
+        }
+      }
+
+      messages.forEach(convertGifUrlToImage);
+    }, 3000);
+
 })();

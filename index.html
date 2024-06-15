@@ -32,75 +32,64 @@
   <!-- Desktop Information + Alternative Chat -->
   <body>
     <div class="main">
-      <footer>
+      <footer class="chatalt">
         <div class="item minnit">
-          <!-- <iframe src="https://kiwiirc.hybridirc.com/?theme=Dark#tkrclient" style="border:0; width:100%; height:100%;"></iframe> -->
-          <iframe src="https://www3.cbox.ws/box/?boxid=3538311&boxtag=KK9MuO" width="100%" height="100%" allowtransparency="no" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>	
+          <iframe src="https://www3.cbox.ws/box/?boxid=3538311&boxtag=KK9MuO" width="100%" height="100%" allowtransparency="no" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"></iframe>	
         </div>
       </footer>
-      <p class="commands">
-        <input type="checkbox" id="enableFunction" onclick="toggleFunction(this)">Unicode Remover (Testing) <br><br>
-        <input type="checkbox" id="enableFunction" onclick="toggleFunction(this)">30 Character Name Limit (Not Ready) <br><br>
-        <input type="checkbox" id="enableFunction" onclick="toggleFunction(this)">100 Character Message Limit (Not Ready) <br><br>
-        <input type="checkbox" id="enableFunction" onclick="toggleFunction(this)"><span style="color: red;">Block names</span> (Not Ready) <br><br>
-        <input type="checkbox" id="enableFunction" onclick="toggleFunction(this)" checked>Color Copier (Not Ready) <br><br>
-        <input type="checkbox" id="enableFunction" onclick="toggleFunction(this)" checked>Name Copier (Not Ready) <br><br>
-        <input type="checkbox" id="enableFunction" onclick="toggleFunction(this)" checked>Color Chooser (Not Ready) <br><br>
-      </p>
-      <div class="explain">
-        <p>What is TKRClient?</p>
-        <p>You can block people, Press top right button ☰</p>
-        <p>It allows for copy and pasting other names, as your name!</p>
-        <p>Makes it harder to receive spam messages</p>
-        <p>Allows you to use this other alternative messaging platform!</p>
-        <p>May soon allow you to block specific users</p>
-        <p>And maybe much more soon!</p>
+      <div class="sidebars">
+        <div class="item opac">
+          <div class="desktopblock blockedUsersListClass all">Blocked Users:</div>
+        </div>
+        <div class="item opac">
+          <input type="text" placeholder="Block user" class="desktopblock blockInputClass">
+        </div>
+        <div class="item opac">
+          <input type="text" placeholder="Unblock user" class="desktopblock unblockInputClass">
+        </div>
+        <div class="item opac">
+          <button class="desktopblock unblockAllButtonClass">Unblock All</button>
+        </div>
+        <div class="item opac">
+          <input type="color" id="usernameColorPicker" class="desktopblock colorPickerClass">
+        </div>
       </div>
-      <div class="foot" style="position: absolute;bottom: 20px;left: 50%; text-align: center;justify-content: center; vertical-align: middle;display: inline-block; transform: translate(-50%, -50%);z-index: -10;"> 
+      <img src="images/TKRLOGO2-cropped.png" class="logotkr">
+      <div class="foot opac"> 
         Source Code: https://github.com/tkrclient/tkrclient.github.io 
       </div>
     </div>
     <!-- End -->
 
     <!-- Desktop Nav -->
-    <nav class="desktop">
-      <div class="menu list">
-        <p style="position: absolute; left: 1%; font-size: 1.5rem; font-weight: bold;">
-          <p style="position: absolute; left: 0.5%; top: 1%; margin: 0px;">
-            <span class="iogames" style="font-size: 20px; color: white;">iogames</span>
-            <span class="fun" style="font-size: 20px;color: #ffcc00;">.fun TKR Client</span>
+    <div class="bar" style="backdrop-filter: blur(9px); position:absolute; top:0%; width:100%;">
+      <nav class="desktop opac" style="z-index: 0; height: 50px;">
+        <div class="menu list">
+          <p style="position: absolute; left: 1%; font-size: 1.5rem; font-weight: bold;">
+            <p style="position: absolute; left: 0.5%; top: 1%; margin: 0px;">
+              <span class="iogames" style="font-size: 20px; color: white;">iogames</span>
+              <span class="fun" style="font-size: 20px;color: #ffcc00;">.fun TKR Client</span>
+            </p>
+            <span class="subtext" style="font-size: 14px;color: grey;left: 0.5%;position: absolute; /* top: 3.5%; */">By Lorenzino, mr.iogames and much more in TKR Version 2</span>
           </p>
-          <span class="subtext" style="font-size: 14px;color: grey;left: 0.5%;position: absolute;top: 3.5%;">By Lorenzino, mr.iogames and much more in TKR (Version 1.7)</span>
-        </p>
-        <div class="item">
-          <a href="https://iogames.fun/new" title="New IO Games"><i class="icon fa fa-air-freshener"></i>New</a>
+          <a class="item" href="#" title="" id="toggleButtonSidebarDesktop" style="top: 1%; position: absolute; right: 1%; display: block; ">
+            <i class="fa" style="font-weight: 1; padding: 0.75rem 1rem; /* text-shadow:0 0 0.5rem #ffff00; */ font-size:28px; font-style: normal; display:block; /* top: 1%; right: 1%; position: absolute; */ ">☰</i>
+          </a>
         </div>
-        <div class="item">
-          <a href="https://iogames.fun/popular" title="Popular IO Games"><i class="icon far fa-eye"></i>Popular</a>
         </div>
-        <div class="item">
-          <a href="https://iogames.fun/best" title="Best IO Games"><i class="icon fa fa-thumbs-up"></i>Best</a>
-        </div>
-        <div class="item">
-          <a href="https://iogames.fun/random" title="Random IO Games"><i class="icon fa fa-dice"></i>Random</a>
-        </div>
-        <a class="item" href="#" title="" id="toggleButtonSidebarDesktop" style="top: 1%; position: absolute; right: 1%; display: block; ">
-          <i class="fa" style="font-weight: 1; padding: 0.2rem 1rem; text-shadow:0 0 0.5rem #ffff00; font-size:28px; font-style: normal; display:block; top: 1%; right: 1%; position: absolute;">☰</i>
-        </a>
-      </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
     <!-- End -->
 
     <!-- Mobile Nav -->
-    <nav class="mobile">
+    <nav class="mobile opac">
       <p style="position: absolute; left: 1%; font-size: 1.5rem; font-weight: bold;">
         <p style="position: absolute;left: 0.5%;top: 0%;margin: 0px;font-size: 16px;">
           <span class="iogames" style="/* font-size: 20px; */color: white;">iogames</span>
           <span class="fun" style="/* font-size: 20px; */color: #ffcc00;">.fun TKR Client</span>
         </p>
       </p>
-      <span class="subtext" style="font-size: 11px;color: grey;left: 0.5%;position: absolute;top: 2.5%;">By Lorenzino, mr.iogames and much more in TKR</span>
+      <span class="subtext" style="font-size: 11px;color: grey;left: 0.5%; position: absolute; top: 70%;">By Lorenzino, mr.iogames and more in TKR</span>
     
       <a class="item" href="#" id="toggleButtonFullscreen" style="display: block;padding: 0.5rem 1rem;position: fixed;right: 27%;">
         <i class="fa fa-expand"></i>
@@ -108,7 +97,7 @@
       <a class="item" href="#" title="" id="toggleButtonChat" style="display: block;padding: 0.5rem 1rem;right: 0%;position: fixed;right: 13%;">
         <i class="far fa-comments"></i>
       </a>
-      <a class="item" href="#" title="" id="toggleButtonSidebar" style="font-weight: 1; text-shadow: 0 0 0.5rem #ffff00; font-size:20px; font-style: normal;display: block;padding: 0.5rem 1rem;position: fixed;right: 0%;">
+      <a class="item" href="#" title="" id="toggleButtonSidebar" style="font-weight: 1; /* text-shadow: 0 0 0.5rem #ffff00; */ font-size:20px; font-style: normal;display: block;padding: 0.5rem 1rem;position: fixed;right: 0%;">
         <i class="fa" style="font-weight:1;">☰</i>
       </a>
     </nav>
@@ -118,16 +107,16 @@
   <script src="/js/iochat.js"></script>
   <!-- End ------------------->
 
-  <!-- DESKTOP CHAT -->
+  <!-- IOGAMES.FUN CHAT -->
   <div id="chat">
-    <div class="chat-send">
+    <div class="chat-send opac">
       <input id="message" type="text" placeholder="Message" maxlength="1000">
       <i id="send" class="fa fa-lg fa-paper-plane"></i>
     </div>
     
     <div id="messages" class="chat-messages"></div>
 
-    <div class="chat-name">
+    <div class="chat-name opac">
       <input id="name" type="text" placeholder="Name" maxlength="1000">
       <i id="colorpicker" class="fa fa-lg fa-palette"></i>
     </div>
@@ -140,68 +129,46 @@
       <div class="header">
         TKR Client
       </div>
-      <div class="item">
-        <a class="icon-name" href="/new" title="New IO Games">
-          <i class="fa-fw fa fa-air-freshener"></i>New
-        </a>
+      <div class="backgroundstyles">
+        <p class="b1">
+          Background 1
+        </p>
+        <p class="b2">
+          <br><br> Background 2
+        </p>
+        <p class="b3">
+          <br><br> Background 3
+        </p>
+        <p class="b4">
+          <br><br> Background 4
+        </p>
+        <p class="b5">
+          <br><br> Background 5
+        </p>
+        <p class="b6">
+          <br><br> Background 6
+        </p>
+        <p class="rem">
+          <br><br> No Background
+        </p>
       </div>
-      <div class="item">
-        <a class="icon-name" href="/popular" title="Popular IO Games">
-          <i class="fa-fw far fa-eye"></i>Popular
-        </a>
-      </div>
-      <div class="item">
-        <a class="icon-name" href="/best" title="Best IO Games">
-          <i class="fa-fw fa fa-thumbs-up"></i>Best
-        </a>
-      </div>
-      <div class="item">
-        <a class="icon-name" href="/random" title="Random IO Games">
-          <i class="fa-fw fa fa-dice"></i>Random
-        </a>
-      </div>
-    </div>
-
-    <div class="sidebars">
-      <div class="header">
-          Featured
-      </div> 
-      <div class="item">
-        <a href="https://iogames.fun/stein.world" class="image-name">
-          <!-- <div class="icon" style="background-image: url('');"></div>Your Mom -->
-          <div style="background-image: url('');"></div>Your Mom
-        </a>
-      </div>
-    </div>
-
-    <div class="sidebars">
-      <div class="header">
-        Genres
-      </div>
-      <div class="item">
-        <a class="name-info" href="/genres/agario">
-          <div class="name">Your Mom</div>
-          <div class="info">0</div>
-        </a>
-      </div>             
-    </div>
 
     <!-- Blocking feature -->
-    <div class="sidebars">
+    <div class="sidebars blocksidebar">
       <div class="item">
-        <div class="blockedUsersListClass all">Blocked Users:</div>
+        <div class="mobileblock blockedUsersListClass all">Blocked Users:</div>
       </div>
       <div class="item">
-        <input type="text" placeholder="Block user" class="blockInputClass">
+        <input type="text" placeholder="Block user" class="mobileblock blockInputClass">
       </div>
       <div class="item">
-        <input type="text" placeholder="Unblock user" class="unblockInputClass">
+        <input type="text" placeholder="Unblock user" class="mobileblock unblockInputClass">
       </div>
       <div class="item">
-        <button class="unblockAllButtonClass">Unblock All</button>
+        <button class="mobileblock unblockAllButtonClass">Unblock All</button>
       </div>
       <div class="item">
-        <input type="color" id="usernameColorPicker" class="colorPickerClass">
+        <input type="color" id="usernameColorPicker" class="mobileblock colorPickerClass">
       </div>
     </div>
     
