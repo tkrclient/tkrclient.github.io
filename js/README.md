@@ -32,7 +32,8 @@ Connect your domain name, from your domain name provider, to your public server 
 ## Self-hosting at Home
 ### Proxy
 Now setting up to NOT publicly show your ip address, you WILL need a VPS anyway for. 
-But, the VPS is only for proxying over to, so you can have a very powerful homelab,
+But, the VPS is only for proxying over to (although it doesn't matter that much in this case,
+because this chat server is lightweight), so you can have a very powerful homelab,
 and also depublicly list your home ip address.
 
 I recommend something that proxies the connection from your homelab, to the VPS, 
