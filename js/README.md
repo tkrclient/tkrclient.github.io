@@ -30,7 +30,7 @@ Connect your domain name, from your domain name provider, to your public server 
 "A".
 
 ## Self-hosting at Home
-### Proxy
+### Hide Home IP Address
 Now setting up to NOT publicly show your ip address, you WILL need a VPS anyway for. 
 But, the VPS is only for proxying over to (although it doesn't matter that much in this case,
 because this chat server is lightweight), so you can have a very powerful homelab,
@@ -41,7 +41,7 @@ for example: https://github.com/ekzhang/bore
 
 Then after setting up bore, you can continue the guide on "self-hosting at a public server"
 
-### No Proxy
+### NOT Hide Home IP Address
 Many Home ISPs are not going to be as extensive and permissive on what ports you can open. It is
 recommended to do proxying.
 
