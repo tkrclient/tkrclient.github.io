@@ -1,5 +1,5 @@
 ## Guide on self-hosting your own "iogames.fun" chat
-You can choose either, buying a VPS, or setting it up at home. 
+You can choose either buying a VPS, or setting it up at home. 
 
 A domain name is needed for a secure connection, even though this is a public chat
 It is possible to run without domain name. If you have multiple public VPS services 
