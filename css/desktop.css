@@ -297,7 +297,6 @@ select,
 textarea {
  padding:0.5rem;
  min-width:200px;
- /* width:100%; */
 }
 input[type=text]:focus,
 select:focus,
@@ -310,10 +309,10 @@ select::placeholder,
 textarea::placeholder {
  color:rgba(255,255,255,0.5)
 }
-/* input[type=text],
+input[type=text],
 select {
- max-width:200px;
-} */
+ max-width:350px;
+}
 textarea {
  line-height:1.5em;
  max-width:600px
