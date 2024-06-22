@@ -27,6 +27,8 @@
 .backgroundstyles {
     height: 330px;
     overflow-y: scroll;
+    scrollbar-color: transparent rgba(255, 255, 255, 0.05);
+    scrollbar-width: none;
 }
 .mobile {
     backdrop-filter: blur(3px);
@@ -372,6 +374,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 h1,
 h2,
