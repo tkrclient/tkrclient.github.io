@@ -340,11 +340,14 @@ backgroundElements.forEach(element => {
   element.addEventListener('click', changeBackground);
 });
 
+// noBackground variable
+const noBackground = removeVideoBackground();
+
 // Remove background click
 function remchange() {
   removeVideoBackground();
   localStorage.removeItem('lastBackground'); // Remove the stored last background
-  localStorage.setItem('noBackground'); // Store the last "no background" option
+  localStorage.setItem('noBackground', noBackground); // Store the last "no background" option
 }
 
 rem.addEventListener('click', remchange);
