@@ -24,7 +24,7 @@
 
     /*---- Click colors and names ----*/
     // Function (for some reason only loads after few seconds)
-    /* function mess() {
+    function mess() {
       // Get the elements whose color and text you want to copy
       const sourceElements = document.querySelectorAll('#messages .entry .name');
       // Get the elements where you want to copy the color and text
@@ -72,7 +72,7 @@
         };
       }
     }
-    setTimeout(mess, 6000); */
+    setTimeout(mess, 6000);
 
 
     /*---- Removing Unicode ----*/
@@ -340,10 +340,14 @@ backgroundElements.forEach(element => {
   element.addEventListener('click', changeBackground);
 });
 
+// noBackground variable
+const noBackground = removeVideoBackground();
+
 // Remove background click
 function remchange() {
   removeVideoBackground();
   localStorage.removeItem('lastBackground'); // Remove the stored last background
+  localStorage.setItem('noBackground', noBackground); // Store the last "no background" option
 }
 
 rem.addEventListener('click', remchange);
@@ -351,8 +355,11 @@ rem.addEventListener('click', remchange);
 // Load the last clicked background on page load
 window.addEventListener('load', () => {
   const lastBackground = localStorage.getItem('lastBackground');
+  const noBackground = localStorage.getItem('noBackground');
   if (lastBackground && videoUrls[lastBackground]) {
     createVideoBackground(videoUrls[lastBackground]);
+  } else if (noBackground) {
+    removeVideoBackground();
   } else {
     // If no last background is stored, load background 5
     createVideoBackground(videoUrls['b5']);

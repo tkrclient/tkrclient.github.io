@@ -8,6 +8,12 @@ $(document).ready(function() {
   console.log("sidebar again");
   const toggleButtonSidebarDesktop = document.getElementById('toggleButtonSidebarDesktop');
   const toggleButtonFullscreen = document.getElementById('toggleButtonFullscreen');
+  console.log("toggleButtonFullscreen");
+  const secondChatButton = document.getElementById('secondChatButton');
+  const secondChatServer = document.getElementById('secondChatServer');
+  console.log("secondChatServer");
+  const secondChatButtonMobile = document.getElementById('secondChatButtonMobile');
+  console.log("secondChatServerMobile");
   
   toggleButtonChat.addEventListener('click', () => {
     console.log("button clicked");
@@ -39,6 +45,16 @@ $(document).ready(function() {
     }
   }
   toggleButtonFullscreen.addEventListener('click', toggleFullscreen);
+  // Second chat button
+  secondChatButton.addEventListener('click', () => {
+    console.log("button clicked");
+    secondChatServer.classList.toggle('hide');
+  });
+  // Second chat button mobile
+  secondChatButtonMobile.addEventListener('click', () => {
+    console.log("button clicked");
+    secondChatServer.classList.toggle('hide');
+  });
   
   //Console log to tell if iogames.fun is loading for you
   console.log('Loading IOGames.fun chat...');

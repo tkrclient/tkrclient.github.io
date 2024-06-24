@@ -5,6 +5,9 @@
     scrollbar-color: transparent rgba(255, 255, 255, 0.05);
     scrollbar-width: none;
 }
+.draw {
+    display: none;
+}
 #video-background {
     position: fixed;
     top: 0;
@@ -152,7 +155,7 @@
     left: 0%;
     bottom: 0%;
     width: 100%;
-    height: 100%;
+    height: calc(100% - 50px);
     border-radius: 0px;
     backdrop-filter: blur(3px);
     background-color: rgba(0, 0, 0, 0.77);
@@ -680,6 +683,8 @@ body .reviews .thumbs .item a:hover img {
 }
 .main {
     /* display: none; */
+    overflow-x: none;
+    overflow-y: none;
 }
 #chat,
 aside {
