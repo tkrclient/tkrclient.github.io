@@ -344,6 +344,7 @@ backgroundElements.forEach(element => {
 function remchange() {
   removeVideoBackground();
   localStorage.removeItem('lastBackground'); // Remove the stored last background
+  localStorage.setItem('noBackground'); // Store the last "no background" option
 }
 
 rem.addEventListener('click', remchange);
@@ -351,8 +352,11 @@ rem.addEventListener('click', remchange);
 // Load the last clicked background on page load
 window.addEventListener('load', () => {
   const lastBackground = localStorage.getItem('lastBackground');
+  const noBackground = localStorage.getItem('noBackground');
   if (lastBackground && videoUrls[lastBackground]) {
     createVideoBackground(videoUrls[lastBackground]);
+  } else if (noBackground) {
+    removeVideoBackground();
   } else {
     // If no last background is stored, load background 5
     createVideoBackground(videoUrls['b5']);
