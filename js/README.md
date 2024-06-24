@@ -29,6 +29,9 @@ Now to run the chat-server: `$ node index.js`
 I recommend using a reverse proxy manager, but it is not absolutely necessary unless you are also
 running other services on your vps.
 
+When running a reverse proxy manager, you should tunnel ports "80" and "443" from the reverse proxy, 
+to the VPS. So that will allow DNS servers to actually resolve to your reverse proxy (let others know that VPS is your server).
+
 If not wanting to do a reverse proxy manager
 Connect your domain name, from your domain name provider, to your public server VPS ip address via
 "A".
