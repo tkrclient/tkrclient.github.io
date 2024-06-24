@@ -12,6 +12,8 @@ $(document).ready(function() {
   const secondChatButton = document.getElementById('secondChatButton');
   const secondChatServer = document.getElementById('secondChatServer');
   console.log("secondChatServer");
+  const secondChatButton = document.getElementById('secondChatButtonMobile');
+  console.log("secondChatServerMobile");
   
   toggleButtonChat.addEventListener('click', () => {
     console.log("button clicked");
@@ -43,8 +45,12 @@ $(document).ready(function() {
     }
   }
   toggleButtonFullscreen.addEventListener('click', toggleFullscreen);
-  //
+  // Second chat button
   secondChatButton.addEventListener('click', () => {
+    console.log("button clicked");
+    secondChatServer.classList.toggle('hide');
+  });
+  secondChatButtonMobile.addEventListener('click', () => {
     console.log("button clicked");
     secondChatServer.classList.toggle('hide');
   });
