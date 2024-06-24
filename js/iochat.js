@@ -12,7 +12,7 @@ $(document).ready(function() {
   const secondChatButton = document.getElementById('secondChatButton');
   const secondChatServer = document.getElementById('secondChatServer');
   console.log("secondChatServer");
-  const secondChatButton = document.getElementById('secondChatButtonMobile');
+  const secondChatButtonMobile = document.getElementById('secondChatButtonMobile');
   console.log("secondChatServerMobile");
   
   toggleButtonChat.addEventListener('click', () => {
@@ -50,6 +50,7 @@ $(document).ready(function() {
     console.log("button clicked");
     secondChatServer.classList.toggle('hide');
   });
+  // Second chat button mobile
   secondChatButtonMobile.addEventListener('click', () => {
     console.log("button clicked");
     secondChatServer.classList.toggle('hide');
