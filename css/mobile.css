@@ -683,6 +683,8 @@ body .reviews .thumbs .item a:hover img {
 }
 .main {
     /* display: none; */
+    overflow-x: none;
+    overflow-y: none;
 }
 #chat,
 aside {
