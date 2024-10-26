@@ -151,7 +151,7 @@
     'use strict';
 
     // Load blocked users from localStorage
-    let blockedUsers = JSON.parse(localStorage.getItem('blockedUsers')) || ["a bot"];
+    let blockedUsers = JSON.parse(localStorage.getItem('blockedUsers')) || ["a bot", "Guest8389"];
 
     // Create the container for the blocked users list
     const blockedUsersList = document.querySelectorAll('.blockedUsersListClass');
