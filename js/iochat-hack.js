@@ -311,23 +311,21 @@
     /*----- Username color script -------*/
     /*-----------------------------------*/
 
-    // Define the color picker element
-    const colorPicker = document.getElementById('colorpicker');
-
-    // Define the element whose color we want to change (assuming it's an element with id 'username')
-    const usernameElement = document.getElementById('username');
-
     // Function to update the username color
     function updateUsernameColor(event) {
-        usernameElement.style.color = event.target.value;
+        const nameColor = document.getElementById('colorpicker');
+        nameColor.style.removeProperty('all');
+        nameColor.style.color = event.target.value;
     }
 
     // Add event listener to the color picker
-    colorPicker.addEventListener('input', updateUsernameColor);
+    colorPicker.forEach(picker => {
+        picker.addEventListener('input', updateUsernameColor);
+    });
 
     // Optionally, set an initial color
-    // colorPicker.value = '#ff0000'; // Red 
-    // updateUsernameColor({target: {value: colorPicker.value}});
+    /* colorPicker.value = '#ff0000'; // Red
+    updateUsernameColor({target: {value: colorPicker.value}}); */
 
     /*------------------*/
     /*- Background js --*/
