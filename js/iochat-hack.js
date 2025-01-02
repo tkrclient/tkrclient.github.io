@@ -324,8 +324,8 @@
     });
 
     // Optionally, set an initial color
-    /* colorPicker.value = '#ff0000'; // Red */
-    updateUsernameColor({target: {value: colorPicker.value}});
+    /* colorPicker.value = '#ff0000'; // Red 
+    updateUsernameColor({target: {value: colorPicker.value}}); */
 
 /*------------------*/
 /*- Background js --*/
