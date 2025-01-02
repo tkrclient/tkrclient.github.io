@@ -312,7 +312,7 @@
     /*-----------------------------------*/
 
     // Define what element is colorpicker
-    const nameColor = document.getElementById('colorpicker');
+    const colorPicker = document.getElementById('colorpicker');
     
     // Function to update the username color
     function updateUsernameColor(event) {
