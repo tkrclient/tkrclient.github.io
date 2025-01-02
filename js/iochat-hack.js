@@ -1,6 +1,8 @@
 (function() {
 
-    /*---- Testing ----*/
+    /*----------------------------------*/
+    /*---- Minor Tweaks to the Chat ----*/
+    /*----------------------------------*/
     
     /*---- Higher char limits ----*/
     // Higher character limit for chat box
@@ -145,7 +147,9 @@
       }
     });*/
 
-    /*---- Next user blocking script ----*/
+    /*-----------------------------------*/
+    /*------ User blocking script -------*/
+    /*-----------------------------------*/
 
     // BLOCK USERS FEATURE
     'use strict';
@@ -161,42 +165,43 @@
     const unblockInput = document.querySelectorAll('.unblockInputClass');
     // Create the button to unblock all users
     const unblockAllButton = document.querySelectorAll('.unblockAllButtonClass');
-    // Add the color picker to the page
-    const colorPicker = document.querySelectorAll('.colorPickerClass');
-
 
     // Function to update the blocked users list display
     function updateBlockedUsersList() {
-      blockedUsersList.forEach(element => {
-        element.textContent = 'Blocked Users:\n' + blockedUsers.join('\n');
-      });
-      localStorage.setItem('blockedUsers', JSON.stringify(blockedUsers));
+        blockedUsersList.forEach(element => {
+            element.textContent = 'Blocked Users:\n' + blockedUsers.join('\n');
+        });
+        localStorage.setItem('blockedUsers', JSON.stringify(blockedUsers));
     }
 
     // Function to block a user
     function blockUser(username) {
-        // Check if the username is "a bot"
-        if (username.toLowerCase() === "a bot", "Guest8389") {
-            // Add "a bot" to the blockedUsers array
-            blockedUsers.push(username);
-            updateBlockedUsersList();
-            filterMessages();
-
-            // Log a message to the console
-            console.log("The user 'a bot' has been blocked");
-            return;
+        if (username.includes('*')) {
+            const pattern = '^' + username.replace(/\*/g, '.*') + '$';
+            if (!blockedUsers.some(user => user === pattern)) {
+                blockedUsers.push(pattern);
+                console.log(`Users matching pattern '${pattern}' have been blocked`);
+            }
+        } else {
+            if (!blockedUsers.includes(username)) {
+                blockedUsers.push(username);
+                console.log(`User '${username}' has been blocked`);
+            }
         }
-
-        if (!blockedUsers.includes(username)) {
-            blockedUsers.push(username);
-            updateBlockedUsersList();
-            filterMessages();
-        }
+        updateBlockedUsersList();
+        filterMessages();
     }
 
     // Function to unblock a user
     function unblockUser(username) {
-        blockedUsers = blockedUsers.filter(user => user !== username);
+        if (username.includes('*')) {
+            const pattern = '^' + username.replace(/\*/g, '.*') + '$';
+            blockedUsers = blockedUsers.filter(user => user !== pattern);
+            console.log(`Users matching pattern '${pattern}' have been unblocked`);
+        } else {
+            blockedUsers = blockedUsers.filter(user => user !== username);
+            console.log(`User '${username}' has been unblocked`);
+        }
         updateBlockedUsersList();
         filterMessages();
     }
@@ -215,16 +220,29 @@
             const messageEntries = messagesContainer.querySelectorAll('.entry');
             messageEntries.forEach(entry => {
                 const usernameElement = entry.querySelector('.name');
-                if (usernameElement && blockedUsers.includes(usernameElement.textContent.replace(':', '').trim())) {
-                    entry.style.display = 'none';
-                } else {
-                    entry.style.display = '';
+                if (usernameElement) {
+                    const username = usernameElement.textContent.replace(':', '').trim();
+                    // Check if the username should be hidden
+                    const isBlocked = blockedUsers.some(blockedUser => {
+                        if (blockedUser.startsWith('^') && blockedUser.endsWith('$')) {
+                            return new RegExp(blockedUser).test(username);
+                        } else {
+                            return blockedUser === username;
+                        }
+                    });
+                    if (isBlocked) {
+                        entry.remove();
+                    }
                 }
             });
         }
     }
 
-    // Event listener for blocking users
+    // Initialize with default blocked users and filter existing messages
+    updateBlockedUsersList();
+    filterMessages();
+
+    // Event listener typing input for blocking users
     blockInput.forEach(input => {
         input.addEventListener('keypress', function(event) {
             if (event.key === 'Enter') {
@@ -237,7 +255,7 @@
         });
     });
 
-    // Event listener for unblocking users
+    // Event listener typing input for unblocking users
     unblockInput.forEach(input => {
         input.addEventListener('keypress', function(event) {
             if (event.key === 'Enter') {
@@ -250,21 +268,48 @@
         });
     });
 
-    // Event listener for unblocking all users
+    // Event listener button for unblocking all users
     unblockAllButton.forEach(button => {
         button.addEventListener('click', unblockAllUsers);
     });
 
     // Observe the messages container for new messages
-    const observer2 = new MutationObserver(() => filterMessages());
+    const observer2 = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.type === 'childList') {
+                mutation.addedNodes.forEach((node) => {
+                    if (node.nodeType === Node.ELEMENT_NODE && node.classList.contains('entry')) {
+                        const usernameElement = node.querySelector('.name');
+                        if (usernameElement) {
+                            const username = usernameElement.textContent.replace(':', '').trim();
+                            // Check if the username should be hidden
+                            const isBlocked = blockedUsers.some(blockedUser => {
+                                if (blockedUser.startsWith('^') && blockedUser.endsWith('$')) {
+                                    return new RegExp(blockedUser).test(username);
+                                } else {
+                                    return blockedUser === username;
+                                }
+                            });
+                            if (isBlocked) {
+                                node.remove();
+                            }
+                        }
+                    }
+                });
+            }
+        });
+        // After processing all mutations, run filterMessages to catch any missed entries
+        // filterMessages();
+    });
+
     const messagesContainer = document.getElementById('messages');
     if (messagesContainer) {
         observer2.observe(messagesContainer, { childList: true, subtree: true });
     }
 
-    // Initial call to display the blocked users and filter messages
-    updateBlockedUsersList("a bot", "Guest8389");
-    filterMessages();
+    /*-----------------------------------*/
+    /*----- Username color script -------*/
+    /*-----------------------------------*/
 
     // Function to update the username color
     function updateUsernameColor(event) {
@@ -282,7 +327,10 @@
     /* colorPicker.value = '#ff0000'; // Red
     updateUsernameColor({target: {value: colorPicker.value}}); */
 
-/* BACKGROUNDS JS */
+/*------------------*/
+/*- Background js --*/
+/*------------------*/
+    
 // Remove the background first variable
 const elementToRemove = document.querySelectorAll('#video-background');
 
@@ -366,7 +414,10 @@ window.addEventListener('load', () => {
   }
 });
 
-    /* GIF AUTOMATIC LOADING SUPPORT */
+    /*---------------------------------*/
+    /*- GIF automatic loading support -*/
+    /*---------------------------------*/
+    
     setTimeout(function() {
       const messages = document.querySelectorAll('.message');
 
