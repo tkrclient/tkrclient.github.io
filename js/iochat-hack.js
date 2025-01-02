@@ -311,6 +311,9 @@
     /*----- Username color script -------*/
     /*-----------------------------------*/
 
+    // Add the color picker to the page
+    const colorPicker = document.querySelectorAll('.colorPickerClass');
+    
     // Function to update the username color
     function updateUsernameColor(event) {
         const nameColor = document.getElementById('colorpicker');
