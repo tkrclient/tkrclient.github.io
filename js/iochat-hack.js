@@ -319,9 +319,9 @@
     }
 
     // Add event listener to the color picker
-    colorPicker.forEach(picker => {
+    /* colorPicker.forEach(picker => {
         picker.addEventListener('input', updateUsernameColor);
-    });
+    }); */
 
     // Optionally, set an initial color
     /* colorPicker.value = '#ff0000'; // Red
