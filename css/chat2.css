@@ -1,0 +1,117 @@
+html {
+    overflow: hidden;
+}
+
+
+#box {
+	padding: 0.5em 0em 0.5em 0em;
+}
+
+#chat {
+	width: 500px;
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+#nme {
+	font-family: "Exo 2";
+	border: none;
+	background-color: #191919;
+/*	height: 10%; */
+	padding: 0 0.5em;
+	width: 100%;
+	color: white;
+	font-size: 16px;
+}
+
+#msg {
+	font-family: "Exo 2";
+	border: none;
+	background-color: #191919;
+/*	height: 10%; */
+	padding: 0 0.5em;
+	width: 100%;
+	color: white;
+	font-size: 16px;
+}
+
+#name {
+/*    padding: 0 0.5em 0 0.5em;*/
+    margin: 0;
+/*    position: absolute;*/
+    top: 1em;
+    left: 0px;
+    width: 100%;
+    overflow: hidden;
+	font-family: "Exo 2";
+	display: flex;
+    flex-direction: row;
+	height: 40px;
+}
+
+body {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333333;
+	font-family: "Exo 2";
+	color: white;
+}
+
+#log {
+    background-color: #101010;
+    margin: 0;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+/*  position: absolute;*/
+    top: 3em;
+    left: 0.5em;
+    right: 0.5em;
+    bottom: 3em;
+    overflow: auto;
+/*	width: 540px; */
+	flex-direction: column-reverse;
+    display: flex;
+	flex-grow: 1;
+	height: 87vh;
+	overflow-y: auto;
+}
+
+/* #log > :first-child {
+  margin-top: auto;
+} */
+
+#message {
+/*    padding: 0 0.5em 0 0.5em;*/
+    margin: 0;
+/*    position: absolute;*/
+    bottom: 1em;
+    left: 0px;
+    width: 100%;
+    overflow: hidden;
+	font-family: "Exo 2";
+	display: flex;
+    flex-direction: row;
+	height: 40px;
+}
+
+#colorpicker {
+    /* color: rgb(53, 84, 192); */
+    width: 50px;
+    /* height: 21px; */
+    /* background-color: rgb(53, 84, 192); */
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+#send {
+	width: 50px;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url('/static/Exo2-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
