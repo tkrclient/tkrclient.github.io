@@ -1,7 +1,18 @@
 html {
     overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-anchor: none;
 }
 
+body {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-anchor: none;
+}
 
 #box2 {
 	padding: 0.5em 0em 0.5em 0em;
