@@ -49,7 +49,7 @@ html {
 	height: 40px;
 }
 
-body {
+/* body {
     overflow: hidden;
     padding: 0;
     margin: 0;
@@ -58,7 +58,7 @@ body {
     background-color: #333333;
 	font-family: "Exo 2";
 	color: white;
-}
+} */
 
 #log2 {
     background-color: #101010;
@@ -96,7 +96,7 @@ body {
 	height: 40px;
 }
 
-#colorpicker {
+#colorpicker2 {
     /* color: rgb(53, 84, 192); */
     width: 50px;
     /* height: 21px; */
@@ -105,7 +105,7 @@ body {
     vertical-align: bottom;
 }
 
-#send {
+#send2 {
 	width: 50px;
 }
 
