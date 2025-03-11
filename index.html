@@ -12,6 +12,11 @@
     <link rel="stylesheet" type="text/css" href="/css/fontawesome.css">
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
+    <!-- custom chat -->
+    <script src="js/chat2/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/chat2.css" rel="stylesheet">
+    <!--             -->
+
     <script src="js/jquery.js"></script>
     <script src="js/cookie.js"></script>
     <script src="js/client.js"></script>
@@ -34,7 +39,17 @@
     <div class="main">
       <footer class="chatalt" style="scrollbar-color: transparent rgba(255, 255, 255, 0); scrollbar-width: none;">
         <div class="item minnit" style="scrollbar-color: transparent rgba(255, 255, 255, 0); scrollbar-width: none;">
-          <iframe src="https://chat.bzmb.eu" width="100%" height="100%" allowtransparency="no" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="no" style="scrollbar-color: transparent rgba(255, 255, 255, 0); scrollbar-width: none;"></iframe>	
+		  <div id="chat2">
+            <form id="message2">
+                <input type="text" id="msg2" placeholder="Message" size="58" autofocus />
+                <input type="submit" id="send2" value="Send" />
+            </form>
+            <div id="log2"></div>
+            <form id="name2">
+                <input type="text" id="nme2" placeholder="Name" size="58" autofocus />
+                <div id="colorpicker2" style="color: rgb(53, 84, 192); background-color: rgb(53, 84, 192);" /></div>
+            </form>
+          </div>
         </div>
       </footer>
       <footer class="chatalt" style="scrollbar-color: transparent rgba(255, 255, 255, 0);scrollbar-width: none;height: 100%;">
