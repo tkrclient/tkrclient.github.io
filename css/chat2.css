@@ -16,7 +16,7 @@ html {
 #nme2 {
 	font-family: "Exo 2";
 	border: none;
-	background-color: #191919;
+	background-color: transparent;
 /*	height: 10%; */
 	padding: 0 0.5em;
 	width: 100%;
@@ -27,7 +27,7 @@ html {
 #msg2 {
 	font-family: "Exo 2";
 	border: none;
-	background-color: #191919;
+	background-color: transparent;
 /*	height: 10%; */
 	padding: 0 0.5em;
 	width: 100%;
@@ -61,7 +61,7 @@ html {
 } */
 
 #log2 {
-    background-color: #101010;
+/*    background-color: #101010; */
     margin: 0;
     padding: 0.5em 0.5em 0.5em 0.5em;
 /*  position: absolute;*/
