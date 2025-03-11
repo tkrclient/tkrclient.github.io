@@ -74,7 +74,7 @@ html {
 	flex-direction: column-reverse;
     display: flex;
 	flex-grow: 1;
-	height: 87vh;
+	height: calc(87vh - 40px);
 	overflow-y: auto;
 }
 
