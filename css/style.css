@@ -1,6 +1,6 @@
 @font-face {
  font-family: 'Exo 2';
-  url('/font/Exo2-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('font/Exo2-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 @keyframes in-progress {
  from {
