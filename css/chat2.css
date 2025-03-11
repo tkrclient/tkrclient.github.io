@@ -3,7 +3,7 @@ html {
     position: fixed;
     top: 0;
     left: 0;
-    overflow-anchor: none;
+/*    overflow-anchor: none; */
 }
 
 body {
@@ -11,7 +11,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    overflow-anchor: none;
+/*    overflow-anchor: none; */
 }
 
 #box2 {
