@@ -125,7 +125,7 @@ window.onload = function() {
     if (window["WebSocket"]) {
 		function establishConnection() {
 		    // Establish a WebSocket connection to the server
-	        conn = new WebSocket("wss://" + chat2.bzmb.eu + "/ws");
+	        conn = new WebSocket("wss://" + "chat2.bzmb.eu" + "/ws");
 
 			// Event handler when open
 			conn.onopen = function(evt) {
