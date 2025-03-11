@@ -1,9 +1,9 @@
 window.onload = function() {
-    var msg = document.getElementById("msg"); // Message input field
-    var nme = document.getElementById("nme"); // Username input field
-    var log = document.getElementById("log"); // Log container for messages
-    var pick = document.getElementById("colorpicker"); // Username's Colorpicker
-    var message = document.getElementById("message");
+    var msg = document.getElementById("msg2"); // Message input field
+    var nme = document.getElementById("nme2"); // Username input field
+    var log = document.getElementById("log2"); // Log container for messages
+    var pick = document.getElementById("colorpicker2"); // Username's Colorpicker
+    var message = document.getElementById("message2");
 
     // A map to store usernames and their assigned colors
     var userColors = {};
@@ -156,7 +156,7 @@ window.onload = function() {
 
 			        // Display username and message
 			        const item = document.createElement("div");
-					item.id = 'box';
+					item.id = 'box2';
 
 			        // Create a span for the username with bold styling
 			        const nameDiv = document.createElement("div");
