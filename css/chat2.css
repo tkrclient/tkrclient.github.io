@@ -1,16 +1,16 @@
 html {
     overflow: hidden;
-    position: fixed;
+/*    position: fixed;
     top: 0;
-    left: 0;
+    left: 0; */
 /*    overflow-anchor: none; */
 }
 
 body {
-    overflow: hidden;
+/*    overflow: hidden;
     position: fixed;
     top: 0;
-    left: 0;
+    left: 0; */
 /*    overflow-anchor: none; */
 }
 
