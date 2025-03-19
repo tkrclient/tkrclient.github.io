@@ -1,4 +1,4 @@
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
 
     /*----------------------------------*/
     /*---- Minor Tweaks to the Chat ----*/
@@ -440,5 +440,4 @@
 
       messages.forEach(convertGifUrlToImage);
     }, 3000);
-
-})();
+});
