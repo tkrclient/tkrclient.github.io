@@ -36,8 +36,16 @@ html, body {
 	height: 500px;
 }
 
-.colors {
+/* .colors {
   position: fixed;
+  margin-left: 10px;
+  margin-top: 10px;
+} */
+
+.colors {
+	position: absolute;
+	left: 300px;
+	top: 50px;
   margin-left: 10px;
   margin-top: 10px;
 }
