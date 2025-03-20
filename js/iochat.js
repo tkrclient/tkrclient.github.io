@@ -1,5 +1,5 @@
-$(document).ready(function() {
-  
+document.addEventListener('DOMContentLoaded', function() {
+
   const toggleButtonChat = document.getElementById('toggleButtonChat');
   const chat = document.getElementById('chat');
   console.log("sidebar");
@@ -12,19 +12,16 @@ $(document).ready(function() {
   const secondChatButton = document.getElementById('secondChatButton');
   const secondChatServer = document.getElementById('secondChatServer');
   console.log("secondChatServer");
+  const firstDrawButton = document.getElementById('firstDrawButton');
+  const firstDrawServer = document.getElementById('firstDrawServer');
+  console.log("firstDrawServer");
   const secondChatButtonMobile = document.getElementById('secondChatButtonMobile');
   console.log("secondChatServerMobile");
-  
+
   toggleButtonChat.addEventListener('click', () => {
     console.log("button clicked");
     chat.classList.toggle('active');
   });
-  /* toggleButtonChat.addEventListener('click', () => {
-    console.log("button clicked");
-    chatElements.forEach(chatElement => {
-      chatElement.classList.toggle('active');
-    });
-  }); */
   console.log("side");
   toggleButtonSidebar.addEventListener('click', () => {
     console.log("button clicked");
@@ -50,16 +47,21 @@ $(document).ready(function() {
     console.log("button clicked");
     secondChatServer.classList.toggle('hide');
   });
+  // First draw button
+  firstDrawButton.addEventListener('click', () => {
+    console.log("draw button clicked");
+    firstDrawServer.classList.toggle('hide');
+  });
   // Second chat button mobile
   secondChatButtonMobile.addEventListener('click', () => {
     console.log("button clicked");
     secondChatServer.classList.toggle('hide');
   });
-  
+
   //Console log to tell if iogames.fun is loading for you
   console.log('Loading IOGames.fun chat...');
   function chatMessage(type, options) {
-      
+
     const name = $("<div></div>").addClass("name").text(options.name + ":");
     const message = $("<div></div>").addClass("message");
 

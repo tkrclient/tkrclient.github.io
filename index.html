@@ -7,10 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" media="all">
-    <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 1025px)" href="/css/desktop.css">
-    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 1024px)" href="/css/mobile.css">
-    <link rel="stylesheet" type="text/css" href="/css/fontawesome.css">
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="only screen and (min-device-width: 1025px)" href="css/desktop.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (max-device-width: 1024px)" href="css/mobile.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 
     <!-- custom chat -->
     <script src="js/chat2/script.js"></script>
@@ -22,11 +22,19 @@
     <link type="text/css" href="css/draw2.css" rel="stylesheet">
     <!-- end of draw2 -->
 
+		<!-- Script ---------------->
+		<script src="js/iochat.js"></script>
+		<!-- End ------------------->
+
+		<!-- Script ---------------->
+		<script src="js/iochat-hack.js"></script>
+		<!-- End ------------------->
+
     <script src="js/jquery.js"></script>
     <script src="js/cookie.js"></script>
     <script src="js/client.js"></script>
         
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
         
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="IOGames.fun">
@@ -47,7 +55,7 @@
 		  <div id="chat2">
             <form id="message2">
                 <input type="text" id="msg2" placeholder="Message" size="58" autofocus />
-                <input type="submit" id="send2" value="Send" />
+                <input type="submit" id="send2" value="Send" style="background-color: transparent; color: white;"/>
             </form>
             <div id="log2"></div>
             <form id="name2">
@@ -62,7 +70,7 @@
           <iframe src="https://www3.cbox.ws/box/?boxid=3538311&amp;boxtag=KK9MuO" width="100%" height="450" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" style="position; height: calc(100% - 50px);"></iframe>
         </div>
       </footer>
-      <footer class="draw" style="scrollbar-color: transparent rgba(255, 255, 255, 0); scrollbar-width: none; position: absolute; /* left: 330px; top: 50px; */ width: 100%; height: 100%; z-index: -1;">
+      <footer class="draw" id="firstDrawServer" style="scrollbar-color: transparent rgba(255, 255, 255, 0); scrollbar-width: none; position: absolute; /* left: 330px; top: 50px; */ width: 100%; height: 100%; z-index: -1;">
         <canvas class="whiteboard"></canvas>
         <div class="colors">
           <div class="colorpicker3"></div>
@@ -106,12 +114,13 @@
             <span class="subtext" style="font-size: 14px;color: grey;left: 0.5%;position: absolute; /* top: 3.5%; */">By Lorenzino, mr.iogames and much more in TKR Version 2</span>
           </p>
           <a class="item" href="#" title="" id="toggleButtonSidebarDesktop" style="top: 1%; position: absolute; right: 1%; display: block; ">
-            <i class="fa" style="font-weight: 1; padding: 0.75rem 1rem; /* text-shadow:0 0 0.5rem #ffff00; */ font-size:28px; font-style: normal; display:block; /* top: 1%; right: 1%; position: absolute; */ ">☰</i>
+            <i class="fa fa-bars" style="font-weight: 600; padding: 0.75rem 1rem; font-size: 28px; font-style: normal; display:block;"></i>
           </a>
-          <a class="item" href="#" title="" id="secondChatButton" style="top: 1%;position: absolute;right: 6%;display: block;">
-            <i class="fa" style="font-weight: 1;padding: 0.75rem 1rem;/* text-shadow:0 0 0.5rem #ffff00; */font-size:28px;font-style: normal;display:block;">
-              <img src="/images/message-type.png" width="30px" height="30px"></img>
-            </i>
+          <a class="item" href="#" title="" id="secondChatButton" style="top: 1%; position: absolute; right: 6%; display: block;">
+            <i class="fa fa-comment" style="font-weight: 500;padding: 0.75rem 1rem; font-size: 28px; font-style: normal; display: block;"></i>
+          </a>
+          <a class="item" href="#" title="" id="firstDrawButton" style="top: 1%; position: absolute; right: 11%; display: block;">
+            <i class="fa fa-pen" style="font-weight: 600;padding: 0.75rem 1rem; font-size:28px;font-style: normal; display: block;"></i>
           </a>
         </div>
         </div>
@@ -129,26 +138,20 @@
       </p>
       <span class="subtext" style="font-size: 11px;color: grey;left: 0.5%; position: absolute; top: 70%;">By Lorenzino, mr.iogames and more in TKR</span>
     
+      <a class="item" href="#" title="" id="secondChatButtonMobile" style="display: block; padding: 0.5rem 1rem; position: fixed; right: 40%;">
+        <i class="fa fa-comment" style="font-weight: 500;"></i>
+      </a>
       <a class="item" href="#" id="toggleButtonFullscreen" style="display: block;padding: 0.5rem 1rem;position: fixed;right: 27%;">
         <i class="fa fa-expand"></i>
       </a>
       <a class="item" href="#" title="" id="toggleButtonChat" style="display: block;padding: 0.5rem 1rem;right: 0%;position: fixed;right: 13%;">
         <i class="far fa-comments"></i>
       </a>
-      <a class="item" href="#" title="" id="toggleButtonSidebar" style="font-weight: 1; /* text-shadow: 0 0 0.5rem #ffff00; */ font-size:20px; font-style: normal;display: block;padding: 0.5rem 1rem;position: fixed;right: 0%;">
-        <i class="fa" style="font-weight:1;">☰</i>
-      </a>
-      <a class="item" href="#" title="" id="secondChatButtonMobile" style="position: absolute;left: 45%;top: -16px;width: 20px;height: 20px;">
-        <i class="fa" style="font-weight: 1;padding: 0.75rem 1rem;/* text-shadow:0 0 0.5rem #ffff00; */font-size:28px;font-style: normal;display:block;">
-          <img src="/images/message-type.png" width="20px" height="20px">
-        </i>
+      <a class="item" href="#" title="" id="toggleButtonSidebar" style="font-weight: 1; font-style: normal;display: block;padding: 0.5rem 1rem;position: fixed;right: 0%;">
+        <i class="fa fa-bars" style="font-weight: 600;"></i>
       </a>
     </nav>
     <!-- End -->
-
-  <!-- Script ---------------->
-  <script src="/js/iochat.js"></script>
-  <!-- End ------------------->
 
   <!-- IOGAMES.FUN CHAT -->
   <div id="chat">
@@ -218,9 +221,6 @@
   </aside>
   <!-- End -->
 
-  <!-- Script ---------------->
-  <script src="/js/iochat-hack.js"></script>
-  <!-- End ------------------->
                         
   </body>
 </html>
