@@ -194,7 +194,7 @@
     height: calc(100% - 50px);
     border-radius: 0px;
     backdrop-filter: blur(3px);
-    background-color: rgba(0, 0, 0, 0.77);
+/*    background-color: rgba(0, 0, 0, 0.77); */
 }
 
 form {
