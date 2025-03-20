@@ -1,31 +1,36 @@
 .mob {
-    z-index: 1
+	z-index: 1
 }
 
 #chat2 {
-  width: 100%;
-  display: flex;
-  flex-direction: column-reverse;
+	width: 100%;
+	display: flex;
+	flex-direction: column-reverse;
 }
 
 .chatalt {
-    scrollbar-color: transparent rgba(255, 255, 255, 0.05);
-    scrollbar-width: none;
+	scrollbar-color: transparent rgba(255, 255, 255, 0.05);
+	scrollbar-width: none;
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	backdrop-filter: blur(8px);
 }
 
 .draw {
-    display: none;
+	display: none;
 }
 
 #video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-    z-index: 0;
-    opacity: 1; /* Adjust opacity here */
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	z-index: 0;
+	opacity: 1; /* Adjust opacity here */
 }
 
 .bar {
