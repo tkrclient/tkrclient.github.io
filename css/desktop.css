@@ -2,16 +2,26 @@
  font-family: 'Exo 2';
  url('/font/Exo2-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
+
 ::-webkit-scrollbar {
  display: none;
 }
+
+#chat2 {
+  width: 300px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 #messages {
  scrollbar-color: transparent rgba(255, 255, 255, 0.05);
  scrollbar-width: none;
 }
+
 .bar {
  height: 50px;
 }
+
 .backgroundstyles {
  overflow-x: scroll;
  height: 80%;

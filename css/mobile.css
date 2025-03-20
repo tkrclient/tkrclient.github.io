@@ -1,13 +1,22 @@
 .mob {
     z-index: 1
 }
+
+#chat2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .chatalt {
     scrollbar-color: transparent rgba(255, 255, 255, 0.05);
     scrollbar-width: none;
 }
+
 .draw {
     display: none;
 }
+
 #video-background {
     position: fixed;
     top: 0;
@@ -18,28 +27,35 @@
     z-index: 0;
     opacity: 1; /* Adjust opacity here */
 }
+
 .bar {
     height: 40px;
 }
+
 .foot {
     display: none;
 }
+
 .logotkr {
     display: none;
 }
+
 .backgroundstyles {
     height: 330px;
     overflow-y: scroll;
     scrollbar-color: transparent rgba(255, 255, 255, 0.05);
     scrollbar-width: none;
 }
+
 .mobile {
     backdrop-filter: blur(3px);
     background-color: rgba(0, 0, 0, 0);
 }
+
 .desktopblock {
     display: none;
 }
+
 .opac {
     opacity: 0.8;
     /* transition: opacity 1s linear(0 0%, 0 2.27%, 0.02 4.53%, 0.04 6.8%, 0.06 9.07%, 0.1 11.33%, 0.14 13.6%, 0.25 18.15%, 0.39 22.7%, 0.56 27.25%, 0.77 31.8%, 1 36.35%, 0.89 40.9%, 0.85 43.18%, 0.81 45.45%, 0.79 47.72%, 0.77 50%, 0.75 52.27%, 0.75 54.55%, 0.75 56.82%, 0.77 59.1%, 0.79 61.38%, 0.81 63.65%, 0.85 65.93%, 0.89 68.2%, 1 72.7%, 0.97 74.98%, 0.95 77.25%, 0.94 79.53%, 0.94 81.8%, 0.94 84.08%, 0.95 86.35%, 0.97 88.63%, 1 90.9%, 0.99 93.18%, 0.98 95.45%, 0.99 97.73%, 1 100%); */
@@ -48,20 +64,25 @@
 /* .opac:hover {
     opacity: 1;
 } */
+
 .all {
     position: absolute;
 }
+
 .testing {
     display: none
 }
+
 #colorpicker {
     position: absolute;
     top: 0%; 
     right: 0%;
 }
+
 .desktop {
     display: none
 }
+
 .explain {
     position: absolute;
     display: none;
@@ -69,6 +90,7 @@
     text-align: center; 
     width: 100px;
 }
+
 .commands {
     position: absolute;
     display: none;
@@ -77,6 +99,7 @@
     text-align: center; 
     width: 100px;
 }
+
 .chatMobile {
     grid-area: messages;
     box-sizing: border-box;
@@ -85,46 +108,49 @@
     z-index: 10;
     overflow-y: scroll;
 }
+
 .blockedUsersListClass {
- position: absolute;
- left: 2%;
- top: 70%;
- transform: translateY(-50%);
- background-color: rgba(51, 51, 51, 0.9);
- color: rgb(255, 255, 255);
- padding: 5px;
- border: 1px solid rgb(68, 68, 68);
- border-radius: 5px;
- font-weight: 200;
- font-size: 12px;
- max-width: 200px;
- overflow-wrap: break-word;
- opacity: 0.9;
- overflow-x: scroll;
+	position: absolute;
+	left: 2%;
+	top: 70%;
+	transform: translateY(-50%);
+	background-color: rgba(51, 51, 51, 0.9);
+	color: rgb(255, 255, 255);
+	padding: 5px;
+	border: 1px solid rgb(68, 68, 68);
+	border-radius: 5px;
+	font-weight: 200;
+	font-size: 12px;
+	max-width: 200px;
+	overflow-wrap: break-word;
+	opacity: 0.9;
+	overflow-x: scroll;
 }
+
 .blockInputClass {
- position: absolute;
- left: 0%;
- top: 79%;
- transform: translateY(-50%);
- background-color: rgb(51, 51, 51);
- color: rgb(255, 255, 255);
- padding: 5px;
- border: 1px solid rgb(68, 68, 68);
- border-radius: 5px;
- width: 10px;
+	position: absolute;
+	left: 0%;
+	top: 79%;
+	transform: translateY(-50%);
+	background-color: rgb(51, 51, 51);
+	color: rgb(255, 255, 255);
+	padding: 5px;
+	border: 1px solid rgb(68, 68, 68);
+	border-radius: 5px;
+	width: 10px;
 }
+
 .unblockInputClass {
- position: absolute;
- left: 0%;
- top: 87%;
- transform: translateY(-50%);
- background-color: rgb(51, 51, 51);
- color: rgb(255, 255, 255);
- padding: 5px;
- border: 1px solid rgb(68, 68, 68);
- border-radius: 5px;
- width: 10px;
+	position: absolute;
+	left: 0%;
+	top: 87%;
+	transform: translateY(-50%);
+	background-color: rgb(51, 51, 51);
+	color: rgb(255, 255, 255);
+	padding: 5px;
+	border: 1px solid rgb(68, 68, 68);
+	border-radius: 5px;
+	width: 10px;
 }
 .unblockAllButtonClass {
  position: absolute;
@@ -138,6 +164,7 @@
  border-radius: 5px;
  cursor: pointer;
 }
+
 .colorPickerClass {
  position: absolute;
  top: 70%;
@@ -149,6 +176,7 @@
  background-color: rgb(51, 51, 51);
  color: rgb(255, 255, 255);
 }
+
 .minnit {
     display: block;
     position: absolute;
@@ -160,39 +188,47 @@
     backdrop-filter: blur(3px);
     background-color: rgba(0, 0, 0, 0.77);
 }
+
 form {
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
 }
+
 form {
     display: flex;
     flex-direction: column;
     margin: 0;
     padding: 0;
 }
+
 form.form {
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 0.5rem;
     padding: 2rem;
 }
+
 form .form-group {
     margin-bottom: 1.5rem;
 }
+
 form .form-group:last-child {
     margin-bottom: 0;
 }
+
 label {
     display: block;
     font-size: 0.9rem;
     margin-bottom: 0.5rem;
 }
+
 input[type="checkbox"],
 input[type="radio"] {
     display: block;
 }
+
 .checkbox,
 .radio {
     display: block;
@@ -204,10 +240,12 @@ input[type="radio"] {
     width: 2rem;
     height: 2rem;
 }
+
 .checkbox:hover,
 .radio:hover {
     border-color: rgba(255, 255, 255, 0.5);
 }
+
 .checkbox.checked,
 .radio.checked {
     border-color: rgba(0, 255, 0, 0.25);
