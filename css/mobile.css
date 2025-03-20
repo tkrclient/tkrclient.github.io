@@ -191,7 +191,7 @@
     left: 0%;
     bottom: 0%;
     width: 100%;
-    height: calc(100% - 50px);
+    height: calc(100% - 40px);
     border-radius: 0px;
     backdrop-filter: blur(3px);
 /*    background-color: rgba(0, 0, 0, 0.77); */
