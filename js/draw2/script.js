@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let canvas = document.getElementsByClassName("whiteboard")[0];
   let context = canvas.getContext("2d");
-  let ws = new WebSocket("wss://" + draw2.bzmb.eu + "/ws");
+  let ws = new WebSocket("wss://" + "draw2.bzmb.eu" + "/ws");
   let pick = document.getElementsByClassName("colorpicker")[0];
   //let eraserButton = document.getElementById('eraser'); // Eraser
   let wipeButton = document.getElementById('wipe'); // Wipe
