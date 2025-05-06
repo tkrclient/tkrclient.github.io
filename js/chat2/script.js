@@ -66,7 +66,7 @@ window.onload = function() {
 		var newName = this.value;
         setCookie("nme", newName); // Update the cookie with the new username
         setName(nme, newName); // Apply the new username
-        console.log(`New Name: ${newName}`);
+        //console.log(`New Name: ${newName}`);
     });
 
     // Check if a color is stored in cookies
@@ -85,7 +85,7 @@ window.onload = function() {
         const newColor = getRandomColor(); // Generate a new random color
         setCookie("color", newColor, 365); // Update the cookie with the new color
         setColor(pick, newColor); // Apply the new color
-        console.log(`New Color: ${newColor}`);
+        //console.log(`New Color: ${newColor}`);
     };
 
 	// Function to append messages to the log
@@ -106,15 +106,15 @@ window.onload = function() {
             return false;
         }
 
-	    // Send username and message as JSON to the server
-	    const fullMessage = {
-	        username: nme.value,
-	        color: getComputedStyle(pick).backgroundColor,
-	        text: msg.value,
-	    };
+	// Send username and message as JSON to the server
+	const fullMessage = {
+	username: nme.value,
+	color: getComputedStyle(pick).backgroundColor,
+	text: msg.value,
+	};
 
-		console.log("Sending message:", JSON.stringify(fullMessage));
-	    conn.send(JSON.stringify(fullMessage));
+	//console.log("Sending message:", JSON.stringify(fullMessage));
+	conn.send(JSON.stringify(fullMessage));
 
 	    // Clear the message input field
         msg.value = "";
@@ -140,13 +140,13 @@ window.onload = function() {
 			conn.onmessage = function(evt) {
 			    try {
 			        // Log raw data for debugging
-			        console.log("Raw data received:", evt.data);
+			        //console.log("Raw data received:", evt.data);
 
 			        // Parse the incoming JSON string into a JavaScript object
 			        const data = JSON.parse(evt.data);
 
 			        // Log parsed data for debugging
-			        console.log("Parsed data:", data);
+			        //console.log("Parsed data:", data);
 
 			        // Ensure `data` has both `username` and `text`
 			        if (!data.username || !data.text) {
