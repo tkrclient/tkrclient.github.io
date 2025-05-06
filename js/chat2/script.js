@@ -129,7 +129,7 @@ window.onload = function() {
 
 			// Event handler when open
 			conn.onopen = function(evt) {
-				console.log("%c Connection established", "color: lightgreen");
+				console.log("%c Connection established to chat", "color: lightgreen");
 			};
 		    // Event handler for when the WebSocket connection is closed
 	        conn.onclose = function(evt) {
