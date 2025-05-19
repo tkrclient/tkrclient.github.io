@@ -3,6 +3,11 @@
  url('/font/Exo2-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
+
+#secondChatServer {
+ height: 100%;
+}
+
 ::-webkit-scrollbar {
  display: none;
 }
