@@ -8,6 +8,11 @@
 	flex-direction: column-reverse;
 }
 
+.chatalt3 {
+	scrollbar-color: transparent rgba(255, 255, 255, 0.05);
+	scrollbar-width: none;
+}
+
 .chatalt {
 	scrollbar-color: transparent rgba(255, 255, 255, 0.05);
 	scrollbar-width: none;
