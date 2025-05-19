@@ -8,6 +8,11 @@
 	flex-direction: column-reverse;
 }
 
+.chatalt3 {
+	scrollbar-color: transparent rgba(255, 255, 255, 0.05);
+	scrollbar-width: none;
+}
+
 .chatalt {
 	scrollbar-color: transparent rgba(255, 255, 255, 0.05);
 	scrollbar-width: none;
@@ -22,6 +27,7 @@
 	left: 0%;
 	bottom: -40px;
 	width: 100%;
+	height: 100%;
 /*	background-color: rgba(0, 0, 0, 0.7);*/
 }
 
@@ -777,6 +783,7 @@ aside.active {
     border-radius: 0;
     padding: 0 0.5rem;
     min-width: auto;
+    width: calc(100% - 52px);
 }
 #chat .chat-name input[type="text"]:focus,
 #chat .chat-send input[type="text"]:focus {
