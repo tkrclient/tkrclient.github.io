@@ -777,6 +777,7 @@ aside.active {
     border-radius: 0;
     padding: 0 0.5rem;
     min-width: auto;
+    width: calc(100% - 52px);
 }
 #chat .chat-name input[type="text"]:focus,
 #chat .chat-send input[type="text"]:focus {
