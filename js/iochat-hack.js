@@ -311,6 +311,53 @@ document.addEventListener('DOMContentLoaded', function() {
     /*----- Username color script -------*/
     /*-----------------------------------*/
 
+    /* cookie color catcher below */
+
+    // Function to generate a random color
+    function getRandomColor() {
+        return "#" + Math.random().toString(16).slice(2, 8).padStart(6, "0");
+    }
+
+    var pick = document.getElementById("usernameColorPicker"); // Username's Colorpicker
+
+    // Function to set background-color and text color
+    function setColor(element, color) {
+        element.value = color;
+    }
+
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+        const date = new Date();
+        date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000); // Convert days to milliseconds
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    }
+
+    // Function to get a cookie by name
+    function getCookie(name) {
+        const cookies = document.cookie.split(";"); // Split cookies into an array
+        for (let i = 0; i < cookies.length; i++) {
+            let cookie = cookies[i].trim(); // Trim whitespace
+            if (cookie.startsWith(name + "=")) {
+                return cookie.substring((name + "=").length); // Return the value of the cookie
+            }
+        }
+        return null; // Return null if the cookie is not found
+    }
+
+    // Check if a color is stored in cookies
+    var userColor = getCookie("color");
+    if (!userColor) {
+        // Generate a random color if no cookie exists
+        var userColor = getRandomColor();
+        setCookie("color", userColor); // Store the color in a cookie
+    }
+
+    // Apply the stored or newly generated color
+    setColor(pick, userColor);
+
+    /* username colorpicker */
+    
     // Add the color picker to the page
     const colorPicker = document.querySelectorAll('.colorPickerClass');
     
@@ -319,6 +366,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const nameColor = document.getElementById('colorpicker');
         nameColor.style.removeProperty('all');
         nameColor.style.color = event.target.value;
+        var userColor = pick.value;
+        setCookie("color", userColor); // Store the color in a cookie
     }
 
     // Add event listener to the color picker
