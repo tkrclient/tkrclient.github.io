@@ -11,13 +11,13 @@ var Client = function(server, room, onMessage)
         name : function(name)
         {
             Cookies.set("name", name, { expires : 3650 });
-            $("#name").val(name);
+            document.getElementById("name").value = name;
         },
 
         color : function(color)
         {
             Cookies.set("color", color, { expires : 3650 });
-            $("#colorpicker").css("color", color);
+            document.getElementById("colorpicker").style.color = color;
         }
     };
 

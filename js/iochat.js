@@ -62,29 +62,42 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('Loading IOGames.fun chat...');
   function chatMessage(type, options) {
 
-    const name = $("<div></div>").addClass("name").text(options.name + ":");
-    const message = $("<div></div>").addClass("message");
+    const name = document.createElement("div");
+    name.classList.add("name");
+    name.textContent = options.name + ":";
+    
+    const message = document.createElement("div");
+    message.classList.add("message");
 
     /*-- I believe this is for the initial IOGames Bot (which has a bright green name) --*/
     if(type == "system") {
-      name.addClass("system");
-      message.html(options.message);
+      name.classList.add("system");
+      message.innerHTML = options.message;
     }
     else {
-      name.css({color : options.color});
-      message.text(options.message);
+      name.style.color = options.color;
+      message.textContent = options.message;
     }
       
-    let entry = $("<div></div>")
-    .addClass("entry")
-    .append(name)
-    .append(message);
-      
-    $("#messages").prepend(entry);
+    let entry = document.createElement("div");
+    entry.classList.add("entry");        // add the "entry" class
+    entry.appendChild(name);             // append the 'name' element
+    entry.appendChild(message);          // append the 'message' element
+
+    const messages = document.getElementById("messages");
+    messages.insertBefore(entry, messages.firstChild);
     
     /*-- IOGames AMOUNT OF MESSAGES! --*/
-    while($("#messages .entry").length > 1000) {
-        $("#messages .entry").last().remove();
+    //const messages = document.getElementById("messages");
+    
+    while (messages.querySelectorAll(".entry").length > 1000) {
+      const entries = messages.querySelectorAll(".entry");
+      const lastEntry = entries[entries.length - 1];
+      if (lastEntry) {
+        messages.removeChild(lastEntry);
+      } else {
+        break; // in case no entries found, break out of the loop
+      }
     }
   }
       
@@ -112,21 +125,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
   /*-- See message color? --*/
   function say() {
-    if($("#name").val().length && $("#message").val().length) {
-      client.send("message", {
-        name : $("#name").val(),
-        color : $("#colorpicker").css("color"),
-        message : $("#message").val()
-      });
-      $("#message").val("");
-    }
+      const nameInput = document.getElementById("name");
+      const messageInput = document.getElementById("message");
+      const colorPicker = document.getElementById("colorpicker");
+  
+      if (nameInput.value.length && messageInput.value.length) {
+          client.send("message", {
+              name: nameInput.value,
+              color: getComputedStyle(colorPicker).color,
+              message: messageInput.value
+          });
+          messageInput.value = "";
+      }
   }
 
+
   /*-- Color randomizer for the color palette icon AND name --*/
-  $("#colorpicker").click(function(e) {
-    client.chat.color("#" + Math.random().toString(16).slice(2, 8));
-    e.preventDefault();
+  const colorpicker = document.getElementById("colorpicker");
+  
+  colorpicker.addEventListener("click", function(e) {
+      client.chat.color("#" + Math.random().toString(16).slice(2, 8));
+      e.preventDefault();
   });
+
 
   /*-- Initial Guest____ name with randomized numbers on the end PLUS randomized color when new to site --*/
   if(Cookies.get("name") === undefined || !Cookies.get("name").length) {
@@ -141,51 +162,85 @@ document.addEventListener('DOMContentLoaded', function() {
   else {
     client.chat.color(Cookies.get("color"));
   }
-  $("#name").change(function() {
-    Cookies.set("name", $(this).val(), { expires : 3650 });
+  const nameInput = document.getElementById("name");
+  
+  nameInput.addEventListener("change", function() {
+      Cookies.set("name", this.value, { expires: 3650 });
   });
-  $("#message").keydown(function(e) {
-    if(e.which == 13) {
-      say();
-    }
+  const messageInput = document.getElementById("message");
+  
+  messageInput.addEventListener("keydown", function(e) {
+      if (e.key === "Enter") {
+          say();
+      }
   });
 
-  $(".checkbox").click(function() {
-    $(this).toggleClass("checked");
-  });
 
-  $(".layer").click(function(e) {
-    $(this).fadeOut("fast", function() {
-      $(".layer iframe").remove();
+  const checkboxes = document.querySelectorAll(".checkbox");
+  
+  checkboxes.forEach(function(checkbox) {
+    checkbox.addEventListener("click", function() {
+      this.classList.toggle("checked");
     });
-    e.preventDefault();
   });
+
+  document.querySelectorAll(".layer").forEach(layer => {
+    layer.addEventListener("click", function(e) {
+      e.preventDefault();
+  
+      // Fade out effect, "fast" ~ 200ms
+      let opacity = 1;
+      const fadeDuration = 200; // ms
+      const intervalTime = 20;  // ms
+      const fadeStep = intervalTime / fadeDuration;
+  
+      const fadeOutInterval = setInterval(() => {
+        opacity -= fadeStep;
+        if (opacity <= 0) {
+          opacity = 0;
+          clearInterval(fadeOutInterval);
+          this.style.display = "none";
+  
+          // Remove all iframe elements inside elements with class "layer"
+          document.querySelectorAll(".layer iframe").forEach(iframe => iframe.remove());
+        }
+        this.style.opacity = opacity;
+      }, intervalTime);
+  
+    });
+  });
+
 
   /*-- I assume this is for the information on the navbar --*/
-  $("[data-favorite]").click(function(e) {
-    let gameId = parseInt($(this).data("favorite"));
-    let favorites = Cookies.getJSON("favorites");
-    if($(this).hasClass("icon-toggle-active")) {
-      if(favorites !== undefined) {
-        const index = favorites.indexOf(gameId);
-        if(index !== -1) {
-          favorites.splice(index, 1);
-          Cookies.set("favorites", favorites, { expires: 3650 });
+  document.querySelectorAll("[data-favorite]").forEach(element => {
+    element.addEventListener("click", function(e) {
+      e.preventDefault();
+  
+      const gameId = parseInt(this.getAttribute("data-favorite"));
+      let favorites = Cookies.getJSON("favorites");
+  
+      if (this.classList.contains("icon-toggle-active")) {
+        if (favorites !== undefined) {
+          const index = favorites.indexOf(gameId);
+          if (index !== -1) {
+            favorites.splice(index, 1);
+            Cookies.set("favorites", favorites, { expires: 3650 });
+          }
         }
+      } else {
+        if (favorites === undefined) {
+          favorites = [gameId];
+        } else {
+          favorites.push(gameId);
+        }
+        Cookies.set("favorites", favorites, { expires: 3650 });
       }
-    }
-  else {
-    if(favorites === undefined) {
-      favorites = [gameId];
-    }
-    else {
-      favorites.push(gameId);
-    }
-  Cookies.set("favorites", favorites, { expires: 3650 });
-  }
-
-  $(this).parent().find(".icon-toggle").toggleClass("hide");  
-
-  e.preventDefault();
+  
+      // this.parentNode.find(".icon-toggle").toggleClass("hide") replacement:
+      const iconToggles = this.parentNode.querySelectorAll(".icon-toggle");
+      iconToggles.forEach(iconToggle => {
+        iconToggle.classList.toggle("hide");
+      });
+    });
   });
 });
