@@ -322,7 +322,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to set background-color and text color
     function setColor(element, color) {
+        //element.style.backgroundColor = color;
+        //element.value="#e66465";
         element.value = color;
+        //element.style.color = "#FFFFFF"; // Default text color (white)
     }
 
     // Function to set a cookie
@@ -357,7 +360,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setColor(pick, userColor);
 
     /* username colorpicker */
-    
+
     // Add the color picker to the page
     const colorPicker = document.querySelectorAll('.colorPickerClass');
     
@@ -366,13 +369,22 @@ document.addEventListener('DOMContentLoaded', function() {
         const nameColor = document.getElementById('colorpicker');
         nameColor.style.removeProperty('all');
         nameColor.style.color = event.target.value;
-        var userColor = pick.value;
-        setCookie("color", userColor); // Store the color in a cookie
     }
-
+    
     // Add event listener to the color picker
     colorPicker.forEach(picker => {
         picker.addEventListener('input', updateUsernameColor);
+        picker.value = userColor;
+        picker.addEventListener('input', () => {
+            const newColor = picker.value; // Get the newly picked color
+            
+            // Update the color value of all color pickers with the same class
+            colorPicker.forEach(p => p.value = newColor);
+
+            var userColor = pick.value;
+            //var userColor = nameColor.value;
+            setCookie("color", userColor); // Store the color in a cookie
+        });
     });
 
     // Optionally, set an initial color
