@@ -1,3 +1,5 @@
+'use strict';
+
 document.addEventListener('DOMContentLoaded', function() {
 
     /*----------------------------------*/
@@ -152,7 +154,6 @@ document.addEventListener('DOMContentLoaded', function() {
     /*-----------------------------------*/
 
     // BLOCK USERS FEATURE
-    'use strict';
 
     // Load blocked users from localStorage
     let blockedUsers = JSON.parse(localStorage.getItem('blockedUsers')) || ["a bot", "Guest8389"];
