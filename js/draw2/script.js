@@ -1,5 +1,6 @@
+'use strict';
+
 document.addEventListener('DOMContentLoaded', function() {
-  'use strict';
 
   let canvas = document.getElementsByClassName("whiteboard")[0];
   let context = canvas.getContext("2d");

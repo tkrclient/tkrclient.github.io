@@ -1,9 +1,12 @@
+'use strict';
+
 window.onload = function() {
     var msg = document.getElementById("msg2"); // Message input field
     var nme = document.getElementById("nme2"); // Username input field
     var log = document.getElementById("log2"); // Log container for messages
     var pick = document.getElementById("colorpicker2"); // Username's Colorpicker
     var message = document.getElementById("message2");
+    var conn = new WebSocket("wss://" + "chat2.bzmb.eu" + "/ws");
 
     // A map to store usernames and their assigned colors
     var userColors = {};
@@ -125,7 +128,6 @@ window.onload = function() {
     if (window["WebSocket"]) {
 		function establishConnection() {
 		    // Establish a WebSocket connection to the server
-	        conn = new WebSocket("wss://" + "chat2.bzmb.eu" + "/ws");
 
 			// Event handler when open
 			conn.onopen = function(evt) {

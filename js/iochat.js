@@ -1,3 +1,5 @@
+'use strict';
+
 document.addEventListener('DOMContentLoaded', function() {
 
   const toggleButtonChat = document.getElementById('toggleButtonChat');

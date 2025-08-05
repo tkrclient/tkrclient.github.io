@@ -1,3 +1,5 @@
+'use strict';
+
 var Client = function(server, room, onMessage)
 {
     this.send = function(type, msg)
