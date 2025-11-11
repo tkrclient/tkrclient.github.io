@@ -26,4 +26,4 @@ function autoGifLoad() {
       messages.forEach(convertGifUrlToImage);
     }, 3000);
 
-});
+};
