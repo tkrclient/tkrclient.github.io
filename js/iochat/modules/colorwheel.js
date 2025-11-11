@@ -1,10 +1,6 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function() {
-
-      /*-----------------------------------*/
-    /*----- Username color script -------*/
-    /*-----------------------------------*/
+function colorWheel() {
 
     /* cookie color catcher below */
 
@@ -86,5 +82,4 @@ document.addEventListener('DOMContentLoaded', function() {
     /* colorPicker.value = '#ff0000'; // Red
     updateUsernameColor({target: {value: colorPicker.value}}); */
 
-  
 });
