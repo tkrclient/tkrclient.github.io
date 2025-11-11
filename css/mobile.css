@@ -752,8 +752,8 @@ aside {
     left: -200vw;
     top: 2rem;
     z-index: 16000000;
-    width: calc(100vw - 2rem);
-    height: calc(100vh - 2rem);
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
     transition: left 0.25s;
     backdrop-filter: blur(30px);
 }
@@ -867,7 +867,7 @@ aside {
 .viewport {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 2.25rem);
+    height: calc(100% - 2.25rem);
 }
 .viewport .game {
     border: none;
