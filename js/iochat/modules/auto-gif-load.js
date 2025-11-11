@@ -2,7 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-  
     /*---------------------------------*/
     /*- GIF automatic loading support -*/
     /*---------------------------------*/
