@@ -2,10 +2,6 @@
 
 function autoGifLoad() {
 
-    /*---------------------------------*/
-    /*- GIF automatic loading support -*/
-    /*---------------------------------*/
-    
     setTimeout(function() {
       const messages = document.querySelectorAll('.message');
 
