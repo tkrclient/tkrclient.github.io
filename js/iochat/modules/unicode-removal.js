@@ -1,6 +1,6 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function() {
+function unicodeRemoval() {
 
   // Function (for some reason only loads after few seconds)
     function removeUnicodeFromElements() {
