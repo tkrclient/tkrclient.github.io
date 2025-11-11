@@ -10,7 +10,7 @@ did you guys know tkr client let's you block any person!!!!!1!! 🔥💯💯💯
 https://tkrclient.github.io OR http://funchat.mooo.com
 
 ## How to add features?
-you could just hijack any of the ```js/iochat/modules/*.js``` scripts to add your script for you personal use (not fork) i dont mind.
+You could just hijack any of the ```js/iochat/modules/*.js``` scripts to add your script for your personal use (not fork) i dont mind.
 
 ### OR
 
