@@ -24,6 +24,7 @@
   width: 300px;
   display: flex;
   flex-direction: column-reverse;
+  height: 100%;
 }
 
 #messages {
