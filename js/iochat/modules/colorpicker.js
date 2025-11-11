@@ -63,4 +63,4 @@ function colorPicker() {
     }
     setTimeout(mess, 6000); */
 
-});
+};
