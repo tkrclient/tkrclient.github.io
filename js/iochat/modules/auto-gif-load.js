@@ -1,6 +1,6 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function() {
+function autoGifLoad() {
 
     /*---------------------------------*/
     /*- GIF automatic loading support -*/
