@@ -14,13 +14,13 @@ You could just hijack any of the ```js/iochat/modules/*.js``` scripts to add you
 
 ### OR
 
-add your function name in this existing file: ```tkrclient.github.io/js/iochat/iochat-modules.js```
+add your function name in this existing file: ```js/iochat/iochat-modules.js```
 
-put your script containing your code in a new file here: ```tkrclient.github.io/js/iochat/modules/SCRIPT-NAME.js```
+put your script containing your code in a new file here: ```js/iochat/modules/SCRIPT-NAME.js```
 
-finally, put the file name in index.html: ```tkrclient.github.io/index.html```
+finally, put the file name in index.html: ```index.html```
 
-for example, here is ```tkrclient.github.io/js/iochat/iochat-modules.js```:
+for example, here is ```js/iochat/iochat-modules.js```:
 ```
 'use strict';
 
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-and here is ```tkrclient.github.io/js/iochat/modules/SCRIPT-NAME.js```:
+and here is ```js/iochat/modules/SCRIPT-NAME.js```:
 ```
 'use strict';
 
@@ -51,7 +51,7 @@ function SCRIPT-NAME() {
 };
 ```
 
-and here is ```tkrclient.github.io/index.html``` (only need to see the "Website features" section):
+and here is ```index.html``` (only need to see the "Website features" section):
 ```
 <!-- testing -->
 <!DOCTYPE html>
