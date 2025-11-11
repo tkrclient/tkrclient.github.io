@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     colorWheel();
     backgrounds();
     gifAutoload();
+    // Added function name for script below
     SCRIPT-NAME();
 
 });
