@@ -82,4 +82,4 @@ function colorWheel() {
     /* colorPicker.value = '#ff0000'; // Red
     updateUsernameColor({target: {value: colorPicker.value}}); */
 
-});
+};
