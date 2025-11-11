@@ -1,12 +1,7 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function() {
+function backgrounds() {
 
-
-    /*------------------*/
-    /*- Background js --*/
-    /*------------------*/
-        
     // Remove the background first variable
     const elementToRemove = document.querySelectorAll('#video-background');
     
@@ -90,5 +85,4 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-  
 });
