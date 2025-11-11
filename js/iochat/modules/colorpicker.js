@@ -11,7 +11,6 @@ function colorPicker() {
     }
     setTimeout(func, 3000);
 
-
     /*---- Click colors and names ----*/
     // Function (for some reason only loads after few seconds)
     /* function mess() {
