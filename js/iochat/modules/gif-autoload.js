@@ -1,6 +1,6 @@
 'use strict';
 
-function autoGifLoad() {
+function gifAutoload() {
 
     setTimeout(function() {
       const messages = document.querySelectorAll('.message');
