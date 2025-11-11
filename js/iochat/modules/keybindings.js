@@ -1,6 +1,6 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function() {
+function keybindings() {
 
    /* Keybindings for [ ] and \ to change colors */
     // Listen for the 'keypress' event on the document
