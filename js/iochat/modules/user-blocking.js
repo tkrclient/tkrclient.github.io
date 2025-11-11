@@ -1,7 +1,6 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function() {
-    // BLOCK USERS FEATURE
+function userBlocking() {
 
     // Load blocked users from localStorage
     let blockedUsers = JSON.parse(localStorage.getItem('blockedUsers')) || ["a bot", "Guest8389"];
@@ -155,4 +154,5 @@ document.addEventListener('DOMContentLoaded', function() {
     if (messagesContainer) {
         observer2.observe(messagesContainer, { childList: true, subtree: true });
     }
+
 });
