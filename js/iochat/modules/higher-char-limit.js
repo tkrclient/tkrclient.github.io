@@ -1,6 +1,6 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function() {
+function higherCharLimit() {
 
     /*----------------------------------*/
     /*---- Minor Tweaks to the Chat ----*/
