@@ -811,10 +811,10 @@ aside {
     left: -200vw;
     top: 2rem;
     z-index: 16000000;
-    /* width: calc(100vw - 2rem); */
+    /* width: calc(100% - 2rem); */
     width: 25%;
     max-width: 302px;
-    height: calc(100vh - 2rem);
+    height: calc(100% - 2rem);
     transition: left 0.25s;
 }
 .chatDesktop {
@@ -826,8 +826,8 @@ aside {
     left: -200vw;
     top: 2rem;
     z-index: 16000000;
-    width: calc(100vw - 2rem);
-    height: calc(100vh - 2rem);
+    width: calc(100% - 2rem);
+    height: calc(100% - 2rem);
 }
 .chatMobile {
  display: none;
@@ -852,7 +852,7 @@ body .main main {
 body .main main .viewport {
  display:flex;
  flex-direction:column;
- height:calc(100vh - 3rem);
+ height:calc(100% - 3rem);
 }
 body .main main .viewport .game {
  border:none;
