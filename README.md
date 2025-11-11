@@ -20,6 +20,8 @@ put your script containing your code in a new file here: ```js/iochat/modules/SC
 
 finally, put the file name in index.html: ```index.html```
 
+---
+
 for example, here is ```js/iochat/iochat-modules.js```:
 ```
 'use strict';
