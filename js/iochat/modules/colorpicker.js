@@ -1,6 +1,6 @@
 'use strict';
 
-document.addEventListener('DOMContentLoaded', function() {
+function colorPicker() {
 
     /*---- Name color changes ----*/
     var namecolor = document.getElementById('colorpicker');
