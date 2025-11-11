@@ -79,7 +79,7 @@ body {
 	flex-direction: column-reverse;
     display: flex;
 	flex-grow: 1;
-	height: calc(100% - 130px);
+	height: calc(100vh - 130px);
 	overflow-y: auto;
 }
 
