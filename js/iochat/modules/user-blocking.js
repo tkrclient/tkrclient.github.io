@@ -155,4 +155,4 @@ function userBlocking() {
         observer2.observe(messagesContainer, { childList: true, subtree: true });
     }
 
-});
+};
