@@ -2,10 +2,6 @@
 
 function higherCharLimit() {
 
-    /*----------------------------------*/
-    /*---- Minor Tweaks to the Chat ----*/
-    /*----------------------------------*/
-    
     /*---- Higher char limits ----*/
     // Higher character limit for chat box
     const messageInput = document.getElementById('message'); {
@@ -15,4 +11,5 @@ function higherCharLimit() {
     const nameInput = document.getElementById('name'); {
       nameInput.setAttribute('maxlength', '1000'); // 400 character limit
     } 
-});
+
+};
