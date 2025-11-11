@@ -9,6 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
     userBlocking();
     colorWheel();
     backgrounds();
-    gifAutoLoad();
+    gifAutoload();
     
 });
