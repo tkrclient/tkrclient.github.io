@@ -23,8 +23,8 @@
  animation-timing-function:ease-in-out;
  position:fixed;
  margin-top:-9rem;
- width:100vw;
- height:100vh;
+ width:100%;
+ height:100%;
  display:flex;
  align-items:center;
  justify-content:center
@@ -65,8 +65,8 @@
  position:fixed;
  left:0;
  top:0;
- width:100vw;
- height:100vh;
+ width:100%;
+ height:100%;
  z-index:16000000
 }
 .s3games-layer .s3games-window {
@@ -79,8 +79,8 @@
  cursor:auto;
  padding:2rem;
  min-width:600px;
- max-width:calc(100vw - 4rem);
- max-height:calc(100vh - 4rem);
+ max-width:calc(100% - 4rem);
+ max-height:calc(100% - 4rem);
  overflow-y:auto
 }
 .s3games-layer .s3games-window::-webkit-scrollbar {
