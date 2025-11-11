@@ -9,7 +9,7 @@ did you guys know tkr client let's you block any person!!!!!1!! 🔥💯💯💯
 
 https://tkrclient.github.io OR http://funchat.mooo.com
 
-### How to add features?
+## How to add features?
 add your function name in this existing file: ```tkrclient.github.io/js/iochat/iochat-modules.js```
 
 put your script containing your code in a new file here: ```tkrclient.github.io/js/iochat/modules/SCRIPT-NAME.js```
@@ -45,8 +45,8 @@ function SCRIPT-NAME() {
 };
 ```
 
-### backend code of chat server:
+## backend code of chat server:
 https://github.com/tkrclient/iogames-chat
 
-### backend code of drawing/whiteboard server:
+## backend code of drawing/whiteboard server:
 https://github.com/tkrclient/iogames-draw
