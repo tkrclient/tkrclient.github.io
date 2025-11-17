@@ -160,7 +160,7 @@ window.onload = function() {
 				messages.forEach(data => {
 					// Display username and message
 					const item = document.createElement("div");
-					item.id = 'box';
+					item.id = 'box2';
 	
 					// Create a span for the username with bold styling
 					const nameDiv = document.createElement("div");
