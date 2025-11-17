@@ -79,8 +79,8 @@ and here is ```index.html``` (only need to see the "Website features" section):
     <!-- End ------------------->
 ```
 
-## backend code of chat server:
-https://github.com/tkrclient/iogames-chat
+## backend code of chat server (python, picows):
+https://github.com/tkrclient/pygames-chat
 
 ## backend code of drawing/whiteboard server:
 https://github.com/tkrclient/iogames-draw
