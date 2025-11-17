@@ -6,7 +6,7 @@ window.onload = function() {
     var log = document.getElementById("log2"); // Log container for messages
     var pick = document.getElementById("colorpicker2"); // Username's Colorpicker
     var message = document.getElementById("message2");
-    var conn = new WebSocket("wss://" + "chat2.bzmb.eu" + "/ws");
+    var conn = new WebSocket("wss://" + "chat.bzmb.eu" + "/chatroom1");
 
     // A map to store usernames and their assigned colors
     var userColors = {};
