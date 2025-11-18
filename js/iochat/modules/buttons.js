@@ -1,8 +1,6 @@
 'use strict';
 
-buttons() {
-  
-/*
+function buttons() {
   const toggleButtonChat = document.getElementById('toggleButtonChat');
   const chat = document.getElementById('chat');
   console.log("sidebar");
@@ -60,6 +58,4 @@ buttons() {
     console.log("button clicked");
     secondChatServer.classList.toggle('hide');
   });
-*/
-  
 };
