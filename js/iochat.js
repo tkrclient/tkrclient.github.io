@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
               message: messageInput.value
           });
           messageInput.value = "";
+          messageInput.focus(); // Keep focus on the message input
       }
   }
 
