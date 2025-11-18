@@ -177,7 +177,10 @@ document.addEventListener('DOMContentLoaded', function() {
           say();
       }
   });
-
+  document.getElementById("send").addEventListener("click", function(e) {
+    e.preventDefault();
+    say();
+  });
 
   const checkboxes = document.querySelectorAll(".checkbox");
   
