@@ -10,5 +10,6 @@ document.addEventListener('DOMContentLoaded', function() {
     colorWheel();
     backgrounds();
     gifAutoload();
+    buttons();
     
 });
