@@ -72,16 +72,17 @@ document.addEventListener('DOMContentLoaded', function() {
       const messageInput = document.getElementById("message");
       const colorPicker = document.getElementById("colorpicker");
   
+      // Ensure both name and message fields have values
       if (nameInput.value.length && messageInput.value.length) {
           client.send("message", {
               name: nameInput.value,
               color: getComputedStyle(colorPicker).color,
               message: messageInput.value
           });
-          messageInput.value = "";
-          messageInput.focus(); // Keep focus on the message input
-          return false;
+          messageInput.value = ""; // Clear message input after sending
+          return false; // Indicate the message was sent
       }
+      return true; // Indicate that either name or message was empty
   }
 
 
@@ -117,13 +118,13 @@ document.addEventListener('DOMContentLoaded', function() {
   messageInput.addEventListener("keydown", function(e) {
       if (e.key === "Enter") {
           e.preventDefault(); // Prevent unwanted form submission
-          say();
+          const result = say(); // Try to send the message
+          if (result === false) {
+              messageInput.focus(); // Keep focus on the message input
+          }
       }
   });
-  document.getElementById("send").addEventListener("click", function(e) {
-    e.preventDefault();
-    say();
-  });
+
 
   const checkboxes = document.querySelectorAll(".checkbox");
   
