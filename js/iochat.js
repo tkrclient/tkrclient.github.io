@@ -139,6 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
           });
           messageInput.value = "";
           messageInput.focus(); // Keep focus on the message input
+          return false;
       }
   }
 
