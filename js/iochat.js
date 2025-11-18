@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const message = document.createElement("div");
     message.classList.add("message");
 
-    /*-- I believe this is for the initial IOGames Bot (which has a bright green name) --*/
+    // Initial IOGames Bot variables
     if(type == "system") {
       name.classList.add("system");
       message.innerHTML = options.message;
@@ -30,9 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const messages = document.getElementById("messages");
     messages.insertBefore(entry, messages.firstChild);
     
-    /*-- IOGames AMOUNT OF MESSAGES! --*/
-    //const messages = document.getElementById("messages");
-    
+    // Amount of messages
     while (messages.querySelectorAll(".entry").length > 1000) {
       const entries = messages.querySelectorAll(".entry");
       const lastEntry = entries[entries.length - 1];
@@ -46,13 +44,13 @@ document.addEventListener('DOMContentLoaded', function() {
       
   let lastTime = null;
 
-  /*-- IOGames Chat server (which uses wss websockets, which reminds me of socket.io) --*/
+  // Websocket server
   const client = new Client("wss://iogames.fun/server", "@global", function(msg) {
     lastTime = new Date();      
     chatMessage("user", msg);
   });
 
-  /*-- IOGames.fun Bot welcoming introduction --*/
+  // IOGames.fun bot welcoming introduction
   const welcomeInterval = setInterval(function() {
     const now = new Date();
     if(lastTime !== null) {
@@ -66,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }, 200);
 
-  /*-- See message color? --*/
+  // Send message function
   function say() {
       const nameInput = document.getElementById("name");
       const messageInput = document.getElementById("message");
@@ -82,11 +80,12 @@ document.addEventListener('DOMContentLoaded', function() {
           messageInput.value = ""; // Clear message input after sending
           return false; // Indicate the message was sent
       }
-      return true; // Indicate that either name or message was empty
+      return true; //
+    // + that either name or message was
   }
 
 
-  /*-- Color randomizer for the color palette icon AND name --*/
+  // Color randomizer for the color palette icon and name
   const colorpicker = document.getElementById("colorpicker");
   
   colorpicker.addEventListener("click", function(e) {
@@ -95,7 +94,8 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
-  /*-- Initial Guest____ name with randomized numbers on the end PLUS randomized color when new to site --*/
+  // Initial Guest____ name with randomized numbers on the end
+  // + randomized color when new to site
   if(Cookies.get("name") === undefined || !Cookies.get("name").length) {
     client.chat.name("Guest" + Math.floor(Math.random() * 10000));
   }
@@ -123,40 +123,5 @@ document.addEventListener('DOMContentLoaded', function() {
               messageInput.focus(); // Keep focus on the message input
           }
       }
-  });
-
-
-  const checkboxes = document.querySelectorAll(".checkbox");
-  
-  checkboxes.forEach(function(checkbox) {
-    checkbox.addEventListener("click", function() {
-      this.classList.toggle("checked");
-    });
-  });
-
-  document.querySelectorAll(".layer").forEach(layer => {
-    layer.addEventListener("click", function(e) {
-      e.preventDefault();
-  
-      // Fade out effect, "fast" ~ 200ms
-      let opacity = 1;
-      const fadeDuration = 200; // ms
-      const intervalTime = 20;  // ms
-      const fadeStep = intervalTime / fadeDuration;
-  
-      const fadeOutInterval = setInterval(() => {
-        opacity -= fadeStep;
-        if (opacity <= 0) {
-          opacity = 0;
-          clearInterval(fadeOutInterval);
-          this.style.display = "none";
-  
-          // Remove all iframe elements inside elements with class "layer"
-          document.querySelectorAll(".layer iframe").forEach(iframe => iframe.remove());
-        }
-        this.style.opacity = opacity;
-      }, intervalTime);
-  
-    });
   });
 });
