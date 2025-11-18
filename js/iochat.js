@@ -173,6 +173,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   messageInput.addEventListener("keydown", function(e) {
       if (e.key === "Enter") {
+          e.preventDefault(); // Prevent unwanted form submission
           say();
       }
   });
@@ -209,40 +210,6 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.opacity = opacity;
       }, intervalTime);
   
-    });
-  });
-
-
-  /*-- I assume this is for the information on the navbar --*/
-  document.querySelectorAll("[data-favorite]").forEach(element => {
-    element.addEventListener("click", function(e) {
-      e.preventDefault();
-  
-      const gameId = parseInt(this.getAttribute("data-favorite"));
-      let favorites = Cookies.getJSON("favorites");
-  
-      if (this.classList.contains("icon-toggle-active")) {
-        if (favorites !== undefined) {
-          const index = favorites.indexOf(gameId);
-          if (index !== -1) {
-            favorites.splice(index, 1);
-            Cookies.set("favorites", favorites, { expires: 3650 });
-          }
-        }
-      } else {
-        if (favorites === undefined) {
-          favorites = [gameId];
-        } else {
-          favorites.push(gameId);
-        }
-        Cookies.set("favorites", favorites, { expires: 3650 });
-      }
-  
-      // this.parentNode.find(".icon-toggle").toggleClass("hide") replacement:
-      const iconToggles = this.parentNode.querySelectorAll(".icon-toggle");
-      iconToggles.forEach(iconToggle => {
-        iconToggle.classList.toggle("hide");
-      });
     });
   });
 });
