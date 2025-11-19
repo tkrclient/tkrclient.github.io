@@ -849,7 +849,7 @@ aside.active {
  -webkit-text-fill-color: transparent;
 }
 .chat-messages {
-    height: 94%;
+    height: 100%;
     display: flex;
     flex-direction: column-reverse;
     overflow-y: scroll;
