@@ -59,7 +59,6 @@ function SCRIPT-NAME() {
 
 and here is ```index.html``` (only need to see the "Website features" section):
 ```
-<!-- testing -->
 <!DOCTYPE html>
   <html lang="en">
   <!-- Header -->
