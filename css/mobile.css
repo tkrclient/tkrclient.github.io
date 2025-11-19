@@ -2,6 +2,15 @@
 	z-index: 1
 }
 
+#firstDrawServer {
+    scrollbar-color: transparent rgba(255, 255, 255, 0);
+    scrollbar-width: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
 #secondChatServerIFrame {
 	backdrop-filter: blur(9px);
 	height: calc(100% - 40px);
