@@ -1,10 +1,10 @@
 'use strict';
 
 document.addEventListener('DOMContentLoaded', function() {
-  //Console log to tell if iogames.fun is loading for you
+  // Console log to tell if iogames.fun is loading for you
   console.log('Loading IOGames.fun chat...');
-  function chatMessage(type, options) {
 
+  function chatMessage(type, options) {
     const name = document.createElement("div");
     name.classList.add("name");
     name.textContent = options.name + ":";
@@ -63,28 +63,38 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   }, 200);
-
+	
   // Send message function
-  function say() {
-      const nameInput = document.getElementById("name");
-      const messageInput = document.getElementById("message");
-      const colorPicker = document.getElementById("colorpicker");
+  function sendMessage() {
+    const nameInput = document.getElementById("name");
+    const messageInput = document.getElementById("message");
+    const colorPicker = document.getElementById("colorpicker");
+
+	if (!client || !messageInput.value) {
+      return false; // Either client not initialized or empty message
+	}
+
+	const message = {
+      name: nameInput.value,
+      color: getComputedStyle(colorPicker).color,
+      message: messageInput.value
+	};
+
+    client.send("message", message);
+    messageInput.value = ""; // Clear message input
+    messageInput.focus(); // Keep focus for next message
+    return true; // Indicate message was sent
+}
+	
+	// Press enter to send message
+	const messageInput = document.getElementById("message");
+	messageInput.addEventListener("keydown", function(e) {
+	  if (e.key === "Enter") {
+	    e.preventDefault(); // Prevent form submission
+	    sendMessage(); // Send the message
+  	  }
+  });
   
-      // Ensure both name and message fields have values
-      if (nameInput.value.length && messageInput.value.length) {
-          client.send("message", {
-              name: nameInput.value,
-              color: getComputedStyle(colorPicker).color,
-              message: messageInput.value
-          });
-          messageInput.value = ""; // Clear message input after sending
-          return false; // Indicate the message was sent
-      }
-      return true; //
-    // + that either name or message was
-  }
-
-
   // Color randomizer for the color palette icon and name
   const colorpicker = document.getElementById("colorpicker");
   
@@ -92,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
       client.chat.color("#" + Math.random().toString(16).slice(2, 8));
       e.preventDefault();
   });
-
 
   // Initial Guest____ name with randomized numbers on the end
   // + randomized color when new to site
@@ -112,16 +121,5 @@ document.addEventListener('DOMContentLoaded', function() {
   
   nameInput.addEventListener("change", function() {
       Cookies.set("name", this.value, { expires: 3650 });
-  });
-  const messageInput = document.getElementById("message");
-  
-  messageInput.addEventListener("keydown", function(e) {
-      if (e.key === "Enter") {
-          e.preventDefault(); // Prevent unwanted form submission
-          const result = say(); // Try to send the message
-          if (result === false) {
-              messageInput.focus(); // Keep focus on the message input
-          }
-      }
   });
 });
