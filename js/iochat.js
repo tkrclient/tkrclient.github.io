@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Console log to tell if iogames.fun is loading for you
   console.log('Loading IOGames.fun chat...');
 
+  // Chat message function to append elements for new messages
+  // including bot message
   function chatMessage(type, options) {
     const name = document.createElement("div");
     name.classList.add("name");
@@ -21,12 +23,12 @@ document.addEventListener('DOMContentLoaded', function() {
       name.style.color = options.color;
       message.textContent = options.message;
     }
-      
+
+	// When new messages appear, append elements
     let entry = document.createElement("div");
     entry.classList.add("entry");        // add the "entry" class
     entry.appendChild(name);             // append the 'name' element
     entry.appendChild(message);          // append the 'message' element
-
     const messages = document.getElementById("messages");
     messages.insertBefore(entry, messages.firstChild);
     
@@ -82,13 +84,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     client.send("message", message);
     messageInput.value = ""; // Clear message input
-    messageInput.focus(); // Keep focus for next message
     return true; // Indicate message was sent
   }
 	
   // Press enter to send message
   const messageInput = document.getElementById("message");
-    messageInput.addEventListener("keydown", function(e) {
+  messageInput.addEventListener("keydown", function(e) {
     if (e.key === "Enter") {
       e.preventDefault(); // Prevent form submission
       sendMessage(); // Send the message
@@ -97,28 +98,29 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Color randomizer for the color palette icon and name
   const colorpicker = document.getElementById("colorpicker");
-  
   colorpicker.addEventListener("click", function(e) {
       client.chat.color("#" + Math.random().toString(16).slice(2, 8));
       e.preventDefault();
   });
 
   // Initial Guest____ name with randomized numbers on the end
-  // + randomized color when new to site
   if(Cookies.get("name") === undefined || !Cookies.get("name").length) {
     client.chat.name("Guest" + Math.floor(Math.random() * 10000));
   }
   else {
     client.chat.name(Cookies.get("name"));
-  }      
+  }
+
+  // Initial randomized color when new to site
   if(Cookies.get("color") === undefined) {
     client.chat.color("#" + Math.random().toString(16).slice(2, 8));
   }
   else {
     client.chat.color(Cookies.get("color"));
   }
+
+  // Get name element, and check for name changes
   const nameInput = document.getElementById("name");
-  
   nameInput.addEventListener("change", function() {
       Cookies.set("name", this.value, { expires: 3650 });
   });
