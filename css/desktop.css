@@ -3,6 +3,17 @@
  url('/font/Exo2-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
+#secondChatServerIFrame {
+	backdrop-filter: blur(9px);
+	height: calc(100% - 40px);
+	border: 0px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	scrollbar-color: transparent rgba(255, 255, 255, 0);
+	scrollbar-width: none;
+}
+
 .chatalt3 {
  backdrop-filter: blur(9px);
  height: 100%;
