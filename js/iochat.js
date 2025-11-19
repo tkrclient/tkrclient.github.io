@@ -84,15 +84,15 @@ document.addEventListener('DOMContentLoaded', function() {
     messageInput.value = ""; // Clear message input
     messageInput.focus(); // Keep focus for next message
     return true; // Indicate message was sent
-}
+  }
 	
-	// Press enter to send message
-	const messageInput = document.getElementById("message");
-	messageInput.addEventListener("keydown", function(e) {
-	  if (e.key === "Enter") {
-	    e.preventDefault(); // Prevent form submission
-	    sendMessage(); // Send the message
-  	  }
+  // Press enter to send message
+  const messageInput = document.getElementById("message");
+    messageInput.addEventListener("keydown", function(e) {
+    if (e.key === "Enter") {
+      e.preventDefault(); // Prevent form submission
+      sendMessage(); // Send the message
+    }
   });
   
   // Color randomizer for the color palette icon and name
