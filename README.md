@@ -14,7 +14,7 @@ https://tkrclient.nekoweb.org
 https://tkrclient.neocities.org
 
 ## How to add features?
-You could just hijack any of the ```js/iochat/modules/*.js``` scripts to add your script for your personal use (not pull request) i dont mind.
+I purposely made a nearly empty function js file, here: ```js/iochat/modules/custom-feature.js```. You can put your script here for personal use.
 
 ### OR
 
