@@ -21,7 +21,7 @@ window.onload = function() {
 	// Function to set background-color and text color
 	function setColor(element, color) {
 		element.style.backgroundColor = color;
-		//element.style.color = color; // Default text color (white)
+		element.style.color = color; // Default text color (white)
 	}
 	
 	// Function to set username
